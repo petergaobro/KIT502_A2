@@ -1,0 +1,29 @@
+table {
+    width: 100%;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 15px;
+    text-align: left;
+}
+
+#review_table tr:nth-child(even) {
+    background-color: #eee;
+}
+
+#review_table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+#review_table th {
+    background-color: black;
+    color: white;
+}
