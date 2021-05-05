@@ -110,10 +110,11 @@ if (isset($_GET['logout'])) {
 		// check in date
 		if (isset($_POST['checkin']) && !empty($_POST['checkin'])) {
 			$checkin = $_POST['checkin'];
+			$sql .= "AND house_checkin <= '%$b_checkin%'";
 			// $sql = "SELECT * FROM `house` WHERE `b_checkin` BETWEEN 
 			// house_checkin('$house_checkin','%d-%m-%Y') AND house_checkout('$house_checkout','%d-%m-%Y')";
 
-			// $sql .= "AND house_checkin <= '%$b_checkin%'";
+
 
 			// $sql .= "AND house_checkout >= '%$b_checkin%'";
 			// $sql .= 'house_checkin BETWEEN "' . $_POST["b_checkin"] . '" AND "' . $_POST["b_checkout"] . '" AND ';
