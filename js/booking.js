@@ -4,7 +4,7 @@ $(document).ready(function() {
         showAnim: 'drop',
         numberOfMonth: 1,
         minDate: minDate,
-        dateFormat: 'dd/mm/yy',
+        dateFormat: 'yy-mm-dd',
         OnClose: function(selectedDate) {
             $('#checkout'), datepicker("option", "minDate", selectedDate)
         }
@@ -13,7 +13,7 @@ $(document).ready(function() {
         showAnim: 'drop',
         numberOfMonth: 1,
         minDate: minDate,
-        dateFormat: 'dd/mm/yy',
+        dateFormat: 'yy-mm-dd',
         OnClose: function(selectedDate) {
             $('#checkin'), datepicker("option", "minDate", selectedDate)
         }

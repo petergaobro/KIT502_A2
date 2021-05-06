@@ -177,8 +177,8 @@ VALUES (
         '4',
         '2',
         '1',
-        '22/04/2021',
-        '30/05/2021',
+        '2021-04-22',
+        '2021-05-30',
         'Yes',
         'Yes',
         'No',
@@ -196,8 +196,8 @@ VALUES (
         '3',
         '5',
         '3',
-        '20/05/2021',
-        '31/05/2021',
+        '2021-05-20',
+        '2021-05-31',
         'No',
         'Yes',
         'Yes',
@@ -215,8 +215,8 @@ VALUES (
         '2',
         '6',
         '1',
-        '20/06/2021',
-        '31/06/2021',
+        '2021-06-20',
+        '2021-05-31',
         'Yes',
         'No',
         'No',
@@ -234,8 +234,8 @@ VALUES (
         '6',
         '6',
         '1',
-        '20/09/2021',
-        '31/10/2021',
+        '2021-07-13',
+        '2021-07-31',
         'Yes',
         'No',
         'No',
@@ -245,7 +245,7 @@ VALUES (
     );
 ALTER TABLE `house`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 2;
+    AUTO_INCREMENT = 6;
 COMMIT;
 -- INSERT INTO `room` (`r_id`, `r_type`, `r_bedding`, `r_status`, `r_inventory`)
 -- VALUES (1, 'Superior Room', 'Single', 'Free', 2),

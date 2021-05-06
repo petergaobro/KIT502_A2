@@ -77,6 +77,7 @@
 		// check in date
 		if (isset($_POST['b_checkin']) && !empty($_POST['b_checkin'])) {
 			$b_checkin = $_POST['b_checkin'];
+			$sql .= "AND house_checkin <= '$b_checkin'";
 			// $sql = "SELECT * FROM `house` WHERE `b_checkin` BETWEEN 
 			// house_checkin('$house_checkin','%d-%m-%Y') AND house_checkout('$house_checkout','%d-%m-%Y')";
 
@@ -88,7 +89,7 @@
 		// check out date
 		if (isset($_POST['b_checkout']) && !empty($_POST['b_checkout'])) {
 			$b_checkout = $_POST['b_checkout'];
-			$sql .= "AND house_checkout >= '%$b_checkout%'";
+			$sql .= "AND house_checkout >= '$b_checkout'";
 			// $sql .= 'house_checkout BETWEEN "' . $_POST["start_date"] . '" AND "' . $_POST["end_date"] . '" AND ';
 		}
 		// guest
@@ -124,14 +125,14 @@
 			</div>
 			<div class="Bk_tab">
 				<!-- <label>Check In:</label> -->
-				<input type="text" class='form-control' id="checkin" name="b_checkin" value="<?php echo $b_checkin; ?>">
+				<input type="text" class='form-control' placeholder="Check in date" id="checkin" name="b_checkin" value="<?php echo $b_checkin; ?>">
 			</div>
 			<div class="Bk_tab">
-				<input type="text" class='form-control' id="checkout" name="b_checkout" value="<?php echo $b_checkout; ?>">
+				<input type="text" class='form-control' placeholder="Check out date" id="checkout" name="b_checkout" value="<?php echo $b_checkout; ?>">
 			</div>
 			<div class="Bk_tab">
 				<!-- <label for="guest">Number of Guests</label> -->
-				<input type="number" class='form-control' placeholder="Select guest" min="1" id="house_guest" name="b_guest" value="<?php echo $b_guest; ?>">
+				<input type="number" class='form-control' placeholder="Select guest" min="1" id="b_guest" name="b_guest" value="<?php echo $b_guest; ?>">
 			</div>
 			<div class="Bk_tab">
 				<input type="submit" class="Search_btn" value="Search" name="search_client">
@@ -192,7 +193,7 @@
 
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-	<script src="./booking.js"></script>
+	<script src="../js/booking.js"></script>
 	<footer>
 		<p>Copyright &copy; , KIT_502 Assignment_1</p>
 	</footer>
