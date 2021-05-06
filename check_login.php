@@ -50,3 +50,6 @@ if (empty($username)) {
         header("location: login.php?error=Incorect User name or password");
     }
 }
+
+
+<a class="active_nav" href="./confirm_booking.php?b_details=<?php echo $b_checkin, $b_checkout ?>">Book now</a>

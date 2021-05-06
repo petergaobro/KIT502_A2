@@ -98,9 +98,9 @@ CREATE TABLE `booking` (
     `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     -- `Location` varchar(100) NOT NULL,
     -- `checkin` varchar(100) NOT NULL,
-    -- `checkout` varchar(100) NOT NULL,
-    -- `guest` varchar(100) NOT NULL,
-    -- `price` varchar(100) NOT NULL,
+    `con_checkin` varchar(100) NOT NULL,
+    `con_checkout` varchar(100) NOT NULL,
+    `con_guest` varchar(100) NOT NULL,
     `b_first_name` varchar(100) NOT NULL,
     `b_last_name` varchar(100) NOT NULL,
     `b_email` varchar(100) NOT NULL,
@@ -109,6 +109,9 @@ CREATE TABLE `booking` (
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 INSERT INTO `booking` (
         `id`,
+        `con_checkin`,
+        `con_checkout`,
+        `con_guest`,
         `b_first_name`,
         `b_last_name`,
         `b_email`,
@@ -117,6 +120,9 @@ INSERT INTO `booking` (
     )
 VALUES (
         1,
+        '2021-05-31',
+        '2021-06-10',
+        '3',
         'PENG',
         'GAO',
         'peter@gmail.com',

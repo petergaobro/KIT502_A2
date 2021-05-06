@@ -1,5 +1,54 @@
-
 <?php include('booking_server.php');
+
+
+// echo $_GET['Checkin'];
+// echo $_GET['Checkout'];
+// echo $_GET['Guest'];
+if (isset($_GET['Checkin'])) {
+    // include "../../db_conn.php";
+
+    function validate($data)
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    // $con_checkin = $_GET['Checkin'];
+    $con_checkin = validate($_GET['Checkin']);
+}
+if (isset($_GET['Checkout'])) {
+    // include "../../db_conn.php";
+
+    function validate($data)
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    // $con_checkin = $_GET['Checkin'];
+    $Checkout = validate($_GET['Checkout']);
+}
+if (isset($_GET['Guest'])) {
+    // include "../../db_conn.php";
+
+    function validate($data)
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    // $con_checkin = $_GET['Checkin'];
+    $Guest = validate($_GET['Guest']);
+}
+// $con_checkin = $_GET['Checkin'];
+// $con_checkout = $_GET['Checkout'];
+// $con_guest = $_GET['Guest'];
 // session_start();
 // include "../db_conn.php";
 
@@ -56,6 +105,21 @@
                 <?php echo $_GET['error']; ?>
             </div>
         <?php } ?>
+        <div class="input-group">
+            <label>Check in date</label>
+            <input type="text" readonly="readonly" name="con_checkin" value="<?php echo $con_checkin; ?>">
+        </div>
+        <div class="input-group">
+            <label>Check out date</label>
+            <input type="text" readonly="readonly" name="con_checkout" value="<?php echo $con_checkout; ?>">
+            <!-- <input type="text" name="b_first_name" value=""> -->
+        </div>
+        <div class="input-group">
+            <label>Guest</label>
+            <input type="text" readonly="readonly" name="con_guest" value="<?php echo $con_guest; ?>">
+            <!-- <input type="text" name="b_first_name" value=""> -->
+        </div>
+
 
         <div class="input-group">
             <label>First name</label>

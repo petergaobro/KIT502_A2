@@ -200,7 +200,9 @@ if (isset($_GET['logout'])) {
 						<strong id="strong">Price</strong>
 						<?php echo $row->house_price ?>
 						<!-- <button type="button" class="Book_btn">book now</button> -->
-						<a class="active_nav" href="./confirm_booking.php">Book now</a>
+						<a href="./confirm_booking.php?Checkin=<?php echo $b_checkin?> & Checkout=<?php echo $b_checkout?> & Guest=<?php echo $b_guest?>"><input type="submit" name="book now"></a>
+						
+
 					</td>
 				</tr>
 			<?php } ?>

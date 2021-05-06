@@ -2,66 +2,16 @@
 session_start();
 // connect to the database
 include "../db_conn.php";
-// initializing variables
-// $Location = "";
-// $checkin = "";
-// $checkout = "";
-// $guest = "";
-// $price = "";
 
-
-// $house_city = "";
-// $house_checkin = "";
-// $house_checkout = "";
-// $house_guest = "";
-
+$con_checkin= "";
+$con_checkout = "";
+$con_guest = "";
 $b_first_name = "";
 $b_last_name = "";
 $b_email = "";
 $b_mobile = "";
 $b_status = "";
 $errors = array();
-
-
-
-// // search function
-// if (isset($_POST['search_client'])) {
-//     // receive all input values from the form
-//     $Location = mysqli_real_escape_string($db, $_POST['Location']);
-//     $checkin = mysqli_real_escape_string($db, $_POST['checkin']);
-//     $checkout = mysqli_real_escape_string($db, $_POST['checkout']);
-//     $guest = mysqli_real_escape_string($db, $_POST['guest']);
-//     // $price = mysqli_real_escape_string($db, $_POST['price']);
-
-//     // form validation: ensure that the form is correctly filled ...
-//     // by adding (array_push()) corresponding error unto $errors array
-//     if (empty($Location)) {
-//         array_push($errors, "Location is required");
-//     }
-//     if (empty($checkin)) {
-//         array_push($errors, "Check in is required");
-//     }
-//     if (empty($checkout)) {
-//         array_push($errors, "Check out is required");
-//     }
-//     if (empty($guest)) {
-//         array_push($errors, "Guest is required");
-//     }
-//     if (empty($price)) {
-//         array_push($errors, "Price is required");
-//     }
-//     // Finally, register user if there are no errors in the form
-//     if (count($errors) == 0) {
-//         $c_password = md5($password_c1); //encrypt the password before saving in the database
-
-//         $query = "INSERT INTO booking (Location, checkin, checkout, guest, price) 
-//   			  VALUES('$Location', '$checkin', '$checkout', '$guest', '$price')";
-//         mysqli_query($db, $query);
-//         // $_SESSION['c_username'] = $c_username;
-//         $_SESSION['success'] = "Here is your search";
-//         header('location: login_book.php');
-//     }
-// }
 
 // confirm booking
 if (isset($_POST['confirm_book'])) {
@@ -70,6 +20,9 @@ if (isset($_POST['confirm_book'])) {
     // $house_checkout = mysqli_real_escape_string($db, $_POST['house_checkout']);
     // $house_guest = mysqli_real_escape_string($db, $_POST['house_guest']);
     // receive all input values from the form
+    $con_checkin = mysqli_real_escape_string($db, $_POST['con_checkin']);
+    $con_checkout = mysqli_real_escape_string($db, $_POST['con_checkout']);
+    $con_guest = mysqli_real_escape_string($db, $_POST['con_guest']);
     $b_first_name = mysqli_real_escape_string($db, $_POST['b_first_name']);
     $b_last_name = mysqli_real_escape_string($db, $_POST['b_last_name']);
     $b_email = mysqli_real_escape_string($db, $_POST['b_email']);
@@ -77,6 +30,8 @@ if (isset($_POST['confirm_book'])) {
     $b_status = mysqli_real_escape_string($db, $_POST['b_status']);
     // form validation: ensure that the form is correctly filled ...
     // by adding (array_push()) corresponding error unto $errors array
+
+    echo $con_checkin;
     if (empty($b_first_name)) {
         array_push($errors, "First name is required");
     }
@@ -94,19 +49,27 @@ if (isset($_POST['confirm_book'])) {
     if (count($errors) == 0) {
         // $c_password = md5($password_c1); //encrypt the password before saving in the database
 
-        $query = "INSERT INTO booking  (b_first_name, 
+        $query = "INSERT INTO booking  (con_checkin,
+                                        con_checkout,
+                                        con_guest,
+                                        b_first_name, 
                                         b_last_name, 
                                         b_email, 
                                         b_mobile,
                                         b_status) 
-  			    VALUES ('$b_first_name', 
+  			    VALUES ('$con_checkin',
+                        '$con_checkout',
+                        '$con_guest',
+                        '$b_first_name', 
                         '$b_last_name', 
                         '$b_email', 
                         '$b_mobile',
                         '$b_status')";
+
+        echo $query;
         mysqli_query($db, $query);
         // $_SESSION['c_username'] = $c_username;
         $_SESSION['success'] = "You are now booked successfully";
-        header('location: review.php');
+        //header('location: review.php');
     }
 }
