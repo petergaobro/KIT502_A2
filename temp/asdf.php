@@ -80,3 +80,6 @@
         <a class="active_nav" href=" ">Book now</a>
     </td>
 </table>
+
+
+<a href="./confirm_booking.php?Checkin=<?php echo $b_checkin ?> & Checkout=<?php echo $b_checkout ?> & Guest=<?php echo $b_guest ?>" name="book_now"><input type="submit" name="book now"></a>

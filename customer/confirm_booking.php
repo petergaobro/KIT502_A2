@@ -5,50 +5,20 @@
 // echo $_GET['Checkout'];
 // echo $_GET['Guest'];
 if (isset($_GET['Checkin'])) {
-    // include "../../db_conn.php";
 
-    function validate($data)
-    {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
-
-    // $con_checkin = $_GET['Checkin'];
-    $con_checkin = validate($_GET['Checkin']);
+    $con_checkin = $_GET['Checkin'];
 }
 if (isset($_GET['Checkout'])) {
-    // include "../../db_conn.php";
 
-    function validate($data)
-    {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
-
-    // $con_checkin = $_GET['Checkin'];
-    $Checkout = validate($_GET['Checkout']);
+    $con_checkout = $_GET['Checkout'];
 }
 if (isset($_GET['Guest'])) {
-    // include "../../db_conn.php";
 
-    function validate($data)
-    {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
-
-    // $con_checkin = $_GET['Checkin'];
-    $Guest = validate($_GET['Guest']);
+    $con_guest = $_GET['Guest'];
 }
-// $con_checkin = $_GET['Checkin'];
-// $con_checkout = $_GET['Checkout'];
-// $con_guest = $_GET['Guest'];
+
+
+
 // session_start();
 // include "../db_conn.php";
 
@@ -84,27 +54,26 @@ if (isset($_GET['Guest'])) {
 //     }
 // }
 ?>
+
+
+
 <!DOCTYPE html>
 <html>
 
 <head>
-    <title>Booking confirm</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
-    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <title>Confirm booking</title>
+    <!-- <link rel="stylesheet" type="text/css" href="../../css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
 <body>
     <div class="header">
-        <h2>Booking confirm</h2>
+        <h2>Confirm booking</h2>
     </div>
+
     <form method="post" action="confirm_booking.php">
 
-        <?php if (isset($_GET['error'])) { ?>
-            <div class="alert alert-danger" role="alert">
-                <?php echo $_GET['error']; ?>
-            </div>
-        <?php } ?>
+        <?php include('../errors.php'); ?>
         <div class="input-group">
             <label>Check in date</label>
             <input type="text" readonly="readonly" name="con_checkin" value="<?php echo $con_checkin; ?>">

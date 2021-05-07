@@ -32,17 +32,33 @@ if (isset($_POST['confirm_book'])) {
     // by adding (array_push()) corresponding error unto $errors array
 
     echo $con_checkin;
+    if (empty($con_checkin)) {
+        array_push($errors, "Check in date is required");
+        // header("Location: ./confirm.php?&error=Check in date is required");
+    }
+    if (empty($con_checkout)) {
+        array_push($errors, "Check out date is required");
+        // header("Location: ./login_book.php?&error=Check out date is required");
+    }
+    if (empty($con_guest)) {
+        array_push($errors, "Guest is required");
+        // header("Location: ./login_book.php?&error=Guest is required");
+    }
     if (empty($b_first_name)) {
         array_push($errors, "First name is required");
+        // header("Location: ./login_book.php?&error=First name is required");
     }
     if (empty($b_last_name)) {
         array_push($errors, "Last name in is required");
+        // header("Location: ./login_book.php?&error=Last name is required");
     }
     if (empty($b_email)) {
         array_push($errors, "Email is required");
+        // header("Location: ./login_book.php?&error=Email is required");
     }
     if (empty($b_mobile)) {
         array_push($errors, "mobile is required");
+        // header("Location: ./login_book.php?&error=Mobile is required");
     }
 
     // Finally, register user if there are no errors in the form
@@ -73,3 +89,19 @@ if (isset($_POST['confirm_book'])) {
         //header('location: review.php');
     }
 }
+
+// if (isset($_POST['book_now'])) {
+//     $con_checkin = mysqli_real_escape_string($db, $_POST['con_checkin']);
+//     $con_checkout = mysqli_real_escape_string($db, $_POST['con_checkout']);
+//     $con_guest = mysqli_real_escape_string($db, $_POST['con_guest']);
+
+//     if (empty($con_checkin)) {
+//     header("Location: ./login_book.php?Checkin=$con_checkin&error=Mobile is required");
+//     }
+//     if (empty($con_checkout)) {
+//     header("Location: ./login_book.php?Checkout=$con_checkout&error=Mobile is required");
+//     }
+//     if (empty($con_guest)) {
+//     header("Location: ./login_book.php?Guest=$con_guest&error=Mobile is required");
+//     }
+// }

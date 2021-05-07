@@ -34,11 +34,11 @@
 			<p>UTas</p>
 			<p>Accommodation</p>
 		</div>
-		<a href="#" class="toggle_btn">
+		<!-- <a href="#" class="toggle_btn">
 			<span class="bar"></span>
 			<span class="bar"></span>
 			<span class="bar"></span>
-		</a>
+		</a> -->
 		<div class="nav_links">
 			<ul class="list_nav">
 				<li><a class="active_nav" href="../home.php">Home</a></li>
@@ -106,10 +106,10 @@
 
 
 		<form class="Bk_form_tab" method="post" action="booking.php">
-			<div class="Bk_op_tab">
+			<div class="Bk_tab">
 				<i class="fa fa-calendar" aria-hidden="true"></i>
 
-				<select id="input-group" name="b_city" placeholder="House city" value="<?php echo $b_city; ?>">
+				<select id="form-select" name="b_city" placeholder="House city" value="<?php echo $b_city; ?>">
 					<option value="">City</option>
 					<option value="Sydney">Sydney</option>
 					<option value="Newcastle">Newcastle</option>

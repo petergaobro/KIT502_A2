@@ -1,4 +1,5 @@
 <?php include('booking_server.php');
+// include('confirm_f.php');
 // session_start();
 
 if (!isset($_SESSION['c_username'])) {
@@ -10,6 +11,31 @@ if (isset($_GET['logout'])) {
 	unset($_SESSION['c_username']);
 	header("location: customer_login.php");
 }
+
+
+
+// echo $_GET['Checkin'];
+// echo $_GET['Checkout'];
+// echo $_GET['Guest'];
+// $error = array();
+// if (isset($_GET['Checkin'])) {
+
+//     $con_checkin = $_GET['Checkin'];
+// }
+// else if(empty($_GET['Checkin'])){
+//     header("Location: ./login_book.php?Checkin=$con_checkin&error=Mobile is required");
+// }
+// if (isset($_GET['Checkout'])) {
+
+//     $con_checkout = $_GET['Checkout'];
+//     header("Location: ./login_book.php?Checkout=$con_checkout&error=Mobile is required");
+// }
+// if (isset($_GET['Guest'])) {
+
+//     $con_guest = $_GET['Guest'];
+//     header("Location: ./login_book.php?Guest=$con_guest&error=Mobile is required");
+// }
+
 ?>
 
 
@@ -40,38 +66,17 @@ if (isset($_GET['logout'])) {
 		</aside>
 	</div>
 
-	<div class="log_msg">
-		<!-- notification message -->
-		<?php if (isset($_SESSION['success'])) : ?>
-			<div class="error success">
-				<h3>
-					<?php
-					echo $_SESSION['success'];
-					unset($_SESSION['success']);
-					?>
-				</h3>
-			</div>
-		<?php endif ?>
 
-		<!-- logged in user information -->
-		<?php if (isset($_SESSION['c_username'])) : ?>
-			<div class="user_log_suc">
-				<p>Welcome <strong><?php echo $_SESSION['c_username']; ?></strong></p>
-				<p> <a href="customer_login.php?logout='1'">logout</a> </p>
-			</div>
-
-		<?php endif ?>
-	</div>
 	<nav class="nav_bar">
 		<div class="logo">
 			<p>UTas</p>
 			<p>Accommodation</p>
 		</div>
-		<a href="#" class="toggle_btn">
+		<!-- <a href="#" class="toggle_btn">
 			<span class="bar"></span>
 			<span class="bar"></span>
 			<span class="bar"></span>
-		</a>
+		</a> -->
 		<div class="nav_links">
 			<ul class="list_nav">
 				<li><a class="active_nav" href="../home.php">Home</a></li>
@@ -80,13 +85,35 @@ if (isset($_GET['logout'])) {
 					<div class="sub_user">
 						<ul>
 							<li><a href="./customer_login.php">Login</a></li>
-							<!-- <li><a onclick="do_logout()" href="../html/login_reg.html">Logout</a ></li> -->
 							<li><a href="./review.php">Review</a></li>
+							<!-- <li><a href="customer_login.php?logout='1'">logout</a></li> -->
 						</ul>
 					</div>
 				</li>
 				<li><a href="../html/login_admin.html"><button id="do_admin_login" type="button" class="btn btn-dark" onclick="do_admin_login()">Admin</button></a></li>
 			</ul>
+		</div>
+		<div class="log_msg">
+			<!-- notification message -->
+			<?php if (isset($_SESSION['success'])) : ?>
+				<div class="error success">
+					<h3>
+						<?php
+						echo $_SESSION['success'];
+						unset($_SESSION['success']);
+						?>
+					</h3>
+				</div>
+			<?php endif ?>
+
+			<!-- logged in user information -->
+			<?php if (isset($_SESSION['c_username'])) : ?>
+				<div class="user_log_suc">
+					<p>Welcome <strong><?php echo $_SESSION['c_username']; ?></strong></p>
+					<p> <a class="active_nav" href="customer_login.php?logout='1'">logout</a> </p>
+				</div>
+
+			<?php endif ?>
 		</div>
 		<!-- <script src="../js/toggle_bar.js" defer></script> -->
 	</nav>
@@ -134,6 +161,12 @@ if (isset($_GET['logout'])) {
 		$result = mysqli_query($db, $sql);
 		?>
 		<form class="Bk_form_tab" method="post" action="login_book.php">
+			<?php if (isset($_GET['error'])) { ?>
+				<div class="alert alert-danger" role="alert">
+					<?php echo $_GET['error']; ?>
+				</div>
+			<?php } ?>
+
 			<div class="Bk_op_tab">
 				<i class="fa fa-calendar" aria-hidden="true"></i>
 
@@ -162,9 +195,15 @@ if (isset($_GET['logout'])) {
 				<!-- <label for="guest">Number of Guests</label> -->
 				<input type="number" class='form-control' placeholder="Select guest" min="1" id="b_guest" name="b_guest" value="<?php echo $b_guest; ?>">
 			</div>
+
+
 			<div class="Bk_tab">
 				<input type="submit" class="Search_btn" value="Search" name="search_client">
 			</div>
+
+			
+
+
 		</form>
 	</div>
 
@@ -200,8 +239,9 @@ if (isset($_GET['logout'])) {
 						<strong id="strong">Price</strong>
 						<?php echo $row->house_price ?>
 						<!-- <button type="button" class="Book_btn">book now</button> -->
-						<a href="./confirm_booking.php?Checkin=<?php echo $b_checkin?> & Checkout=<?php echo $b_checkout?> & Guest=<?php echo $b_guest?>"><input type="submit" name="book now"></a>
-						
+
+						<a  name="book_now" href="./confirm_booking.php?Checkin=<?php echo $b_checkin ?> & Checkout=<?php echo $b_checkout ?> & Guest=<?php echo $b_guest ?>"><input type="submit"></a>
+
 
 					</td>
 				</tr>
@@ -212,7 +252,7 @@ if (isset($_GET['logout'])) {
 	<!-- <script src="../js/home.js"></script> -->
 	<!-- <script src="../js/admin_pop.js"></script> -->
 	<!-- <script src="../js/booking2.js"></script> -->
-	<script src="../js/popup_window.js"></script>
+	<!-- <script src="../js/popup_window.js"></script> -->
 	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="../js/booking.js"></script>
