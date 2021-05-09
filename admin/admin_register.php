@@ -16,7 +16,7 @@
 		<?php include('../errors.php'); ?>
 		<div class="input-group">
 			<label>Are you registering as a system manager or host?</label>
-			<select class="type_user" name="type_user" value="<?php echo $type_user; ?>"><br>
+			<select class="type_user" id="usertype" name="type_user" value="<?php echo $type_user; ?>"><br>
 				<option selected value=""></option>
 				<option value="System manager">System manager</option>
 				<option value="Host">Host</option>
@@ -69,7 +69,7 @@
 				<option value="South Korea">South Korea</option>
 			</select><br>
 		</div>
-		<div class="input-group">
+		<div class="input-group" id="abn">
 			<label>ABN</label>
 			<input type="text" name="abn" value="<?php echo $abn; ?>">
 		</div>
@@ -82,5 +82,7 @@
 		</p>
 	</form>
 </body>
+
+<script src="../js/hide.js"></script>
 
 </html>

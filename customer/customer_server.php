@@ -28,7 +28,7 @@ if (isset($_POST['reg_customer'])) {
     $password_c2 = mysqli_real_escape_string($db, $_POST['password_c2']);
     $c_address = mysqli_real_escape_string($db, $_POST['c_address']);
     $c_country = mysqli_real_escape_string($db, $_POST['c_country']);
-    $pattern = '/^(?=.*[!@#$%])(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]).{6,12}$/';
+    $c_pattern = '/^(?=.*[!@#$%])(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]).{6,12}$/';
 
 
     // form validation: ensure that the form is correctly filled ...
@@ -54,7 +54,7 @@ if (isset($_POST['reg_customer'])) {
     if ($password_c1 != $password_c2) {
         array_push($errors, "The two passwords do not match");
     }
-    elseif(!preg_match($pattern,$password_c1)){
+    elseif(!preg_match($c_pattern,$password_c1)){
         array_push($errors,"Your Password  length Must be 6-12 and must contain 1 letter, 1 number, 1 capital letter and one of the following special character(!@#$%)");
     }
     if (empty($c_address)) {

@@ -32,6 +32,7 @@ if (isset($_POST['reg_user'])) {
   $address = mysqli_real_escape_string($db, $_POST['address']);
   $country = mysqli_real_escape_string($db, $_POST['country']);
   $abn = mysqli_real_escape_string($db, $_POST['abn']);
+  $pattern = '/^(?=.*[!@#$%])(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]).{6,12}$/';
 
 
   // form validation: ensure that the form is correctly filled ...
@@ -59,6 +60,9 @@ if (isset($_POST['reg_user'])) {
   }
   if ($password_1 != $password_2) {
     array_push($errors, "The two passwords do not match");
+  }
+  elseif(!preg_match($pattern,$password_1)){
+    array_push($errors,"Your Password  length Must be 6-12 and must contain 1 letter, 1 number, 1 capital letter and one of the following special character(!@#$%)");
   }
   if (empty($address)) {
     array_push($errors, "Address is required");
