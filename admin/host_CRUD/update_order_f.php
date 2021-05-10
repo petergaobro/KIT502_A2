@@ -38,7 +38,7 @@ if (isset($_POST['edit_order'])) {
 
         // array_push($errors, "House price is required");
         header("Location: ./update_order.php?id=$id&error=Status is required");
-    } else if (isset($b_status) == "Reject" AND !empty($b_reason)) {
+    } else if ( empty($b_reason) AND $b_status === "Reject") {
 
         header("Location: ./update_order.php?id=$id&error=Reject reason is required");
     } else {
