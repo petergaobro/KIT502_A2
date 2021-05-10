@@ -58,15 +58,15 @@ if (isset($_GET['id'])) {
         <!-- house id -->
         <input type="text" name="id" value="<?php echo $id; ?>" ; hidden>
         <div class="input-group">
-            <label>First name</label>
+            <label>check in date</label>
             <input type="text" readonly="readonly" name="con_checkin" value="<?= $row['con_checkin'] ?>">
         </div>
         <div class="input-group">
-            <label>First name</label>
+            <label>Check out date</label>
             <input type="text" readonly="readonly" name="con_checkout" value="<?= $row['con_checkout'] ?>">
         </div>
         <div class="input-group">
-            <label>First name</label>
+            <label>Guest</label>
             <input type="text" readonly="readonly" name="con_guest" value="<?= $row['con_guest'] ?>">
         </div>
         <div class="input-group">
