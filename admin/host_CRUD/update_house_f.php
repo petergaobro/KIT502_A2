@@ -86,7 +86,7 @@ if (isset($_POST['edit_house'])) {
     } else if (empty($house_price)) {
         // array_push($errors, "House price is required");
         header("Location: ./update_house.php?id=$id&error=House price is required");
-    } else {
+    } else  {
         $query = "UPDATE house  SET house_name = '$house_name', 
                                     house_desc = '$house_desc',
                                     house_addr = '$house_addr', 
