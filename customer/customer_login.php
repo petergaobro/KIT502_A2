@@ -4,11 +4,12 @@
 
 <head>
     <title>Registration system PHP and MySQL</title>
-    <link rel="stylesheet" type="text/css" href="../css/home.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/home.css"> -->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./css/footer.css">
-    <link rel="shortcut icon" type="image" href="../img/logo/Photo.png">
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
+    <link rel="stylesheet" type="text/css" href="../css/login_reg.css">
+    <!-- <link rel="shortcut icon" type="image" href="../img/logo/Photo.png"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 
 </head>
@@ -24,7 +25,8 @@
     </div>
     <nav class="nav_bar">
         <div class="logo">
-            <img src="../img/logo/Photo.png" alt="">
+            <p>UTas</p>
+            <p>Accommodation</p>
         </div>
         <!-- <a href="#" class="toggle_btn">
             <span class="bar"></span>
@@ -104,13 +106,7 @@
             </p>
         </div>
 
-        <div class="google_map">
-            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2922.5404210451375!2d147.32365931566832!3d-42.9036422497168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaa6ddf5a09db9cc9%3A0xf03c94eb451f680!2sUniversity%20of%20Tasmania!5e0!3m2!1sen!2sau!4v1620016679034!5m2!1sen!2sau" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
-        </div>
     </div>
-
-
-
 
     <div class="social_main">
         <div class="social_container">
@@ -140,12 +136,12 @@
         <p>Copyright &copy; , KIT_502 Assignment_2</p>
     </footer>
     <!-- js files -->
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="../js/home.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+    <!-- <script src="../js/home.js"></script> -->
     <!-- <script src="./js/search_pop.js"></script> -->
-    <script src="../js/admin_pop.js"></script>
-    <script src="../js/booking.js"></script>
+    <!-- <script src="../js/admin_pop.js"></script> -->
+    <!-- <script src="../js/booking.js"></script> -->
 
 
 </body>

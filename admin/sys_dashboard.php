@@ -1,5 +1,7 @@
-<?php 
+<?php
 include "./system_CRUD/read.php";
+include "./host_CRUD/read_house.php";
+include "./host_CRUD/read_order.php";
 // include "./CRUD/update_cust.php";
 session_start();
 
@@ -272,91 +274,63 @@ Group 3 last edit 26/03/2021 -->
 					</div>
 				</div>
 			</div>
-			<!--------------------------accommodation card---------------------------->
+			<!--------------------------order card---------------------------->
 			<div class="tab" id="order_content">
-				<div class="tab tab_create">
-					<td>
-						Location :<input type="email" name="edit_location" id="edit_location">
-					</td>
-
-					<td>
-						Price :<input type="location" name="edit_price" id="edit_price">
-					</td>
-
-					<td>
-						Num_of_room :<input type="text" name="edit_room" id="edit_room">
-					</td>
-
-					<td>
-						Num_of_bathroom :<input type="text" name="edit_bathroom" id="edit_bathroom">
-					</td>
-
-					<td>
-						Smoke :<input type="text" name="edit_smoke" id="edit_smoke">
-					</td>
-
-					<td>
-						Garage :<input type="text" name="edit_garage" id="edit_garage">
-					</td>
-
-					<td>
-						Internet :<input type="text" name="edit_internet" id="edit_internet">
-					</td>
-
-					<div class="create_btn">
-						<button onclick="create_order()">Create</button>
-						<button id="edit_btn" onclick="edit_order()">Edit</button>
+				<div class="container">
+					<div class="box_customer">
+						<h4 class="display-4 text-center">Orders</h4><br>
+						<?php if (isset($_GET['success'])) { ?>
+							<div class="alert alert-success" role="alert">
+								<?php echo $_GET['success']; ?>
+							</div>
+						<?php } ?>
+						<?php if (mysqli_num_rows($result_order)) { ?>
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th scope="col">Order.NO</th>
+										<th scope="col">ID.NO</th>
+										<th scope="col">Check in date</th>
+										<th scope="col">Check out date</th>
+										<th scope="col">Guest</th>
+										<th scope="col">Price</th>
+										<th scope="col">First name</th>
+										<th scope="col">Last name</th>
+										<th scope="col">Email</th>
+										<th scope="col">Mobile</th>
+										<th scope="col">Status</th>
+										<th scope="col">Reason</th>
+										<th scope="col">Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php
+									$i = 0;
+									while ($rows = mysqli_fetch_assoc($result_order)) {
+										$i++;
+									?>
+										<tr>
+											<th scope="row"><?= $i ?></th>
+											<th scope="row"><?= $rows['id'] ?></th>
+											<td><?php echo $rows['con_checkin']; ?></td>
+											<td><?php echo $rows['con_checkout']; ?></td>
+											<td><?php echo $rows['con_guest']; ?></td>
+											<td><?php echo $rows['con_price']; ?></td>
+											<td><?php echo $rows['b_first_name']; ?></td>
+											<td><?php echo $rows['b_last_name']; ?></td>
+											<td><?php echo $rows['b_email']; ?></td>
+											<td><?php echo $rows['b_mobile']; ?></td>
+											<td><?php echo $rows['b_status']; ?></td>
+											<td><?php echo $rows['b_reason']; ?></td>
+											<td><a href="./system_CRUD/delete_house_sys.php?id=<?= $rows['id']?>" class="btn btn-success">Delete</a>
+											</td>
+										</tr>
+									<?php } ?>
+								</tbody>
+							</table>
+						<?php } ?>
 					</div>
 				</div>
-				<table id="order_table">
-					<thead>
-						<tr>
-							<th>Location</th>
-							<th>Price</th>
-							<th>Num_of_room</th>
-							<th>Num_of_bathroom</th>
-							<th>Smoke</th>
-							<th>Garage</th>
-							<th>Internet</th>
-						</tr>
-					</thead>
-					<tr>
-						<td>MEL</td>
-						<td>30</td>
-						<td>2</td>
-						<td>3</td>
-						<td>NO</td>
-						<td>YES</td>
-						<td>YES</td>
-					</tr>
-					<tr>
-						<td>SYN</td>
-						<td>100</td>
-						<td>34</td>
-						<td>5</td>
-						<td>YES</td>
-						<td>NO</td>
-						<td>YES</td>
-					</tr>
-					<tr>
-						<td>Hobart</td>
-						<td>90</td>
-						<td>8</td>
-						<td>2</td>
-						<td>NO</td>
-						<td>YES</td>
-						<td>NO</td>
-					</tr>
-					<tr>
-						<td>ADELAILE</td>
-						<td>60</td>
-						<td>5</td>
-						<td>2</td>
-						<td>YES</td>
-						<td>YES</td>
-						<td>YES</td>
-					</tr>
-				</table>
 			</div>
 
 			<!--------------------------review card---------------------------->

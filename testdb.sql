@@ -101,33 +101,39 @@ CREATE TABLE `booking` (
     `con_checkin` varchar(100) NOT NULL,
     `con_checkout` varchar(100) NOT NULL,
     `con_guest` varchar(100) NOT NULL,
+    `con_price` varchar(100) NOT NULL,
     `b_first_name` varchar(100) NOT NULL,
     `b_last_name` varchar(100) NOT NULL,
     `b_email` varchar(100) NOT NULL,
     `b_mobile` varchar(100) NOT NULL,
-    `b_status` varchar(100) NOT NULL
+    `b_status` varchar(100) NOT NULL,
+    `b_reason` varchar(100) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 INSERT INTO `booking` (
         `id`,
         `con_checkin`,
         `con_checkout`,
         `con_guest`,
+        `con_price`,
         `b_first_name`,
         `b_last_name`,
         `b_email`,
         `b_mobile`,
-        `b_status`
+        `b_status`,
+        `b_reason`
     )
 VALUES (
         1,
         '2021-05-31',
         '2021-06-10',
         '3',
+        '240',
         'PENG',
         'GAO',
         'peter@gmail.com',
         '0426612390',
-        'in process'
+        'in process',
+        'Good'
     );
 ALTER TABLE `users_customer`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,

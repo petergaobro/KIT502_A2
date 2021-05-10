@@ -7,6 +7,7 @@ $b_last_name = "";
 $b_email = "";
 $b_mobile = "";
 $b_status = "";
+$b_reason = "";
 $errors = array();
 
 if (isset($_POST['edit_order'])) {
@@ -19,6 +20,7 @@ if (isset($_POST['edit_order'])) {
     $b_email = mysqli_real_escape_string($db, $_POST['b_email']);
     $b_mobile = mysqli_real_escape_string($db, $_POST['b_mobile']);
     $b_status = mysqli_real_escape_string($db, $_POST['b_status']);
+    $b_reason = mysqli_real_escape_string($db, $_POST['b_reason']);
 
 
     // form validation: ensure that the form is correctly filled ...
@@ -34,13 +36,18 @@ if (isset($_POST['edit_order'])) {
         header("Location: ./update_order.php?id=$id&error=House address is required");
     } else if (empty($b_status)) {
         // array_push($errors, "House price is required");
-        header("Location: ./update_order.php?id=$id&error=House price is required");
-    } else {
+        header("Location: ./update_order.php?id=$id&error=Status is required");
+    } else if (empty($b_reason) AND $b_status=== "Reject") {
+        // array_push($errors, "House price is required");
+        header("Location: ./update_order.php?id=$id&error=Reject reason is required");
+    }
+    else {
         $query = "UPDATE booking  SET b_first_name = '$b_first_name', 
                                     b_last_name = '$b_last_name',
                                     b_email = '$b_email', 
                                     b_mobile = '$b_mobile', 
-                                    b_status = '$b_status'
+                                    b_status = '$b_status',
+                                    b_reason = '$b_reason'
                                 WHERE id = '$id'";
         $result = mysqli_query($db, $query);
         // var_dump($query);

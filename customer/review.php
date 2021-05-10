@@ -25,52 +25,53 @@ include "./review_read.php";
 
     <title>KIT_502_web_dev</title>
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
-	<link rel="stylesheet" type="text/css" href="../css/home.css">
-	<link rel="stylesheet" type="text/css" href="../css/style.css">
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="./css/footer.css">
-	<link rel="shortcut icon" type="image" href="../img/logo/Photo.png">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
+    <link rel="stylesheet" type="text/css" href="../css/login_reg.css">
+    <!-- <link rel="shortcut icon" type="image" href="../img/logo/Photo.png"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
 </head>
 
 <body>
-	<!---------------part 1-------------------->
-	<div class="covid_div">
-		<aside class="covid_notice">
-			<a class="covid_news" href="https://www.australia.gov.au/">
-				<span class="covid_words">Get the latest on our COVID-19 response</span>
-			</a>
-		</aside>
-	</div>
-	<nav class="nav_bar">
-		<div class="logo">
-			<img src="../img/logo/Photo.png" alt="">
-		</div>
-		<!-- <a href="#" class="toggle_btn">
+    <!---------------part 1-------------------->
+    <div class="covid_div">
+        <aside class="covid_notice">
+            <a class="covid_news" href="https://www.australia.gov.au/">
+                <span class="covid_words">Get the latest on our COVID-19 response</span>
+            </a>
+        </aside>
+    </div>
+    <nav class="nav_bar">
+        <div class="logo">
+            <p>UTas</p>
+            <p>Accommodation</p>
+        </div>
+        <!-- <a href="#" class="toggle_btn">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
         </a> -->
-		<div class="nav_links">
-			<ul class="list_nav">
-				<li><a class="active_nav" href="../home.php">Home</a></li>
-				<li><a class="active_nav" href="../customer/booking.php">Book</a></li>
-				<li><a class="active_nav" href="#">Customer</a>
-					<!-- sub user bar -->
-					<div class="sub_user">
-						<ul>
-							<li><a href="../customer/customer_login.php">Login</a></li>
-							<!-- <li><a onclick="do_logout()" href="../html/login_reg.html">Logout</a></li> -->
-							<li><a href="../customer/review.php">Review</a></li>
-						</ul>
-					</div>
-				</li>
+        <div class="nav_links">
+            <ul class="list_nav">
+                <li><a class="active_nav" href="../home.php">Home</a></li>
+                <li><a class="active_nav" href="../customer/booking.php">Book</a></li>
+                <li><a class="active_nav" href="#">Customer</a>
+                    <!-- sub user bar -->
+                    <div class="sub_user">
+                        <ul>
+                            <li><a href="../customer/customer_login.php">Login</a></li>
+                            <!-- <li><a onclick="do_logout()" href="../html/login_reg.html">Logout</a></li> -->
+                            <li><a href="../customer/review.php">Review</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <!-- <li><a><button id="open" type="button" class="btn btn-info">Search Now</button></a></li> -->
+            </ul>
+        </div>
+        <!-- <script src="../js/toggle_bar.js" defer></script> -->
+    </nav>
 
-				<!-- <li><a><button id="open" type="button" class="btn btn-info">Search Now</button></a></li> -->
-			</ul>
-		</div>
-		<!-- <script src="../js/toggle_bar.js" defer></script> -->
-	</nav>
 
 
     <!---------------part 2-------------------->
@@ -148,9 +149,6 @@ include "./review_read.php";
 			</p>
 		</div>
 
-		<div class="google_map">
-			<p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2922.5404210451375!2d147.32365931566832!3d-42.9036422497168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaa6ddf5a09db9cc9%3A0xf03c94eb451f680!2sUniversity%20of%20Tasmania!5e0!3m2!1sen!2sau!4v1620016679034!5m2!1sen!2sau" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
-		</div>
 	</div>
 
 

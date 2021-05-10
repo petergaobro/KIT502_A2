@@ -9,7 +9,7 @@ Group 3 last edit 26/03/2021 -->
 
     <title>KIT_502_web_dev</title>
     <link rel="stylesheet" type="text/css" href="./css/home.css">
-    <link rel="stylesheet" type="text/css" href="./css/booking.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/booking.css"> -->
     <!-- <link rel="stylesheet" type="text/css" href="./css/popup_window.css"> -->
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
@@ -33,7 +33,7 @@ Group 3 last edit 26/03/2021 -->
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
-        </a> -->
+        </a > -->
         <div class="nav_links">
             <ul class="list_nav">
                 <li><a class="active_nav" href="./home.php">Home</a></li>
@@ -43,13 +43,13 @@ Group 3 last edit 26/03/2021 -->
                     <div class="sub_user">
                         <ul>
                             <li><a href="./customer/customer_login.php">Login</a></li>
-                            <!-- <li><a onclick="do_logout()" href="../html/login_reg.html">Logout</a></li> -->
+                            <!-- <li><a onclick="do_logout()" href="../html/login_reg.html">Logout</a ></li> -->
                             <li><a href="./customer/review.php">Review</a></li>
                         </ul>
                     </div>
                 </li>
                 <li><a href="./admin/admin_login.php"><button id="do_admin_login" type="button" class="btn btn-dark" onclick="do_admin_login()">Admin</button></a></li>
-                <!-- <li><a><button id="open" type="button" class="btn btn-info">Search Now</button></a></li> -->
+                <!-- <li><a><button id="open" type="button" class="btn btn-info">Search Now</button></a ></li> -->
             </ul>
         </div>
         <!-- <script src="../js/toggle_bar.js" defer></script> -->
@@ -70,23 +70,23 @@ Group 3 last edit 26/03/2021 -->
             </div>
             <div class="img_container" id="first">
                 <img src="./img/gallery/hotel_1.jpeg">
-                <p class="text_form">Ithaa, Location: Rangali Island, Maldives</p>
+                    <p class="text_form">Ithaa, Location: Rangali Island, Maldives</p>
             </div>
             <div class="img_container">
                 <img src="./img/gallery/hotel_2.jpg">
-                <p class="text_form">Parallax Restaurant, Location: Mammoth Lakes, California</p>
+                    <p class="text_form">Parallax Restaurant, Location: Mammoth Lakes, California</p>
             </div>
             <div class="img_container">
                 <img src="./img/gallery/hotel_3.jpg">
-                <p class="text_form">Sur un Arbre Perché, Location: Paris, France</p>
+                    <p class="text_form">Sur un Arbre Perché, Location: Paris, France</p>
             </div>
             <div class="img_container">
                 <img src="./img/gallery/hotel_4.jpg">
-                <p class="text_form">Eternity, Location: Truskavets, Ukraine</p>
+                    <p class="text_form">Eternity, Location: Truskavets, Ukraine</p>
             </div>
             <div class="img_container">
                 <img src="./img/gallery/hotel_5.jpg">
-                <p class="text_form">The Disaster Café, Location: Loloret de Mar, Spain</p>
+                    <p class="text_form">The Disaster Café, Location: Loloret de Mar, Spain</p>
             </div>
 
             <!-- booking button -->
@@ -128,22 +128,30 @@ Group 3 last edit 26/03/2021 -->
     <div class="social_main">
         <div class="social_container">
             <li>
-                <a href="https://www.facebook.com/UniversityofTasmania/"><img src="./img/footer_social/fb.png" alt=""></a>
+                <a href="https://www.facebook.com/UniversityofTasmania/">
+                    <img src="./img/footer_social/fb.png" alt="">
+                </a>
             </li>
         </div>
         <div class="social_container">
             <li>
-                <a href="https://www.instagram.com/universityoftasmania/?hl=en"><img src="./img/footer_social/ins.png" alt=""></a>
+                <a href="https://www.instagram.com/universityoftasmania/?hl=en">
+                    <img src="./img/footer_social/ins.png" alt="">
+                </a>
             </li>
         </div>
         <div class="social_container">
             <li>
-                <a href="https://twitter.com/UTAS_?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><img src="./img/footer_social/twitter.webp" alt=""></a>
+                <a href="https://twitter.com/UTAS_?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                    <img src="./img/footer_social/twitter.webp" alt="">
+                </a>
             </li>
         </div>
         <div class="social_container">
             <li>
-                <a href="https://www.youtube.com/channel/UCnSDAnLD6JDC7C5ZVaKbC2g"><img src="./img/footer_social/youtube.jpeg" alt=""></a>
+                <a href="https://www.youtube.com/channel/UCnSDAnLD6JDC7C5ZVaKbC2g">
+                    <img src="./img/footer_social/youtube.jpeg" alt="">
+                </a>
             </li>
         </div>
     </div>
@@ -157,8 +165,8 @@ Group 3 last edit 26/03/2021 -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./js/home.js"></script>
     <!-- <script src="./js/search_pop.js"></script> -->
-    <script src="./js/admin_pop.js"></script>
-    <script src="./js/booking.js"></script>
+    <!-- <script src="./js/admin_pop.js"></script> -->
+    <!-- <script src="./js/booking.js"></script> -->
 </body>
 
 </html>

@@ -1,4 +1,5 @@
 <?php include('booking_server.php');
+include "../db_conn.php";
 
 
 // echo $_GET['Checkin'];
@@ -17,42 +18,11 @@ if (isset($_GET['Guest'])) {
     $con_guest = $_GET['Guest'];
 }
 
+if (isset($_GET['Price'])) {
 
+    $house_price = $_GET['Price'];
+}
 
-// session_start();
-// include "../db_conn.php";
-
-// $house_city = "";
-// $house_checkin = "";
-// $house_checkout = "";
-// $house_guest = "";
-
-// $b_first_name = "";
-// $b_last_name = "";
-// $b_email = "";
-// $b_mobile = "";
-// $errors = array();
-
-// if (isset($_GET['id'])) {
-
-//     function validate($data)
-//     {
-//         $data = trim($data);
-//         $data = stripslashes($data);
-//         $data = htmlspecialchars($data);
-//         return $data;
-//     }
-
-//     $id = validate($_GET['id']);
-
-//     $sql = "SELECT * FROM house WHERE id=$id";
-//     $result = mysqli_query($db, $sql);
-//     if (mysqli_num_rows($result) > 0) {
-//         $row = mysqli_fetch_assoc($result);
-//     } else {
-//         header("Location: ../login_book.php");
-//     }
-// }
 ?>
 
 
@@ -74,6 +44,7 @@ if (isset($_GET['Guest'])) {
     <form method="post" action="confirm_booking.php">
 
         <?php include('../errors.php'); ?>
+        <input type="text" name="id" value="<?php echo $id; ?>" ; hidden>
         <div class="input-group">
             <label>Check in date</label>
             <input type="text" readonly="readonly" name="con_checkin" value="<?php echo $con_checkin; ?>">
@@ -89,6 +60,10 @@ if (isset($_GET['Guest'])) {
             <!-- <input type="text" name="b_first_name" value=""> -->
         </div>
 
+        <div class="input-group">
+            <label>Price</label>
+            <input type="text" readonly="readonly" name="house_price" value="<?php echo $house_price; ?>">
+        </div>
 
         <div class="input-group">
             <label>First name</label>
@@ -117,6 +92,7 @@ if (isset($_GET['Guest'])) {
             <button type="submit" class="btn btn-primary" name="confirm_book">Confirm</button>
             <a href="./review.php" class="link-primary">Review</a>
         </div>
+        
     </form>
 </body>
 

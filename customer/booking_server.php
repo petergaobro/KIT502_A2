@@ -3,9 +3,10 @@ session_start();
 // connect to the database
 include "../db_conn.php";
 
-$con_checkin= "";
+$con_checkin = "";
 $con_checkout = "";
 $con_guest = "";
+$house_price = "";
 $b_first_name = "";
 $b_last_name = "";
 $b_email = "";
@@ -15,14 +16,11 @@ $errors = array();
 
 // confirm booking
 if (isset($_POST['confirm_book'])) {
-    // $house_city = mysqli_real_escape_string($db, $_POST['house_city']);
-    // $house_checkin = mysqli_real_escape_string($db, $_POST['house_checkin']);
-    // $house_checkout = mysqli_real_escape_string($db, $_POST['house_checkout']);
-    // $house_guest = mysqli_real_escape_string($db, $_POST['house_guest']);
-    // receive all input values from the form
+
     $con_checkin = mysqli_real_escape_string($db, $_POST['con_checkin']);
     $con_checkout = mysqli_real_escape_string($db, $_POST['con_checkout']);
     $con_guest = mysqli_real_escape_string($db, $_POST['con_guest']);
+    $house_price = mysqli_real_escape_string($db, $_POST['house_price']);
     $b_first_name = mysqli_real_escape_string($db, $_POST['b_first_name']);
     $b_last_name = mysqli_real_escape_string($db, $_POST['b_last_name']);
     $b_email = mysqli_real_escape_string($db, $_POST['b_email']);
@@ -42,6 +40,10 @@ if (isset($_POST['confirm_book'])) {
     }
     if (empty($con_guest)) {
         array_push($errors, "Guest is required");
+        // header("Location: ./login_book.php?&error=Guest is required");
+    }
+    if (empty($house_price)) {
+        array_push($errors, "House Price is required");
         // header("Location: ./login_book.php?&error=Guest is required");
     }
     if (empty($b_first_name)) {
@@ -68,6 +70,7 @@ if (isset($_POST['confirm_book'])) {
         $query = "INSERT INTO booking  (con_checkin,
                                         con_checkout,
                                         con_guest,
+                                        con_price,
                                         b_first_name, 
                                         b_last_name, 
                                         b_email, 
@@ -76,6 +79,7 @@ if (isset($_POST['confirm_book'])) {
   			    VALUES ('$con_checkin',
                         '$con_checkout',
                         '$con_guest',
+                        '$house_price',
                         '$b_first_name', 
                         '$b_last_name', 
                         '$b_email', 
@@ -89,19 +93,3 @@ if (isset($_POST['confirm_book'])) {
         //header('location: review.php');
     }
 }
-
-// if (isset($_POST['book_now'])) {
-//     $con_checkin = mysqli_real_escape_string($db, $_POST['con_checkin']);
-//     $con_checkout = mysqli_real_escape_string($db, $_POST['con_checkout']);
-//     $con_guest = mysqli_real_escape_string($db, $_POST['con_guest']);
-
-//     if (empty($con_checkin)) {
-//     header("Location: ./login_book.php?Checkin=$con_checkin&error=Mobile is required");
-//     }
-//     if (empty($con_checkout)) {
-//     header("Location: ./login_book.php?Checkout=$con_checkout&error=Mobile is required");
-//     }
-//     if (empty($con_guest)) {
-//     header("Location: ./login_book.php?Guest=$con_guest&error=Mobile is required");
-//     }
-// }

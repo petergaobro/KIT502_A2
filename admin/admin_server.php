@@ -70,7 +70,7 @@ if (isset($_POST['reg_user'])) {
   if (empty($country)) {
     array_push($errors, "Country is required");
   }
-  if (empty($abn)) {
+  if (empty($abn) AND $type_user==="Host") {
     array_push($errors, "ABN is required");
   }
 

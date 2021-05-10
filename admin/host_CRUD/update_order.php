@@ -57,6 +57,22 @@ if (isset($_GET['id'])) {
         <?php } ?>
         <!-- house id -->
         <input type="text" name="id" value="<?php echo $id; ?>" ; hidden>
+        <div class="input-group">
+            <label>Check in date</label>
+            <input type="text" name="con_checkin" value="<?= $row['con_checkin'] ?>">
+        </div>
+        <div class="input-group">
+            <label>Check out date</label>
+            <input type="text" name="con_checkout" value="<?= $row['con_checkout'] ?>">
+        </div>
+        <div class="input-group">
+            <label>Guest</label>
+            <input type="text" name="con_guest" value="<?= $row['con_guest'] ?>">
+        </div>
+        <div class="input-group">
+            <label>Price</label>
+            <input type="text" name="con_price" value="<?= $row['con_price'] ?>">
+        </div>
         <!-- house name -->
         <div class="input-group">
             <label>First name</label>
@@ -80,12 +96,18 @@ if (isset($_GET['id'])) {
         <!-- booking status-->
         <div class="input-group">
             <label>Status</label>
-            <select class="country" name="b_status" value="<?= $row['b_status'] ?>"><br>
-                <option selected value="In process">In process</option>
+            <select class="country" id="status" name="b_status"><br>
+                <option select value=""></option>
+                <option value="In process">In process</option>
                 <!-- <option value="in process">In process</option> -->
                 <option value="Approve">Approve</option>
                 <option value="Reject">Reject</option>
             </select><br>
+        </div>
+
+        <div class="input-group" id="reason">
+            <label>Reason</label>
+            <textarea type="text" name="b_reason" value="<?= $row['b_reason'] ?>"></textarea>
         </div>
 
 
@@ -94,9 +116,8 @@ if (isset($_GET['id'])) {
             <button type="submit" class="btn btn-primary" name="edit_order">Update</button>
         </div>
     </form>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="../../js/booking.js"></script>
+
 </body>
+<script src="../../js/reject_reason.js"></script>
 
 </html>

@@ -1,0 +1,361 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-size: 120%;
+    background: #F8F8FF;
+}
+
+.header {
+    width: 30%;
+    margin: 50px auto 0px;
+    color: white;
+    background: #5F9EA0;
+    text-align: center;
+    border: 1px solid #B0C4DE;
+    border-bottom: none;
+    border-radius: 10px 10px 0px 0px;
+    padding: 20px;
+}
+
+form,
+.content {
+    width: 30%;
+    margin: 0px auto;
+    padding: 20px;
+    border: 1px solid #B0C4DE;
+    background: white;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.input-group {
+    margin: 10px 0px 10px 0px;
+}
+
+.input-group label {
+    display: block;
+    text-align: left;
+    margin: 3px;
+}
+
+.input-group input {
+    height: 30px;
+    width: 93%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.btn {
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+    background: #5F9EA0;
+    border: none;
+    border-radius: 5px;
+}
+
+.error {
+    width: 92%;
+    margin: 0px auto;
+    padding: 10px;
+    border: 1px solid #a94442;
+    color: #a94442;
+    background: #f2dede;
+    border-radius: 5px;
+    text-align: left;
+}
+
+.success {
+    color: #3c763d;
+    background: #dff0d8;
+    border: 1px solid #3c763d;
+    margin-bottom: 20px;
+}
+
+
+/* KIT 502
+Group 3 last edit 26/03/2021 */
+
+
+/* import font google css API */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+.db_sider {
+    width: 250px;
+    position: fixed;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #191970;
+}
+
+.db_brand {
+    height: 200px;
+    width: 250px;
+    padding: 16px 10px 15px 45px;
+    color: #fff;
+}
+
+.db_brand img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.db_brand span {
+    display: inline-block;
+    padding-right: 20px;
+}
+
+.sider_bar_menu {
+    margin-top: 16px;
+}
+
+.active_fun {
+    height: 40px;
+    padding-top: 8px;
+    cursor: pointer;
+}
+
+.sider_bar_menu li {
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 32px;
+    margin-bottom: 32px;
+}
+
+.sider_bar_menu a {
+    padding-left: 16px;
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.sider_bar_menu ul li a:hover {
+    background: #fff;
+    color: #191970;
+    border-radius: 30px 0px 0px 30px;
+}
+
+
+/* responsive */
+
+.sider_bar_menu a span:first-child {
+    font-size: 20px;
+    padding-right: 16px;
+}
+
+.main_container {
+    background-color: #fff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 25px;
+    box-shadow: 2px 2px 15px #888888;
+}
+
+header h2 {
+    color: #222;
+}
+
+header label span {
+    font-size: 25px;
+    padding-right: 16px;
+}
+
+.user_bar {
+    display: flex;
+    align-items: center;
+}
+
+.user_bar img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+.user_bar h6 {
+    display: inline-block;
+    color: #191970;
+}
+
+main {
+    padding: 32px 24px;
+    min-height: 100vh;
+}
+
+.dash_card_container ul {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 32px;
+}
+
+.dash_card_container ul li {
+    cursor: pointer;
+}
+
+.dash_card_container ul li a {
+    color: #191970;
+}
+
+.dash_card_container ul li:hover {
+    background: #191970;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.dash_card_container ul li a:hover {
+    color: #fff;
+}
+
+.dash_card {
+    border: 1px solid #191970;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#user_content,
+#order_content,
+#house_content,
+#review_content,
+#rate_content,
+#q_n_a_content {
+    color: #191970;
+    margin-top: 20px;
+    width: 100%;
+    height: 20px;
+    display: none;
+}
+
+.edit_form {
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.tab {
+    float: left;
+    margin-top: 40px;
+}
+
+.tab_create {
+    margin-bottom: 50px;
+    color: #191970;
+}
+
+.tab_create input {
+    display: block;
+    margin-bottom: 10px
+}
+
+#edit_btn {
+    margin-left: 65px;
+}
+
+input::placeholder {
+    color: #222 !important;
+}
+
+
+/* tr {
+    transition: all .25s ease-in-out
+} */
+
+
+/* tr:hover {
+    background-color: #EEE;
+    cursor: pointer
+} */
+
+
+/* table {
+    width: 100%;
+} */
+
+
+/* table, */
+
+th,
+td {
+    border: 1px solid #191970;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 5px;
+    text-align: left;
+    color: #191970;
+}
+
+#review_table tr,
+#host_table tr,
+#host_add_table tr:nth-child(even) {
+    background-color: #fff;
+}
+
+#review_table,
+#host_table,
+#host_add_table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+#review_table tr th,
+#host_table tr th,
+#host_add_table tr th {
+    background-color: rgba(25, 25, 112, 0.5);
+    color: white;
+}
+
+#host_add_table {
+    margin-top: 2rem;
+}
+
+#host_table {
+    margin-top: 2rem;
+}
+
+
+/* host table shadow */
+
+#host_table #host_shadow {
+    transition: all .25s ease-in-out;
+}
+
+#host_table #host_shadow:hover {
+    background-color: wheat;
+    cursor: pointer;
+}
+
+
+/* add host table shadow */
+
+#host_add_table #host_shadow {
+    transition: all .25s ease-in-out;
+}
+
+#host_add_table #host_add_shadow:hover {
+    background-color: wheat;
+    cursor: pointer;
+}
+
+.de_add_btn {
+    text-align: center;
+}

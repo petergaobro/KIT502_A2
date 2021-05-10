@@ -1,73 +1,71 @@
-<?php
-include "./host_CRUD/read_house.php";
-include "./host_CRUD/read_order.php";
-include "./host_CRUD/read_review.php";
-session_start();
-
-if (!isset($_SESSION['username'])) {
-    $_SESSION['msg'] = "You must log in first";
-    header('location: admin_login.php');
-}
-if (isset($_GET['logout'])) {
-    session_destroy();
-    unset($_SESSION['username']);
-    header("location: admin_login.php");
-}
-?>
-<!DOCTYPE html>
-<html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" type="text/css" href="../css/customer_profile.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/footer.css">
+    <link rel="stylesheet" type="text/css" href="../css/login_reg.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- link css file and font style -->
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <link rel="stylesheet" href="../css/dashboard.css" />
+    <!-- <link rel="stylesheet" href="../css/dashboard.css" /> -->
     <link rel="stylesheet" href="../css/system_CRUD.css" />
-    <title>UTas host dashboard</title>
+    <title>Profile</title>
 </head>
 
 <body>
-    <!-- sider nav bar -->
-    <div class="db_sider">
-        <div class="db_brand">
-            <h2><span class="las la-hotel"></span>Utas Hotel</h2>
+    <!---------------part 1-------------------->
+    <div class="covid_div">
+        <aside class="covid_notice">
+            <a class="covid_news" href="https://www.australia.gov.au/">
+                <span class="covid_words">Get the latest on our COVID-19 response</span>
+            </a>
+        </aside>
+    </div>
+
+    <nav class="nav_bar">
+        <div class="logo">
+            <p>UTas</p>
+            <p>Accommodation</p>
         </div>
-        <!-- <div class="db_brand">
-            <img src="../img/logo/logo.png" alt="">
-        </div> -->
-        <div class="sider_bar_menu">
-            <ul>
-                <li>
-                    <a class="active_fun" onclick="house_tab()"><span class="las la-users"></span>
-                        <span>House</span></a>
+        <!-- <a href="#" class="toggle_btn">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a> -->
+        <div class="nav_links">
+            <ul class="list_nav">
+                <li><a class="active_nav" href="../home.php">Home</a></li>
+                <li><a class="active_nav" href="../customer/booking.php">Book</a></li>
+                <li><a class="active_nav" href="#">Customer</a>
+                    <!-- sub user bar -->
+                    <div class="sub_user">
+                        <ul>
+                            <li><a href="../customer/customer_login.php">Login</a></li>
+                            <!-- <li><a onclick="do_logout()" href="../html/login_reg.html">Logout</a></li> -->
+                            <li><a href="../customer/review.php">Review</a></li>
+                            <li>
+                                <a href="customer_login.php?logout='1'" class="active_fun">
+                                    <span>Logout</span></a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
-                <li>
-                    <a class="active_fun" onclick="order_tab()"><span class="las la-list-alt"></span>
-                        <span>Orders</span></a>
-                </li>
-                <li>
-                    <a class="active_fun" onclick="rate_tab()"><span class="las la-list-alt"></span>
-                        <span>Rates</span></a>
-                </li>
-                <li>
-                    <a href="admin_login.php?logout='1'" class="active_fun"><span class="las la-hotel"></span>
-                        <span>Logout</span></a>
-                </li>
+                <!-- <li><a><button id="open" type="button" class="btn btn-info">Search Now</button></a></li> -->
             </ul>
         </div>
-    </div>
+    </nav>
+
+
     <div class="main_container">
         <header>
             <h2>
                 <label for="">
                     <span class="las la-bars"></span>
-                </label> Dashboard
+                </label> Profile
             </h2>
             <!-- user nav bar -->
             <div class="user_bar">
-                <img src="../img/dashboard/user_icon.webp" alt="">
                 <div>
                     <!-- notification message -->
                     <?php if (isset($_SESSION['success'])) : ?>
@@ -84,7 +82,7 @@ if (isset($_GET['logout'])) {
                     <?php if (isset($_SESSION['username'])) : ?>
                         <h3>Welcome <?php echo $_SESSION['username']; ?></h3>
                     <?php endif ?>
-                    <h6>Host</h6>
+                    <h6>Customer</h6>
                 </div>
             </div>
         </header>
@@ -95,11 +93,7 @@ if (isset($_GET['logout'])) {
                         <a onclick="house_tab()">
                             <div class="dash_card">
                                 <div>
-                                    <h1>10</h1>
-                                    <span>House</span>
-                                </div>
-                                <div>
-                                    <span class="las la-users"></span>
+                                    <h1>Person details</h1>
                                 </div>
                             </div>
                         </a>
@@ -108,11 +102,7 @@ if (isset($_GET['logout'])) {
                         <a onclick="order_tab()">
                             <div class="dash_card">
                                 <div>
-                                    <h1>10</h1>
-                                    <span>Orders</span>
-                                </div>
-                                <div>
-                                    <span class="las la-users"></span>
+                                    <h1>Order History</h1>
                                 </div>
                             </div>
                         </a>
@@ -121,11 +111,7 @@ if (isset($_GET['logout'])) {
                         <a onclick="rate_tab()">
                             <div class="dash_card">
                                 <div>
-                                    <h1>10</h1>
-                                    <span>Rates</span>
-                                </div>
-                                <div>
-                                    <span class="las la-list-alt"></span>
+                                    <h1>Rate</h1>
                                 </div>
                             </div>
                         </a>
@@ -136,7 +122,7 @@ if (isset($_GET['logout'])) {
             <div class="tab" id="house_content">
                 <div class="container">
                     <div class="box_customer">
-                        <h4 class="display-4 text-center">House</h4><br>
+                        <h4 class="display-4 text-center">Personal Details</h4><br>
                         <?php if (isset($_GET['success'])) { ?>
                             <div class="alert alert-success" role="alert">
                                 <?php echo $_GET['success']; ?>
@@ -146,24 +132,12 @@ if (isset($_GET['logout'])) {
                             <table class="table table-striped">
                                 <thead>
                                     <tr>
-                                        <th scope="col">Order.NO</th>
-                                        <th scope="col">ID.NO</th>
-                                        <th scope="col">House name</th>
-                                        <th scope="col">House description</th>
-                                        <th scope="col">House address</th>
-                                        <th scope="col">House city</th>
-                                        <th scope="col">House price</th>
-                                        <th scope="col">Num. guest</th>
-                                        <th scope="col">Num. room</th>
-                                        <th scope="col">Num. bathroom</th>
-                                        <th scope="col">Check in</th>
-                                        <th scope="col">Check out</th>
-                                        <th scope="col">Entire house?</th>
-                                        <th scope="col">Garage</th>
-                                        <th scope="col">Smoking</th>
-                                        <th scope="col">Internet</th>
-                                        <th scope="col">Pet</th>
-                                        <th scope="col">Image</th>
+                                        <th scope="col">User Name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">First Name</th>
+                                        <th scope="col">Last Name</th>
+                                        <th scope="col">Country</th>
+                                        <th scope="col">Password</th>
                                         <th scope="col">Action</th>
                                     </tr>
                                 </thead>
@@ -224,16 +198,11 @@ if (isset($_GET['logout'])) {
                                     <tr>
                                         <th scope="col">Order.NO</th>
                                         <th scope="col">ID.NO</th>
-                                        <th scope="col">Check in date</th>
-                                        <th scope="col">Check out date</th>
-                                        <th scope="col">Guest</th>
-                                        <th scope="col">Price</th>
                                         <th scope="col">First name</th>
                                         <th scope="col">Last name</th>
                                         <th scope="col">Email</th>
                                         <th scope="col">Mobile</th>
                                         <th scope="col">Status</th>
-                                        <th scope="col">Reason</th>
                                         <th scope="col">Action</th>
                                     </tr>
                                 </thead>
@@ -246,16 +215,11 @@ if (isset($_GET['logout'])) {
                                         <tr>
                                             <th scope="row"><?= $i ?></th>
                                             <th scope="row"><?= $rows['id'] ?></th>
-                                            <td><?php echo $rows['con_checkin']; ?></td>
-                                            <td><?php echo $rows['con_checkout']; ?></td>
-                                            <td><?php echo $rows['con_guest']; ?></td>
-                                            <td><?php echo $rows['con_price']; ?></td>
                                             <td><?php echo $rows['b_first_name']; ?></td>
                                             <td><?php echo $rows['b_last_name']; ?></td>
                                             <td><?php echo $rows['b_email']; ?></td>
                                             <td><?php echo $rows['b_mobile']; ?></td>
                                             <td><?php echo $rows['b_status']; ?></td>
-                                            <td><?php echo $rows['b_reason']; ?></td>
                                             <td><a href="./host_CRUD/update_order.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
                                             </td>
                                         </tr>
@@ -303,7 +267,7 @@ if (isset($_GET['logout'])) {
                                     <?php } ?>
                                 </tbody>
                             </table>
-                        <h4 class="display-4 text-center">Average Rates</h4><br>
+                            <h4 class="display-4 text-center">Average Rates</h4><br>
                         <?php } ?>
                     </div>
                 </div>

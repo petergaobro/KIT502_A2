@@ -321,3 +321,60 @@ span {
     justify-content: center;
     flex-wrap: wrap;
 }
+
+.social_main {
+    text-align: center;
+}
+
+.social_container {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+.social_container li {
+    list-style: none;
+}
+
+.social_container img {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.covid_div {
+    margin-top: 0;
+    position: relative;
+    display: block;
+    height: 60px;
+    background-color: #222222;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.covid_notice {
+    text-align: center;
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.covid_news {
+    text-decoration-color: #a3a3a3;
+}
+
+.covid_words {
+    color: #a3a3a3;
+}
+
+.contact_word h1 {
+    color: #fff;
+    /* align-items: center; */
+    text-align: center;
+}
+
+.contact_word p {
+    color: #fff;
+    /* align-items: center; */
+    text-align: center;
+}
