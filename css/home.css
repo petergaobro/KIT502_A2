@@ -498,15 +498,19 @@ body {
     margin-left: calc((100% - 90%) / 2);
 }
 
-.footer_container {
-    position: relative;
-    width: 100%;
-    height: auto;
+.contact_word h1 {
+    color: black;
+    /* align-items: center; */
+    text-align: center;
 }
 
-.about_us {
+.contact_word p {
     color: black;
-    align-items: center;
+    /* align-items: center; */
+    text-align: center;
+}
+
+.google_map {
     text-align: center;
 }
 

@@ -9,7 +9,7 @@ Group 3 last edit 26/03/2021 -->
 
     <title>KIT_502_web_dev</title>
     <link rel="stylesheet" type="text/css" href="./css/home.css">
-    <link rel="stylesheet" type="text/css" href="./css/booking.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./css/booking.css"> -->
     <!-- <link rel="stylesheet" type="text/css" href="./css/popup_window.css"> -->
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
@@ -157,8 +157,8 @@ Group 3 last edit 26/03/2021 -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./js/home.js"></script>
     <!-- <script src="./js/search_pop.js"></script> -->
-    <script src="./js/admin_pop.js"></script>
-    <script src="./js/booking.js"></script>
+    <!-- <script src="./js/admin_pop.js"></script> -->
+    <!-- <script src="./js/booking.js"></script> -->
 </body>
 
 </html>
