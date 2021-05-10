@@ -240,7 +240,7 @@ if (isset($_GET['logout'])) {
 						<?php echo $row->house_price ?>
 						<!-- <button type="button" class="Book_btn">book now</button> -->
 
-						<a  name="book_now" href="./confirm_booking.php?Checkin=<?php echo $b_checkin ?> & Checkout=<?php echo $b_checkout ?> & Guest=<?php echo $b_guest ?>"><input type="submit"></a>
+						<a  name="book_now" href="./confirm_booking.php?Checkin=<?php echo $b_checkin ?> & Checkout=<?php echo $b_checkout ?> & Guest=<?php echo $b_guest ?> & Price=<?php echo $row->house_price ?>"><input type="submit"></a>
 
 
 					</td>

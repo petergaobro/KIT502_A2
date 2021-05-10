@@ -57,6 +57,22 @@ if (isset($_GET['id'])) {
         <?php } ?>
         <!-- house id -->
         <input type="text" name="id" value="<?php echo $id; ?>" ; hidden>
+        <div class="input-group">
+            <label>First name</label>
+            <input type="text" name="con_checkin" value="<?= $row['con_checkin'] ?>">
+        </div>
+        <div class="input-group">
+            <label>First name</label>
+            <input type="text" name="con_checkout" value="<?= $row['con_checkout'] ?>">
+        </div>
+        <div class="input-group">
+            <label>First name</label>
+            <input type="text" name="con_guest" value="<?= $row['con_guest'] ?>">
+        </div>
+        <div class="input-group">
+            <label>Price</label>
+            <input type="text" name="con_price" value="<?= $row['con_price'] ?>">
+        </div>
         <!-- house name -->
         <div class="input-group">
             <label>First name</label>

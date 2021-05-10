@@ -223,6 +223,10 @@ if (isset($_GET['logout'])) {
                                     <tr>
                                         <th scope="col">Order.NO</th>
                                         <th scope="col">ID.NO</th>
+                                        <th scope="col">Check in date</th>
+                                        <th scope="col">Check out date</th>
+                                        <th scope="col">Guest</th>
+                                        <th scope="col">Price</th>
                                         <th scope="col">First name</th>
                                         <th scope="col">Last name</th>
                                         <th scope="col">Email</th>
@@ -240,6 +244,10 @@ if (isset($_GET['logout'])) {
                                         <tr>
                                             <th scope="row"><?= $i ?></th>
                                             <th scope="row"><?= $rows['id'] ?></th>
+                                            <td><?php echo $rows['con_checkin']; ?></td>
+                                            <td><?php echo $rows['con_checkout']; ?></td>
+                                            <td><?php echo $rows['con_guest']; ?></td>
+                                            <td><?php echo $rows['con_price']; ?></td>
                                             <td><?php echo $rows['b_first_name']; ?></td>
                                             <td><?php echo $rows['b_last_name']; ?></td>
                                             <td><?php echo $rows['b_email']; ?></td>
