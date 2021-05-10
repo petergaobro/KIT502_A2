@@ -59,39 +59,39 @@ if (isset($_GET['id'])) {
         <input type="text" name="id" value="<?php echo $id; ?>" ; hidden>
         <div class="input-group">
             <label>First name</label>
-            <input type="text" name="con_checkin" value="<?= $row['con_checkin'] ?>">
+            <input type="text" readonly="readonly" name="con_checkin" value="<?= $row['con_checkin'] ?>">
         </div>
         <div class="input-group">
             <label>First name</label>
-            <input type="text" name="con_checkout" value="<?= $row['con_checkout'] ?>">
+            <input type="text" readonly="readonly" name="con_checkout" value="<?= $row['con_checkout'] ?>">
         </div>
         <div class="input-group">
             <label>First name</label>
-            <input type="text" name="con_guest" value="<?= $row['con_guest'] ?>">
+            <input type="text" readonly="readonly" name="con_guest" value="<?= $row['con_guest'] ?>">
         </div>
         <div class="input-group">
             <label>Price</label>
-            <input type="text" name="con_price" value="<?= $row['con_price'] ?>">
+            <input type="text" readonly="readonly" name="con_price" value="<?= $row['con_price'] ?>">
         </div>
         <!-- house name -->
         <div class="input-group">
             <label>First name</label>
-            <input type="text" name="b_first_name" value="<?= $row['b_first_name'] ?>">
+            <input type="text" readonly="readonly" name="b_first_name" value="<?= $row['b_first_name'] ?>">
         </div>
         <!-- house description -->
         <div class="input-group">
             <label>Last name</label>
-            <input type="text" name="b_last_name" value="<?= $row['b_last_name'] ?>">
+            <input type="text" readonly="readonly" name="b_last_name" value="<?= $row['b_last_name'] ?>">
         </div>
         <!-- house address -->
         <div class="input-group">
             <label>Email</label>
-            <input type="text" name="b_email" value="<?= $row['b_email'] ?>">
+            <input type="text" readonly="readonly" name="b_email" value="<?= $row['b_email'] ?>">
         </div>
         <!-- house price -->
         <div class="input-group">
             <label>Mobile</label>
-            <input type="text" name="b_mobile" value="<?= $row['b_mobile'] ?>">
+            <input type="text" readonly="readonly" name="b_mobile" value="<?= $row['b_mobile'] ?>">
         </div>
         <!-- booking status-->
         <div class="input-group">
