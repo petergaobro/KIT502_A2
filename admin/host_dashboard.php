@@ -232,6 +232,7 @@ if (isset($_GET['logout'])) {
                                         <th scope="col">Email</th>
                                         <th scope="col">Mobile</th>
                                         <th scope="col">Status</th>
+                                        <th scope="col">Reason</th>
                                         <th scope="col">Action</th>
                                     </tr>
                                 </thead>
@@ -253,6 +254,7 @@ if (isset($_GET['logout'])) {
                                             <td><?php echo $rows['b_email']; ?></td>
                                             <td><?php echo $rows['b_mobile']; ?></td>
                                             <td><?php echo $rows['b_status']; ?></td>
+                                            <td><?php echo $rows['b_reason']; ?></td>
                                             <td><a href="./host_CRUD/update_order.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
                                             </td>
                                         </tr>

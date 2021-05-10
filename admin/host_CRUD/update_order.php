@@ -96,23 +96,30 @@ if (isset($_GET['id'])) {
         <!-- booking status-->
         <div class="input-group">
             <label>Status</label>
-            <select class="country" name="b_status" value="<?= $row['b_status'] ?>"><br>
-                <option selected value="In process">In process</option>
+            <select class="country" id="status" name="b_status"><br>
+                <option select value=""></option>
+                <option value="In process">In process</option>
                 <!-- <option value="in process">In process</option> -->
                 <option value="Approve">Approve</option>
                 <option value="Reject">Reject</option>
             </select><br>
         </div>
 
+        <div class="input-group" id="reason">
+            <label>Reason</label>
+            <textarea type="text" name="b_reason" value="<?= $row['b_reason'] ?>"></textarea>
+        </div>
 
         <!-- button  -->
         <div class="input-group">
             <button type="submit" class="btn btn-primary" name="edit_order">Update</button>
         </div>
+
     </form>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="../../js/booking.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+
 </body>
+<script src="../../js/reject_reason.js"></script>
 
 </html>

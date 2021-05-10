@@ -106,7 +106,8 @@ CREATE TABLE `booking` (
     `b_last_name` varchar(100) NOT NULL,
     `b_email` varchar(100) NOT NULL,
     `b_mobile` varchar(100) NOT NULL,
-    `b_status` varchar(100) NOT NULL
+    `b_status` varchar(100) NOT NULL,
+    `b_reason` varchar(100) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 INSERT INTO `booking` (
         `id`,
@@ -118,7 +119,8 @@ INSERT INTO `booking` (
         `b_last_name`,
         `b_email`,
         `b_mobile`,
-        `b_status`
+        `b_status`,
+        `b_reason`
     )
 VALUES (
         1,
@@ -130,7 +132,8 @@ VALUES (
         'GAO',
         'peter@gmail.com',
         '0426612390',
-        'in process'
+        'in process',
+        'Good'
     );
 ALTER TABLE `users_customer`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,
