@@ -135,7 +135,7 @@ VALUES (
         'in process',
         'Good'
     );
-ALTER TABLE `users_customer`
+ALTER TABLE `booking`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,
     AUTO_INCREMENT = 2;
 COMMIT;

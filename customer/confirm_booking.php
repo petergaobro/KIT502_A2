@@ -86,6 +86,11 @@ if (isset($_GET['Price'])) {
             <!-- <label>Mobile</label> -->
             <input type="text" name="b_status" value="In process" ; hidden>
         </div>
+
+        <div class="input-group">
+            <!-- <label>Mobile</label> -->
+            <input type="text" name="b_reason" value="" ; hidden>
+        </div>
         <div class="input-group">
 
             <!-- <button type="submit" class="btn btn-primary" name="edit_cust">Update</button> -->

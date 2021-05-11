@@ -200,10 +200,6 @@ if (isset($_GET['logout'])) {
 			<div class="Bk_tab">
 				<input type="submit" class="Search_btn" value="Search" name="search_client">
 			</div>
-
-			
-
-
 		</form>
 	</div>
 

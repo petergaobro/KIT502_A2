@@ -12,6 +12,7 @@ $b_last_name = "";
 $b_email = "";
 $b_mobile = "";
 $b_status = "";
+$b_reason = "";
 $errors = array();
 
 // confirm booking
@@ -26,6 +27,7 @@ if (isset($_POST['confirm_book'])) {
     $b_email = mysqli_real_escape_string($db, $_POST['b_email']);
     $b_mobile = mysqli_real_escape_string($db, $_POST['b_mobile']);
     $b_status = mysqli_real_escape_string($db, $_POST['b_status']);
+    $b_reason = mysqli_real_escape_string($db, $_POST['b_reason']);
     // form validation: ensure that the form is correctly filled ...
     // by adding (array_push()) corresponding error unto $errors array
 
@@ -75,7 +77,8 @@ if (isset($_POST['confirm_book'])) {
                                         b_last_name, 
                                         b_email, 
                                         b_mobile,
-                                        b_status) 
+                                        b_status,
+                                        b_reason) 
   			    VALUES ('$con_checkin',
                         '$con_checkout',
                         '$con_guest',
@@ -84,7 +87,8 @@ if (isset($_POST['confirm_book'])) {
                         '$b_last_name', 
                         '$b_email', 
                         '$b_mobile',
-                        '$b_status')";
+                        '$b_status',
+                        '$b_reason')";
 
         echo $query;
         mysqli_query($db, $query);
