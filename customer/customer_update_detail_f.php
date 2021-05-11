@@ -34,7 +34,7 @@ if (isset($_POST['edit_customer_profile'])) {
     // by adding (array_push()) corresponding error unto $errors array
     
     if (empty($c_mobile)) {
-        header("Location: ./customer_update_detail.php?id=$id&error=Passwords do not match");
+        header("Location: ./customer_update_detail.php?id=$id&error=Moblie is reuqired");
     }
     // } else if (!preg_match($c_pattern_detail, $c_password)) {
     //     header("Location: ./customer_update_detail.php?id=$id&error=Your Password  length Must be 6-12 and must contain 1 letter, 1 number, 1 capital letter and one of the following special character(!@#$%)");

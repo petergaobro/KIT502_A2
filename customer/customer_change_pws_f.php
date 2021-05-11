@@ -21,18 +21,17 @@ if (isset($_POST['customer_change_pws'])) {
     $c_pattern_detail = '/^(?=.*[!@#$%])(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]).{6,12}$/';
     // form validation: ensure that the form is correctly filled ...
     // by adding (array_push()) corresponding error unto $errors array
-    if ($c_password != $c_password_c) {
-        header("Location: ./customer_update_detail.php?id=$id&error=Passwords do not match");
-    }
-    // } else if (!preg_match($c_pattern_detail, $c_password)) {
+    if (empty($c_password)) {
+        header("Location: ./customer_update_detail.php?id=$id&error=Password is reuqired");
+    } //elseif ($c_password != $c_password_c) {
+    //     array_push($errors, "The two passwords do not match");
+    // } elseif (!preg_match($c_pattern_detail, $c_password)) {
     //     header("Location: ./customer_update_detail.php?id=$id&error=Your Password  length Must be 6-12 and must contain 1 letter, 1 number, 1 capital letter and one of the following special character(!@#$%)");
-    // }else if(count($errors) == 0) {
-    //     $c_password = md5($c_password_c);
     // }
-
-    else {
-        $sql_customer_detail = "UPDATE users_customer  SET c_password = '$c_password', 
-                                    c_address = '$c_address'
+    // if (count($errors) == 0) {
+    //     $c_password = md5($c_password_c);
+    else{
+        $sql_customer_detail = "UPDATE users_customer  SET c_password = '$c_password'
                                 WHERE id = '$id'";
         $result_customer_detail = mysqli_query($db, $sql_customer_detail);
 

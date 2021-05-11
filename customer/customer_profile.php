@@ -149,7 +149,7 @@ if (!isset($_SESSION['c_username'])) {
                                 <thead>
                                     <tr>
                                         <!-- <th scope="col">User ID</th> -->
-                                        <th scope="col">Account ID</th>
+                                        <th scope="col" style="display: none;">Account ID</th>
                                         <th scope="col">User Name</th>
                                         <th scope="col">First Name</th>
                                         <th scope="col">Last Name</th>
@@ -179,22 +179,28 @@ if (!isset($_SESSION['c_username'])) {
                                             <td><?php echo $rows['c_address']; ?></td>
                                             <td><?php echo $rows['c_country']; ?></td>
                                             <td><a href="customer_update_detail.php?id=<?= $rows['id'] ?>" class="btn btn-success">Change Details</a>
-                                                <a href="./customer_change_pws.php?= $rows['id'] ?>" class="btn btn-danger">Change Password</a>
-
                                             </td>
 
                                         </tr>
                                     <?php } ?>
                                 </tbody>
-
                             </table>
+                            <table>
+                                <td>
+                                    <td><a href="./customer_change_pws.php?= $rows['id'] ?>" class="btn btn-danger">Change Password</a></td>
+                                </td>
+                            </table>
+
+
+
+
                         <?php } ?>
                     </div>
                 </div>
             </div>
     </div>
 
-    <!------------------------Orders card----------------->
+    <!------------------------Orders History----------------->
     <div class="tab" id="order_content">
         <div class="container">
             <div class="box_customer">
