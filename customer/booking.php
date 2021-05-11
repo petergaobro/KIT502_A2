@@ -48,7 +48,6 @@
 						<ul>
 							<li><a href="./customer_login.php">Login</a></li>
 							<!-- <li><a onclick="do_logout()" href="../html/login_reg.html">Logout</a></li> -->
-							<li><a href="./review.php">Review</a></li>
 						</ul>
 					</div>
 				</li>

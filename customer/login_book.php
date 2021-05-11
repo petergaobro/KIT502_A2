@@ -84,7 +84,7 @@ if (isset($_GET['logout'])) {
 				<li><a class="active_nav" href="#">Customer</a>
 					<div class="sub_user">
 						<ul>
-							<li><a href="./customer_login.php">Login</a></li>
+							<li><a href="./customer_login.php">Logout</a></li>
 							<li><a href="./review.php">Review</a></li>
 							<!-- <li><a href="customer_login.php?logout='1'">logout</a></li> -->
 						</ul>
