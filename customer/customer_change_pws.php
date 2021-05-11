@@ -45,7 +45,7 @@ if (isset($_GET['id'])) {
 <html>
 
 <head>
-<link rel="stylesheet" type="text/css" href="../css/customer_profile.css">
+    <link rel="stylesheet" type="text/css" href="../css/customer_profile.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../css/footer.css">
     <link rel="stylesheet" type="text/css" href="../css/login_reg.css">
@@ -110,22 +110,18 @@ if (isset($_GET['id'])) {
     </div>
     <form method="post" action="customer_change_pws_f.php">
 
-        <?php if (isset($_GET['error'])) { ?>
-            <div class="alert alert-danger" role="alert">
-                <?php echo $_GET['error']; ?>
-            </div>
-        <?php } ?>
+        <?php include('../errors.php'); ?>
         <!-- User id -->
-        <input type="text" name="id" value="<?php echo $id; ?>" ; hidden> 
+        <input type="text" name="id" value="<?php echo $id; ?>" ; hidden>
         <!-- Password -->
         <div class="input-group">
             <label>Password</label>
-            <input type="c_password_c" name="c_password_c1" value="">
+            <input type="c_password_c" name="c_password_c1">
         </div>
         <!-- Confirm Password -->
         <div class="input-group">
             <label>Confirm Password</label>
-            <input type="c_password_c" name="c_password_c2" value="">
+            <input type="c_password_c" name="c_password_c2">
         </div>
 
         <!-- button  -->
