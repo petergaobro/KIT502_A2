@@ -56,9 +56,9 @@ if (isset($_POST['edit_customer_profile'])) {
         $result_customer_detail = mysqli_query($db, $sql_customer_detail);
 
         if ($result_customer_detail) {
-            header("Location: .customer_profile.php?success=successfully created");
+            header("Location: customer_profile.php?success=successfully created");
         } else {
-            header("Location: .customer_profile.php?error=unknown error occurred&$user_data");
+            header("Location: customer_profile.php?error=unknown error occurred&$user_data");
         }
     }
 
