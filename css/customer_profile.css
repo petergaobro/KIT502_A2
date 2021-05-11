@@ -207,8 +207,20 @@ main {
     grid-gap: 32px;
 }
 
+.main_container h2 {
+    color: #191970;
+}
+
+.user_bar h3 {
+    color: #191970;
+}
+
 .dash_card_container ul li {
     cursor: pointer;
+}
+
+.dash_card_container h1 {
+    color: #191970;
 }
 
 .dash_card_container h1:hover {

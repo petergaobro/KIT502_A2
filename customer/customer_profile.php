@@ -102,7 +102,6 @@ if (!isset($_SESSION['c_username'])) {
                     <?php if (isset($_SESSION['c_username'])) : ?>
                         <h3>Welcome <?php echo $_SESSION['c_username']; ?></h3>
                     <?php endif ?>
-                    <h6>Customer</h6>
                 </div>
             </div>
         </header>
