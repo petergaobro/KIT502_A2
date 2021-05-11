@@ -32,13 +32,15 @@ if (isset($_POST['edit_customer_profile'])) {
     $c_pattern_detail = '/^(?=.*[!@#$%])(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]).{6,12}$/';
     // form validation: ensure that the form is correctly filled ...
     // by adding (array_push()) corresponding error unto $errors array
+    
     if ($c_password != $c_password_c) {
         header("Location: ./customer_update_detail.php?id=$id&error=Passwords do not match");
-    } else if (!preg_match($c_pattern_detail, $c_password)) {
-        header("Location: ./customer_update_detail.php?id=$id&error=Your Password  length Must be 6-12 and must contain 1 letter, 1 number, 1 capital letter and one of the following special character(!@#$%)");
-    }else if(count($errors) == 0) {
-        $c_password = md5($c_password_c);
     }
+    // } else if (!preg_match($c_pattern_detail, $c_password)) {
+    //     header("Location: ./customer_update_detail.php?id=$id&error=Your Password  length Must be 6-12 and must contain 1 letter, 1 number, 1 capital letter and one of the following special character(!@#$%)");
+    // }else if(count($errors) == 0) {
+    //     $c_password = md5($c_password_c);
+    // }
 
     else {
         $sql_customer_detail = "UPDATE users_customer  SET c_username = '$c_username', 
@@ -52,11 +54,7 @@ if (isset($_POST['edit_customer_profile'])) {
 
                                 WHERE id = '$id'";
         $result_customer_detail = mysqli_query($db, $sql_customer_detail);
-        // var_dump($query);
-        // var_dump($result);
-        // mysqli_query($db, $query);
-        // $_SESSION['c_username'] = $c_username;
-        // $_SESSION['success'] = "You are now logged in";
+
         if ($result_customer_detail) {
             header("Location: .customer_profile.php?success=successfully created");
         } else {
