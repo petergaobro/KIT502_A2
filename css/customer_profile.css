@@ -219,14 +219,6 @@ main {
     cursor: pointer;
 }
 
-.dash_card_container h1 {
-    color: #191970;
-}
-
-.dash_card_container h1:hover {
-    color: #fff;
-}
-
 .dash_card_container ul li a {
     color: #191970;
 }
@@ -236,9 +228,18 @@ main {
     border-radius: 10px 10px 10px 10px;
 }
 
-.dash_card_container ul li a:hover {
+.dash_card h1 {
+    color: #191970;
+}
+
+.dash_card h1:hover {
     color: #fff;
 }
+
+
+/* .dash_card_container ul li a:hover {
+    color: #fff;
+} */
 
 .dash_card {
     border: 1px solid #191970;
