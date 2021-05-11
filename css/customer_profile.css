@@ -211,6 +211,10 @@ main {
     cursor: pointer;
 }
 
+.dash_card_container h1:hover {
+    color: #fff;
+}
+
 .dash_card_container ul li a {
     color: #191970;
 }
