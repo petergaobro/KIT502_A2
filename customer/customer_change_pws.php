@@ -120,12 +120,12 @@ if (isset($_GET['id'])) {
         <!-- Password -->
         <div class="input-group">
             <label>Password</label>
-            <input type="text" name="c_password" value="">
+            <input type="c_password_c" name="c_password_c1" value="">
         </div>
         <!-- Confirm Password -->
         <div class="input-group">
             <label>Confirm Password</label>
-            <input type="text" name="c_password_c" value="">
+            <input type="c_password_c" name="c_password_c2" value="">
         </div>
 
         <!-- button  -->
