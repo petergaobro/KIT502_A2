@@ -157,7 +157,7 @@ CREATE TABLE `house` (
     `house_smoke` varchar(100) NOT NULL,
     `house_internet` varchar(100) NOT NULL,
     `house_pet` varchar(100) NOT NULL,
-    `house_image` varchar(100) NOT NULL
+    `house_image` longblob NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 -- insert into house table database
 INSERT INTO `house` (
@@ -196,7 +196,7 @@ VALUES (
         'No',
         'Yes',
         'No',
-        'hi image'
+        './img/background/background_img.jpg'
     ),
     (
         2,
@@ -215,7 +215,7 @@ VALUES (
         'Yes',
         'No',
         'Yes',
-        'hi image'
+        './img/booking/background.jpg'
     ),
     (
         3,
@@ -234,7 +234,7 @@ VALUES (
         'No',
         'No',
         'Yes',
-        'hi image'
+        './img/booking/close.jpg'
     ),
     (
         4,
@@ -253,7 +253,7 @@ VALUES (
         'No',
         'No',
         'Yes',
-        'hi image'
+        './img/footer_social/fb.png'
     );
 ALTER TABLE `house`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,

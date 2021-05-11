@@ -103,7 +103,7 @@ if (isset($_POST['edit_house'])) {
                                     house_smoke = '$house_smoke', 
                                     house_internet = '$house_internet', 
                                     house_pet = '$house_pet', 
-                                    house_image = '$house_image'
+                                    house_image = '$house_image' as img
                                 WHERE id = '$id'";
         $result = mysqli_query($db, $query);
         // var_dump($query);
