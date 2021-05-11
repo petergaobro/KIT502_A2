@@ -116,7 +116,7 @@ if (isset($_GET['id'])) {
         <!-- Password -->
         <div class="input-group">
             <label>Password</label>
-            <input type="c_password_c" name="c_password_c1">
+            <input type="c_password_c" name="c_password_c1" value="<?= $row['c_password'] ?>">
         </div>
         <!-- Confirm Password -->
         <div class="input-group">

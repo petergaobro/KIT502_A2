@@ -191,7 +191,8 @@ if (isset($_GET['logout'])) {
                                             <td><?php echo $rows['house_smoke']; ?></td>
                                             <td><?php echo $rows['house_internet']; ?></td>
                                             <td><?php echo $rows['house_pet']; ?></td>
-                                            <td><?php echo '<img src="data:image;base64,'.base64_encode($rows['house_image']).'" alt="Image" style="width:auto; height:auto; " >'; ?> </td>
+                                            <td<img src="data:image;base64,'.base64, <?php echo base64_encode($rows['house_image']);?>"/></td>
+                                        
                                             <td><a href="./host_CRUD/update_house.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
 
                                                 <a href="./host_CRUD/delete_house.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Delete</a>
@@ -308,8 +309,6 @@ if (isset($_GET['logout'])) {
                     </div>
                 </div>
             </div>
-
-
         </main>
     </div>
     <!-- insert the javascript files -->

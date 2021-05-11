@@ -1,5 +1,9 @@
 <?php
 include "./customer_read_detail.php";
+// include "./host_CRUD/read_house.php";
+include "../admin/host_CRUD/read_order.php";
+include "../admin/host_CRUD/read_review.php";
+
 // include "./host_CRUD/read_order.php";
 // include "./host_CRUD/read_review.php";
 session_start();
@@ -187,113 +191,107 @@ if (!isset($_SESSION['c_username'])) {
                             </table>
                             <table>
                                 <td>
-                                    <td><a href="./customer_change_pws.php?= $rows['id'] ?>" class="btn btn-danger">Change Password</a></td>
+                                <td><a href="./customer_change_pws.php?= $rows['id'] ?>" class="btn btn-danger">Change Password</a></td>
                                 </td>
                             </table>
-
-
-
-
                         <?php } ?>
                     </div>
                 </div>
             </div>
-    </div>
 
-    <!------------------------Orders History----------------->
-    <div class="tab" id="order_content">
-        <div class="container">
-            <div class="box_customer">
-                <h4 class="display-4 text-center">Orders</h4><br>
-                <?php if (isset($_GET['success'])) { ?>
-                    <div class="alert alert-success" role="alert">
-                        <?php echo $_GET['success']; ?>
+            <!------------------------Orders History----------------->
+            <div class="tab" id="order_content">
+                <div class="container">
+                    <div class="box_customer">
+                        <h4 class="display-4 text-center">Orders</h4><br>
+                        <?php if (isset($_GET['success'])) { ?>
+                            <div class="alert alert-success" role="alert">
+                                <?php echo $_GET['success']; ?>
+                            </div>
+                        <?php } ?>
+                        <?php if (mysqli_num_rows($result_order)) { ?>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Order.NO</th>
+                                        <th scope="col">ID.NO</th>
+                                        <th scope="col">First name</th>
+                                        <th scope="col">Last name</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Mobile</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    $i = 0;
+                                    while ($rows = mysqli_fetch_assoc($result_order)) {
+                                        $i++;
+                                    ?>
+                                        <tr>
+                                            <th scope="row"><?= $i ?></th>
+                                            <th scope="row"><?= $rows['id'] ?></th>
+                                            <td><?php echo $rows['b_first_name']; ?></td>
+                                            <td><?php echo $rows['b_last_name']; ?></td>
+                                            <td><?php echo $rows['b_email']; ?></td>
+                                            <td><?php echo $rows['b_mobile']; ?></td>
+                                            <td><?php echo $rows['b_status']; ?></td>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
+                                </tbody>
+                            </table>
+                        <?php } ?>
                     </div>
-                <?php } ?>
-                <?php if (mysqli_num_rows($result_order)) { ?>
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">Order.NO</th>
-                                <th scope="col">ID.NO</th>
-                                <th scope="col">First name</th>
-                                <th scope="col">Last name</th>
-                                <th scope="col">Email</th>
-                                <th scope="col">Mobile</th>
-                                <th scope="col">Status</th>
-                                <th scope="col">Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            $i = 0;
-                            while ($rows = mysqli_fetch_assoc($result_order)) {
-                                $i++;
-                            ?>
-                                <tr>
-                                    <th scope="row"><?= $i ?></th>
-                                    <th scope="row"><?= $rows['id'] ?></th>
-                                    <td><?php echo $rows['b_first_name']; ?></td>
-                                    <td><?php echo $rows['b_last_name']; ?></td>
-                                    <td><?php echo $rows['b_email']; ?></td>
-                                    <td><?php echo $rows['b_mobile']; ?></td>
-                                    <td><?php echo $rows['b_status']; ?></td>
-                                    <td><a href="./host_CRUD/update_order.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
-                                    </td>
-                                </tr>
-                            <?php } ?>
-                        </tbody>
-                    </table>
-                <?php } ?>
+                </div>
             </div>
-        </div>
-    </div>
-    <!------------------------rate card----------------->
-    <div class="tab" id="rate_content">
-        <div class="container">
-            <div class="box_customer">
-                <h4 class="display-4 text-center">Rates&Comment</h4><br>
-                <?php if (isset($_GET['success'])) { ?>
-                    <div class="alert alert-success" role="alert">
-                        <?php echo $_GET['success']; ?>
+            <!------------------------rate card----------------->
+            <div class="tab" id="rate_content">
+                <div class="container">
+                    <div class="box_customer">
+                        <h4 class="display-4 text-center">Rates&Comment</h4><br>
+                        <?php if (isset($_GET['success'])) { ?>
+                            <div class="alert alert-success" role="alert">
+                                <?php echo $_GET['success']; ?>
+                            </div>
+                        <?php } ?>
+                        <?php if (mysqli_num_rows($result_review)) { ?>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Order.NO</th>
+                                        <th scope="col">ID.NO</th>
+                                        <th scope="col">Location</th>
+                                        <th scope="col">Rating</th>
+                                        <th scope="col">Comment</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    $i = 0;
+                                    while ($rows = mysqli_fetch_assoc($result_review)) {
+                                        $i++;
+                                    ?>
+                                        <tr>
+                                            <th scope="row"><?= $i ?></th>
+                                            <th scope="row"><?= $rows['id'] ?></th>
+                                            <td><?php echo $rows['r_location']; ?></td>
+                                            <td><?php echo $rows['r_rating']; ?></td>
+                                            <td><?php echo $rows['r_comment']; ?></td>
+                                        </tr>
+                                    <?php } ?>
+                                </tbody>
+                            </table>
+                            <h4 class="display-4 text-center">Average Rates</h4><br>
+                        <?php } ?>
                     </div>
-                <?php } ?>
-                <?php if (mysqli_num_rows($result_review)) { ?>
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th scope="col">Order.NO</th>
-                                <th scope="col">ID.NO</th>
-                                <th scope="col">Location</th>
-                                <th scope="col">Rating</th>
-                                <th scope="col">Comment</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <?php
-                            $i = 0;
-                            while ($rows = mysqli_fetch_assoc($result_review)) {
-                                $i++;
-                            ?>
-                                <tr>
-                                    <th scope="row"><?= $i ?></th>
-                                    <th scope="row"><?= $rows['id'] ?></th>
-                                    <td><?php echo $rows['r_location']; ?></td>
-                                    <td><?php echo $rows['r_rating']; ?></td>
-                                    <td><?php echo $rows['r_comment']; ?></td>
-                                </tr>
-                            <?php } ?>
-                        </tbody>
-                    </table>
-                    <h4 class="display-4 text-center">Average Rates</h4><br>
-                <?php } ?>
+                </div>
             </div>
-        </div>
+        </main>
     </div>
 
 
-    </main>
-    </div>
+
     <!-- insert the javascript files -->
     <script src="../js/host_dashboard.js"></script>
     <script src="../js/host_CRUD.js"></script>
