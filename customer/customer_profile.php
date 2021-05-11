@@ -155,7 +155,7 @@ if (!isset($_SESSION['c_username'])) {
                                         <th scope="col">Last Name</th>
                                         <th scope="col">Email</th>
                                         <th scope="col">Mobile</th>
-                                        <th scope="col" style="display:none" >Password</th>
+                                        <th scope="col" style="display:none">Password</th>
                                         <th scope="col">Address</th>
                                         <th scope="col">Country</th>
                                         <th scope="col">Action</th>
@@ -174,14 +174,19 @@ if (!isset($_SESSION['c_username'])) {
                                             <td><?php echo $rows['c_first_name']; ?></td>
                                             <td><?php echo $rows['c_last_name']; ?></td>
                                             <td><?php echo $rows['c_email']; ?></td>
-                                            <td><?php echo $rows['c_mobile'];?></td>
+                                            <td><?php echo $rows['c_mobile']; ?></td>
                                             <td style="display:none"><?php echo $rows['c_password']; ?></td>
                                             <td><?php echo $rows['c_address']; ?></td>
                                             <td><?php echo $rows['c_country']; ?></td>
-                                            <td><a href="customer_update_detail.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a></td>
+                                            <td><a href="customer_update_detail.php?id=<?= $rows['id'] ?>" class="btn btn-success">Change Details</a>
+                                                <a href="./customer_change_pws.php?= $rows['id'] ?>" class="btn btn-danger">Change Password</a>
+
+                                            </td>
+
                                         </tr>
                                     <?php } ?>
                                 </tbody>
+
                             </table>
                         <?php } ?>
                     </div>

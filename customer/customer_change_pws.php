@@ -6,14 +6,8 @@ session_start();
 include "../db_conn.php";
 
 
-$c_username = "";
-$c_first_name = "";
-$c_last_name = "";
-$c_email = "";
-$c_mobile = "";
+
 $c_password = "";
-$c_address = "";
-$c_country = "";
 
 $errors = array();
 
@@ -112,9 +106,9 @@ if (isset($_GET['id'])) {
 
 
     <div class="header">
-        <h2>Update Personal Details</h2>
+        <h2>Change Password</h2>
     </div>
-    <form method="post" action="customer_update_detail_f.php">
+    <form method="post" action="customer_change_pws_f.php">
 
         <?php if (isset($_GET['error'])) { ?>
             <div class="alert alert-danger" role="alert">
@@ -122,62 +116,26 @@ if (isset($_GET['id'])) {
             </div>
         <?php } ?>
         <!-- User id -->
-        <input type="text" name="id" value="<?php echo $id; ?>" ; hidden>
-        <!-- User Name -->
+        <input type="text" name="id" value="<?php echo $id; ?>" ; hidden> 
+        <!-- Password -->
         <div class="input-group">
-            <label>User Name</label>
-            <input type="text" name="c_username" readonly="readonly" value="<?= $row['c_username'] ?>">
-        </div>
-        <!-- First Name -->
-        <div class="input-group">
-            <label>First Name</label>
-            <input type="text" name="c_first_name" readonly="readonly" value="<?= $row['c_first_name'] ?>">
-        </div>
-        <!-- Last Name -->
-        <div class="input-group">
-            <label>Last Name</label>
-            <input type="text" name="c_last_name" readonly="readonly" value="<?= $row['c_last_name'] ?>">
-        </div>
-        <!-- Email Adress -->
-        <div class="input-group">
-            <label>Email</label>
-            <input type="Email" name="c_email" readonly="readonly" value="<?= $row['c_email'] ?>">
-        </div>
-        <!-- Mobile-->
-        <div class="input-group">
-            <label>Mobile</label>
-            <input type="text" name="c_mobile" value="<?= $row['c_mobile'] ?>">
+            <label>Password</label>
+            <input type="text" name="c_password" value="">
         </div>
         <!-- Confirm Password -->
         <div class="input-group">
-            <label>Address</label>
-            <input type="text" name="c_address" value="<?= $row['c_address'] ?>">
+            <label>Confirm Password</label>
+            <input type="text" name="c_password_c" value="">
         </div>
-        <!-- house city -->
-        <div class="input-group">
-            <label>City</label>
-            <select class="house_city" name="c_country" value="<?= $row['c_country'] ?>"><br>
-                <!-- <option value="">City</option> -->
-                <option value="Sydney">Sydney</option>
-                <option value="Newcastle">Newcastle</option>
-                <option value="Wollongong">Wollongong</option>
-                <option value="Bendigo">Bendigo</option>
-                <option value="Brisbane">Brisbane</option>
-                <option value="Gold Coast">Gold Coast</option>
-                <option value="Adelaide">Adelaide</option>
-                <option value="Hobart">Hobart</option>
-                <option value="Melbourne">Melbourne</option>
-                <option value="Perth">Perth</option>
-            </select><br>
-        </div>
+
         <!-- button  -->
         <div class="input-group">
-            <button type="submit" class="btn btn-primary" name="edit_customer_profile">Update</button>
+            <button type="submit" class="btn btn-primary" name="customer_change_pws">Confirm to Change Password</button>
             <a href="customer_profile.php" class="link-primary">Cancel</a>
         </div>
     </form>
 
-    <script src="../../js/booking.js"></script>
+
 </body>
 
 </html>
