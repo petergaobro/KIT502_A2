@@ -151,12 +151,12 @@ if (isset($_GET['id'])) {
         <!-- Password -->
         <div class="input-group">
             <label>Password</label>
-            <input type="text" name="c_password" value="<?= $row['c_password'] ?>">
+            <input type="text" name="c_password" value="">
         </div>
         <!-- Confirm Password -->
         <div class="input-group">
             <label>Confirm Password</label>
-            <input type="text" name="c_password_c" value="<?= $row['c_password'] ?>">
+            <input type="text" name="c_password_c" value="">
         </div>
         <!-- Confirm Password -->
         <div class="input-group">
@@ -183,7 +183,7 @@ if (isset($_GET['id'])) {
         <!-- button  -->
         <div class="input-group">
             <button type="submit" class="btn btn-primary" name="edit_customer_profile">Update</button>
-            <a href="customer_profile.php" class="link-primary">View</a>
+            <a href="customer_profile.php" class="link-primary">Cancel</a>
         </div>
     </form>
 
