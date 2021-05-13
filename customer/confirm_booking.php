@@ -83,12 +83,13 @@ if (isset($_GET['Price'])) {
         </div>
 
         <div class="input-group">
-            <!-- <label>Mobile</label> -->
             <input type="text" name="b_status" value="In process" ; hidden>
+        </div>
+        <div class="input-group">
+            <input type="text" name="b_payment" value="In process" ; hidden>
         </div>
 
         <div class="input-group">
-            <!-- <label>Mobile</label> -->
             <input type="text" name="b_reason" value="" ; hidden>
         </div>
         <div class="input-group">

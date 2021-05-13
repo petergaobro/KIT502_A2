@@ -301,6 +301,7 @@ Group 3 last edit 26/03/2021 -->
 										<th scope="col">Email</th>
 										<th scope="col">Mobile</th>
 										<th scope="col">Status</th>
+										<th scope="col">Payment</th>
 										<th scope="col">Reason</th>
 										<th scope="col">Action</th>
 									</tr>
@@ -323,6 +324,7 @@ Group 3 last edit 26/03/2021 -->
 											<td><?php echo $rows['b_email']; ?></td>
 											<td><?php echo $rows['b_mobile']; ?></td>
 											<td><?php echo $rows['b_status']; ?></td>
+											<td><?php echo $rows['b_payment']; ?></td>
 											<td><?php echo $rows['b_reason']; ?></td>
 											<td><a href="./system_CRUD/delete_house_sys.php?id=<?= $rows['id'] ?>" class="btn btn-success">Delete</a>
 											</td>

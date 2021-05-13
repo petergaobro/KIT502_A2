@@ -107,6 +107,7 @@ CREATE TABLE `booking` (
     `b_email` varchar(100) NOT NULL,
     `b_mobile` varchar(100) NOT NULL,
     `b_status` varchar(100) NOT NULL,
+    `b_payment` varchar(100) NOT NULL,
     `b_reason` varchar(100) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
 INSERT INTO `booking` (
@@ -120,6 +121,7 @@ INSERT INTO `booking` (
         `b_email`,
         `b_mobile`,
         `b_status`,
+        `b_payment`,
         `b_reason`
     )
 VALUES (
@@ -132,6 +134,7 @@ VALUES (
         'GAO',
         'peter@gmail.com',
         '0426612390',
+        'in process',
         'in process',
         'Good'
     );

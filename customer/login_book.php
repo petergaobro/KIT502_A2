@@ -11,31 +11,6 @@ if (isset($_GET['logout'])) {
 	unset($_SESSION['c_username']);
 	header("location: customer_login.php");
 }
-
-
-
-// echo $_GET['Checkin'];
-// echo $_GET['Checkout'];
-// echo $_GET['Guest'];
-// $error = array();
-// if (isset($_GET['Checkin'])) {
-
-//     $con_checkin = $_GET['Checkin'];
-// }
-// else if(empty($_GET['Checkin'])){
-//     header("Location: ./login_book.php?Checkin=$con_checkin&error=Mobile is required");
-// }
-// if (isset($_GET['Checkout'])) {
-
-//     $con_checkout = $_GET['Checkout'];
-//     header("Location: ./login_book.php?Checkout=$con_checkout&error=Mobile is required");
-// }
-// if (isset($_GET['Guest'])) {
-
-//     $con_guest = $_GET['Guest'];
-//     header("Location: ./login_book.php?Guest=$con_guest&error=Mobile is required");
-// }
-
 ?>
 
 
