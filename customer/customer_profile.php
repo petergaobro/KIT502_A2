@@ -1,10 +1,12 @@
 <?php
+// session_start();
 include('q_a_f.php');
 include "./customer_read_detail.php";
 // include "./host_CRUD/read_house.php";
 include "../admin/host_CRUD/read_order.php";
 include "../admin/host_CRUD/read_review.php";
 include "../db_conn.php";
+include "../admin/host_CRUD/read_q_a.php";
 // include "../customer/q_a_f.php";
 
 
@@ -44,6 +46,8 @@ if (isset($_GET['id'])) {
     }
 }
 ?>
+<!DOCTYPE html>
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -350,32 +354,48 @@ if (isset($_GET['id'])) {
             <div class="tab" id="response_content">
                 <div class="container">
                     <div class="box_customer">
-                        <form method="post" action="../admin/host_CRUD/update_q_a_f.php">
-
-                            <?php if (isset($_GET['error'])) { ?>
-                                <div class="alert alert-danger" role="alert">
-                                    <?php echo $_GET['error']; ?>
-                                </div>
-                            <?php } ?>
-                            <!-- house id -->
-                            <input type="text" name="id" value="<?php echo $id; ?>" ; hidden>
-                            <div class="input-group">
-                                <label>Response</label>
-                                <input type="text" name="QA" value="<?= $row['QA'] ?>">
+                        <h4 class="display-4 text-center">Response</h4><br>
+                        <?php if (isset($_GET['success'])) { ?>
+                            <div class="alert alert-success" role="alert">
+                                <?php echo $_GET['success']; ?>
                             </div>
+                        <?php } ?>
+                        <?php if (mysqli_num_rows($result_q_a)) { ?>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Order.NO</th>
+                                        <th scope="col">ID.NO</th>
+                                        <th scope="col">Content</th>
+                                        <th scope="col">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    $i = 0;
+                                    while ($rows = mysqli_fetch_assoc($result_q_a)) {
+                                        $i++;
+                                    ?>
+                                        <tr>
+                                            <th scope="row"><?= $i ?></th>
+                                            <th scope="row"><?= $rows['id'] ?></th>
+                                            <td><?php echo $rows['QA']; ?></td>
+                                            <td><a href="update_qa.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
+                                            </td>
+                                        </tr>
+                                    <?php } ?>
+                                </tbody>
+                            </table>
+                        <?php } ?>
 
-                            <!-- button  -->
-                            <div class="input-group">
-                                <button type="submit" class="btn btn-primary" name="edit_QA">Update</button>
-                            </div>
-                        </form>
                     </div>
                 </div>
             </div>
         </main>
     </div>
     <!-- insert the javascript files -->
-    <script src="../js/client_profile.js"></script>
+
 </body>
+<script src="../js/client_profile.js"></script>
 
 </html>

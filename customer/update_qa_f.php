@@ -1,6 +1,6 @@
 <?php
 session_start();
-include "../../db_conn.php";
+include "../db_conn.php";
 // initializing variables
 $QA = "";
 $errors = array();
@@ -16,7 +16,7 @@ if (isset($_POST['edit_QA'])) {
     // by adding (array_push()) corresponding error unto $errors array
     if (empty($QA)) {
         // array_push($errors, "House name is required");
-        header("Location: ./update_q_a.php?id=$id&error=Q/A is required");
+        header("Location: ./update_qa.php?id=$id&error=Q/A is required");
     } else {
         $query = "UPDATE Q_A  SET QA = '$QA'
                                 WHERE id = '$id'";
@@ -27,14 +27,14 @@ if (isset($_POST['edit_QA'])) {
         // $_SESSION['c_username'] = $c_username;
         // $_SESSION['success'] = "You are now logged in";
         if ($result) {
-            header("Location: ../host_dashboard.php?success=successfully update");
+            header("Location: ./customer_profile.php?success=successfully update");
         } else {
-            header("Location: ../host_dashboard.php?error=unknown error occurred&$user_data");
+            header("Location: ./customer_profile.php?error=unknown error occurred&$user_data");
         }
         // header('location: ../sys_dashboard.php');
     }
 } else {
-    header("Location: ../host_dashboard.php");
+    header("Location: ./customer_profile.php");
     //var_dump($_POST);
     // echo "No";
 }
