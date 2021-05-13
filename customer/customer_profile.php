@@ -327,7 +327,19 @@ if (!isset($_SESSION['c_username'])) {
                         <form method="post" action="customer_profile.php">
                             <?php include('../errors.php'); ?>
                             <div class="input-group">
-                                <label>Q&A</label>
+                                <label>New Q&A?</label>
+                                <input type="text" name="c_q_a" value="<?php echo $c_q_a; ?>">
+                            </div>
+                            <div class="input-group">
+                                <button type="submit" class="btn" name="edit_q_a">Submit</button>
+                            </div>
+                        </form>
+
+
+                        <form method="post" action="customer_profile.php">
+                            <?php include('../errors.php'); ?>
+                            <div class="input-group">
+                                <label>New Q&A?</label>
                                 <input type="text" name="c_q_a" value="<?php echo $c_q_a; ?>">
                             </div>
                             <div class="input-group">

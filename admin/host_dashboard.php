@@ -332,7 +332,7 @@ if (isset($_GET['logout'])) {
             <div class="tab" id="Q_A_content">
                 <div class="container">
                     <div class="box_customer">
-                        <h4 class="display-4 text-center">Rates&Comment</h4><br>
+                        <h4 class="display-4 text-center">Q&A</h4><br>
                         <?php if (isset($_GET['success'])) { ?>
                             <div class="alert alert-success" role="alert">
                                 <?php echo $_GET['success']; ?>
@@ -344,7 +344,8 @@ if (isset($_GET['logout'])) {
                                     <tr>
                                         <th scope="col">Order.NO</th>
                                         <th scope="col">ID.NO</th>
-                                        <th scope="col">Q&A</th>
+                                        <th scope="col">Content</th>
+                                        <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -357,11 +358,14 @@ if (isset($_GET['logout'])) {
                                             <th scope="row"><?= $i ?></th>
                                             <th scope="row"><?= $rows['id'] ?></th>
                                             <td><?php echo $rows['QA']; ?></td>
+                                            <td><a href="./host_CRUD/update_q_a.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
+                                            </td>
                                         </tr>
                                     <?php } ?>
                                 </tbody>
                             </table>
                         <?php } ?>
+
                     </div>
                 </div>
             </div>
