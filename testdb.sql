@@ -304,3 +304,25 @@ ALTER TABLE `users_review`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,
     AUTO_INCREMENT = 3;
 COMMIT;
+
+-- Q&A
+CREATE TABLE `Q_A` (
+    `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    `QA` varchar(100) NOT NULL
+) ENGINE = InnoDB DEFAULT CHARSET = latin1;
+INSERT INTO `Q_A` (
+        `id`,
+        `QA`
+    )
+VALUES (
+        1,
+        'Hi, where is the utas hotel?'
+    ),
+    (
+        2,
+        'Hi, how are you?'
+    );
+ALTER TABLE `Q_A`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,
+    AUTO_INCREMENT = 3;
+COMMIT;

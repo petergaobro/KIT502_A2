@@ -2,12 +2,7 @@
 session_start();
 include "../../db_conn.php";
 // initializing variables
-$b_first_name = "";
-$b_last_name = "";
-$b_email = "";
-$b_mobile = "";
-$b_status = "";
-$b_reason = "";
+$QA = "";
 $errors = array();
 
 if (isset($_POST['edit_order'])) {

@@ -1,8 +1,13 @@
 <?php
+include('q_a_f.php');
 include "./customer_read_detail.php";
 // include "./host_CRUD/read_house.php";
 include "../admin/host_CRUD/read_order.php";
 include "../admin/host_CRUD/read_review.php";
+include "../db_conn.php";
+// include "../customer/q_a_f.php";
+
+
 
 // include "./host_CRUD/read_order.php";
 // include "./host_CRUD/read_review.php";
@@ -17,6 +22,28 @@ if (!isset($_SESSION['c_username'])) {
 //     unset($_SESSION['c_username']);
 //     header("location: admin_login.php");
 // }
+// if (isset($_GET['id'])) {
+//     // include "../../db_conn.php";
+
+//     function validate($data)
+//     {
+//         $data = trim($data);
+//         $data = stripslashes($data);
+//         $data = htmlspecialchars($data);
+//         return $data;
+//     }
+
+//     $id = validate($_GET['id']);
+
+//     $sql = "SELECT * FROM Q_A WHERE id=$id";
+//     $result = mysqli_query($db, $sql);
+//     if (mysqli_num_rows($result) > 0) {
+//         $row = mysqli_fetch_assoc($result);
+//     } else {
+//         // echo ("ok");
+//         header("Location: ./customer_profile.php");
+//     }
+// }
 ?>
 
 <head>
@@ -30,7 +57,7 @@ if (!isset($_SESSION['c_username'])) {
     <!-- link css file and font style -->
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <!-- <link rel="stylesheet" href="../css/dashboard.css" /> -->
-    <link rel="stylesheet" href="../css/system_CRUD.css" />
+    <!-- <link rel="stylesheet" href="../css/system_CRUD.css" /> -->
     <title>Profile</title>
 </head>
 
@@ -72,7 +99,6 @@ if (!isset($_SESSION['c_username'])) {
                         </ul>
                     </div>
                 </li>
-                <!-- <li><a><button id="open" type="button" class="btn btn-info">Search Now</button></a></li> -->
             </ul>
         </div>
     </nav>
@@ -180,8 +206,6 @@ if (!isset($_SESSION['c_username'])) {
                                         $i++;
                                     ?>
                                         <tr>
-
-                                            <th scope="row"><?= $rows['id'] ?></th>
                                             <td><?php echo $rows['c_username']; ?></td>
                                             <td><?php echo $rows['c_first_name']; ?></td>
                                             <td><?php echo $rows['c_last_name']; ?></td>
@@ -300,19 +324,23 @@ if (!isset($_SESSION['c_username'])) {
             <div class="tab" id="q_n_a_content">
                 <div class="container">
                     <div class="box_customer">
-                        <h4 class="display-4 text-center">Q&A</h4><br>
-                        
+                        <form method="post" action="customer_profile.php">
+                            <?php include('../errors.php'); ?>
+                            <div class="input-group">
+                                <label>Q&A</label>
+                                <input type="text" name="c_q_a" value="<?php echo $c_q_a; ?>">
+                            </div>
+                            <div class="input-group">
+                                <button type="submit" class="btn" name="edit_q_a">Submit</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
         </main>
     </div>
-
-
-
     <!-- insert the javascript files -->
     <script src="../js/client_profile.js"></script>
-    <!-- <script src="../js/host_CRUD.js"></script> -->
 </body>
 
 </html>

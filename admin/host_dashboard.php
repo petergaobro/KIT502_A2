@@ -2,6 +2,7 @@
 include "./host_CRUD/read_house.php";
 include "./host_CRUD/read_order.php";
 include "./host_CRUD/read_review.php";
+include "./host_CRUD/read_q_a.php";
 session_start();
 
 if (!isset($_SESSION['username'])) {
@@ -50,6 +51,10 @@ if (isset($_GET['logout'])) {
                 <li>
                     <a class="active_fun" onclick="rate_tab()"><span class="las la-list-alt"></span>
                         <span>Rates</span></a>
+                </li>
+                <li>
+                    <a class="active_fun" onclick="Q_A_tab()"><span class="las la-list-alt"></span>
+                        <span>Q&A</span></a>
                 </li>
                 <li>
                     <a href="admin_login.php?logout='1'" class="active_fun"><span class="las la-hotel"></span>
@@ -130,6 +135,19 @@ if (isset($_GET['logout'])) {
                             </div>
                         </a>
                     </li>
+                    <li class="active_card">
+                        <a onclick="Q_A_tab()">
+                            <div class="dash_card">
+                                <div>
+                                    <h1>10</h1>
+                                    <span>Q&A</span>
+                                </div>
+                                <div>
+                                    <span class="las la-list-alt"></span>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
             </div>
             <!------------------------House card----------------->
@@ -191,8 +209,9 @@ if (isset($_GET['logout'])) {
                                             <td><?php echo $rows['house_smoke']; ?></td>
                                             <td><?php echo $rows['house_internet']; ?></td>
                                             <td><?php echo $rows['house_pet']; ?></td>
-                                            <td<img src="data:image;base64,'.base64, <?php echo base64_encode($rows['house_image']);?>"/></td>
-                                        
+                                            <td<img src="data:image;base64,'.base64, <?php echo base64_encode($rows['house_image']); ?>" />
+                                            </td>
+
                                             <td><a href="./host_CRUD/update_house.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
 
                                                 <a href="./host_CRUD/delete_house.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Delete</a>
@@ -304,7 +323,44 @@ if (isset($_GET['logout'])) {
                                     <?php } ?>
                                 </tbody>
                             </table>
-                        <h4 class="display-4 text-center">Average Rates</h4><br>
+                            <h4 class="display-4 text-center">Average Rates</h4><br>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+            <!------------------------Q&A card----------------->
+            <div class="tab" id="Q_A_content">
+                <div class="container">
+                    <div class="box_customer">
+                        <h4 class="display-4 text-center">Rates&Comment</h4><br>
+                        <?php if (isset($_GET['success'])) { ?>
+                            <div class="alert alert-success" role="alert">
+                                <?php echo $_GET['success']; ?>
+                            </div>
+                        <?php } ?>
+                        <?php if (mysqli_num_rows($result_q_a)) { ?>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Order.NO</th>
+                                        <th scope="col">ID.NO</th>
+                                        <th scope="col">Q&A</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    $i = 0;
+                                    while ($rows = mysqli_fetch_assoc($result_q_a)) {
+                                        $i++;
+                                    ?>
+                                        <tr>
+                                            <th scope="row"><?= $i ?></th>
+                                            <th scope="row"><?= $rows['id'] ?></th>
+                                            <td><?php echo $rows['QA']; ?></td>
+                                        </tr>
+                                    <?php } ?>
+                                </tbody>
+                            </table>
                         <?php } ?>
                     </div>
                 </div>
@@ -313,7 +369,7 @@ if (isset($_GET['logout'])) {
     </div>
     <!-- insert the javascript files -->
     <script src="../js/host_dashboard.js"></script>
-    <script src="../js/host_CRUD.js"></script>
+    <!-- <script src="../js/host_CRUD.js"></script> -->
 </body>
 
 </html>
