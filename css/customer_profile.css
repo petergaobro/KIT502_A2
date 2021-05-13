@@ -151,9 +151,6 @@ Group 3 last edit 26/03/2021 */
     border-radius: 30px 0px 0px 30px;
 }
 
-
-/* responsive */
-
 .sider_bar_menu a span:first-child {
     font-size: 20px;
     padding-right: 16px;
@@ -235,11 +232,6 @@ main {
 .dash_card h1:hover {
     color: #fff;
 }
-
-
-/* .dash_card_container ul li a:hover {
-    color: #fff;
-} */
 
 .dash_card {
     border: 1px solid #191970;
