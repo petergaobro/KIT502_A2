@@ -8,16 +8,16 @@ function populateEndDate() {
 $(document).ready(function() {
     $("#checkin")
         .datepicker({
-            dateFormat: "dd-M-yy",
+            dateFormat: "yy-mm-dd",
             minDate: "dateToday",
-            onSelect: function(date) {
+            onSelect: function() {
                 populateEndDate();
             },
         })
         .datepicker("setDate", new Date());
     $("#checkout")
         .datepicker({
-            dateFormat: "dd-M-yy",
+            dateFormat: "yy-mm-dd",
             minDate: 1,
             onClose: function() {
                 var dt1 = $("#checkin").datepicker("getDate");
