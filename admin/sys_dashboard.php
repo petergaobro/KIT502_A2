@@ -354,6 +354,7 @@ Group 3 last edit 26/03/2021 -->
 										<th scope="col">Location</th>
 										<th scope="col">Rating</th>
 										<th scope="col">Comment</th>
+										<th scope="col">Action</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -368,6 +369,9 @@ Group 3 last edit 26/03/2021 -->
 											<td><?php echo $rows['r_location']; ?></td>
 											<td><?php echo $rows['r_rating']; ?></td>
 											<td><?php echo $rows['r_comment']; ?></td>
+											<td>
+												<a href="./system_CRUD/delete_review.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Delete</a>
+											</td>
 										</tr>
 									<?php } ?>
 								</tbody>
