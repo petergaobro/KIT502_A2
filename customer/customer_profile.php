@@ -109,7 +109,7 @@ if (!isset($_SESSION['c_username'])) {
             <div class="dash_card_container">
                 <ul>
                     <li class="active_card">
-                        <a onclick="house_tab()">
+                        <a onclick="client_tab()">
                             <div class="dash_card">
                                 <div>
                                     <h1>Person details</h1>
@@ -135,10 +135,19 @@ if (!isset($_SESSION['c_username'])) {
                             </div>
                         </a>
                     </li>
+                    <li class="active_card">
+                        <a onclick="q_n_a_tab()">
+                            <div class="dash_card">
+                                <div>
+                                    <h1>Q&A</h1>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
             </div>
             <!------------------------Personal Details----------------->
-            <div class="tab" id="house_content">
+            <div class="tab" id="client_content">
                 <div class="container">
                     <div class="box_customer">
                         <h4 class="display-4 text-center">Personal Details</h4><br>
@@ -286,14 +295,24 @@ if (!isset($_SESSION['c_username'])) {
                     </div>
                 </div>
             </div>
+
+            <!------------------------q&a card----------------->
+            <div class="tab" id="q_n_a_content">
+                <div class="container">
+                    <div class="box_customer">
+                        <h4 class="display-4 text-center">Rates&Comment</h4><br>
+                        
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
 
 
 
     <!-- insert the javascript files -->
-    <script src="../js/host_dashboard.js"></script>
-    <script src="../js/host_CRUD.js"></script>
+    <script src="../js/client_profile.js"></script>
+    <!-- <script src="../js/host_CRUD.js"></script> -->
 </body>
 
 </html>

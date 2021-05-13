@@ -249,10 +249,8 @@ main {
     border-radius: 10px 10px 10px 10px;
 }
 
-#user_content,
+#client_content,
 #order_content,
-#house_content,
-#review_content,
 #rate_content,
 #q_n_a_content {
     color: #191970;
@@ -289,25 +287,6 @@ main {
 input::placeholder {
     color: #222 !important;
 }
-
-
-/* tr {
-    transition: all .25s ease-in-out
-} */
-
-
-/* tr:hover {
-    background-color: #EEE;
-    cursor: pointer
-} */
-
-
-/* table {
-    width: 100%;
-} */
-
-
-/* table, */
 
 th,
 td {
