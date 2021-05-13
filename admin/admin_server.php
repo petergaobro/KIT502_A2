@@ -91,7 +91,7 @@ if (isset($_POST['reg_user'])) {
     if ($user['mobile'] === $mobile) {
       array_push($errors, "Mobile already exists");
     }
-    if ($user['abn'] === $abn) {
+    if ($user['abn'] === $abn && $type_user=="Host") {
       array_push($errors, "ABN already exists");
     }
   }
