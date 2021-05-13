@@ -3,7 +3,7 @@
 
 function do_logout() {
     alert("Are you sure want to logout?")
-    location.href = "./login_reg.html"
+    location.href = "./admin/admin_login.php"
 }
 
 function do_admin_login() {
