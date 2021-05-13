@@ -17,33 +17,32 @@ if (!isset($_SESSION['c_username'])) {
     $_SESSION['msg'] = "You must log in first";
     header('location: customer_login.php');
 }
-// if (isset($_GET['logout'])) {
-//     session_destroy();
-//     unset($_SESSION['c_username']);
-//     header("location: admin_login.php");
-// }
-// if (isset($_GET['id'])) {
-//     // include "../../db_conn.php";
 
-//     function validate($data)
-//     {
-//         $data = trim($data);
-//         $data = stripslashes($data);
-//         $data = htmlspecialchars($data);
-//         return $data;
-//     }
+$QA = "";
+$errors = array();
 
-//     $id = validate($_GET['id']);
+if (isset($_GET['id'])) {
+    // include "../../db_conn.php";
 
-//     $sql = "SELECT * FROM Q_A WHERE id=$id";
-//     $result = mysqli_query($db, $sql);
-//     if (mysqli_num_rows($result) > 0) {
-//         $row = mysqli_fetch_assoc($result);
-//     } else {
-//         // echo ("ok");
-//         header("Location: ./customer_profile.php");
-//     }
-// }
+    function validate($data)
+    {
+        $data = trim($data);
+        $data = stripslashes($data);
+        $data = htmlspecialchars($data);
+        return $data;
+    }
+
+    $id = validate($_GET['id']);
+
+    $sql = "SELECT * FROM Q_A WHERE id=$id";
+    $result = mysqli_query($db, $sql);
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+    } else {
+        // echo ("ok");
+        header("Location: ./customer_profile.php");
+    }
+}
 ?>
 
 <head>
@@ -166,6 +165,15 @@ if (!isset($_SESSION['c_username'])) {
                             <div class="dash_card">
                                 <div>
                                     <h1>Q&A</h1>
+                                </div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="active_card">
+                        <a onclick="response_tab()">
+                            <div class="dash_card">
+                                <div>
+                                    <h1>Response</h1>
                                 </div>
                             </div>
                         </a>
@@ -334,16 +342,31 @@ if (!isset($_SESSION['c_username'])) {
                                 <button type="submit" class="btn" name="edit_q_a">Submit</button>
                             </div>
                         </form>
+                    </div>
+                </div>
+            </div>
 
+            <!------------------------response card----------------->
+            <div class="tab" id="response_content">
+                <div class="container">
+                    <div class="box_customer">
+                        <form method="post" action="../admin/host_CRUD/update_q_a_f.php">
 
-                        <form method="post" action="customer_profile.php">
-                            <?php include('../errors.php'); ?>
+                            <?php if (isset($_GET['error'])) { ?>
+                                <div class="alert alert-danger" role="alert">
+                                    <?php echo $_GET['error']; ?>
+                                </div>
+                            <?php } ?>
+                            <!-- house id -->
+                            <input type="text" name="id" value="<?php echo $id; ?>" ; hidden>
                             <div class="input-group">
-                                <label>New Q&A?</label>
-                                <input type="text" name="c_q_a" value="<?php echo $c_q_a; ?>">
+                                <label>Response</label>
+                                <input type="text" name="QA" value="<?= $row['QA'] ?>">
                             </div>
+
+                            <!-- button  -->
                             <div class="input-group">
-                                <button type="submit" class="btn" name="edit_q_a">Submit</button>
+                                <button type="submit" class="btn btn-primary" name="edit_QA">Update</button>
                             </div>
                         </form>
                     </div>

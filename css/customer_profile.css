@@ -93,6 +93,8 @@ Group 3 last edit 26/03/2021 */
     font-family: "Montserrat", sans-serif;
 }
 
+
+/* 
 .db_sider {
     width: 250px;
     position: fixed;
@@ -154,7 +156,7 @@ Group 3 last edit 26/03/2021 */
 .sider_bar_menu a span:first-child {
     font-size: 20px;
     padding-right: 16px;
-}
+} */
 
 .main_container {
     background-color: #fff;
@@ -216,7 +218,7 @@ main {
     cursor: pointer;
 }
 
-.dash_card_container ul li a {
+.dash_card_container ul li h1 {
     color: #191970;
 }
 
@@ -225,13 +227,19 @@ main {
     border-radius: 10px 10px 10px 10px;
 }
 
-.dash_card h1 {
-    color: #191970;
-}
-
-.dash_card h1:hover {
+.dash_card_container ul li h1:hover {
     color: #fff;
 }
+
+
+/* .dash_card h1 {
+    color: #191970;
+} */
+
+
+/* .dash_card h1:hover {
+    background: #fff;
+} */
 
 .dash_card {
     border: 1px solid #191970;
@@ -244,7 +252,8 @@ main {
 #client_content,
 #order_content,
 #rate_content,
-#q_n_a_content {
+#q_n_a_content,
+#response_content {
     color: #191970;
     margin-top: 20px;
     width: 100%;

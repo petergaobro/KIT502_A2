@@ -6,6 +6,7 @@ function client_tab() {
     document.getElementById('order_content').style.display = "none";
     document.getElementById('rate_content').style.display = "none";
     document.getElementById('q_n_a_content').style.display = "none";
+    document.getElementById('response_content').style.display = "none";
 }
 
 function order_tab() {
@@ -13,6 +14,7 @@ function order_tab() {
     document.getElementById('order_content').style.display = "block";
     document.getElementById('rate_content').style.display = "none";
     document.getElementById('q_n_a_content').style.display = "none";
+    document.getElementById('response_content').style.display = "none";
 }
 
 function rate_tab() {
@@ -20,6 +22,7 @@ function rate_tab() {
     document.getElementById('order_content').style.display = "none";
     document.getElementById('rate_content').style.display = "block";
     document.getElementById('q_n_a_content').style.display = "none";
+    document.getElementById('response_content').style.display = "none";
 }
 
 function q_n_a_tab() {
@@ -27,4 +30,13 @@ function q_n_a_tab() {
     document.getElementById('order_content').style.display = "none";
     document.getElementById('rate_content').style.display = "none";
     document.getElementById('q_n_a_content').style.display = "block";
+    document.getElementById('response_content').style.display = "none";
+}
+
+function response_tab() {
+    document.getElementById('client_content').style.display = "none";
+    document.getElementById('order_content').style.display = "none";
+    document.getElementById('rate_content').style.display = "none";
+    document.getElementById('q_n_a_content').style.display = "none";
+    document.getElementById('response_content').style.display = "block";
 }
