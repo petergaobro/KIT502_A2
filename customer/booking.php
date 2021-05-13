@@ -131,7 +131,6 @@
 				<input type="text" class='form-control' placeholder="Check out date" id="checkout" name="b_checkout" value="<?php echo $b_checkout; ?>">
 			</div>
 			<div class="Bk_tab">
-				<!-- <label for="guest">Number of Guests</label> -->
 				<input type="number" class='form-control' placeholder="Select guest" min="1" id="b_guest" name="b_guest" value="<?php echo $b_guest; ?>">
 			</div>
 			<div class="Bk_tab">

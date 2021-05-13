@@ -31,8 +31,6 @@
                 <div id="content">
                     <i class="fa fa-phone" aria-hidden="true"></i>
                     <input type="text" id="input-group" name="house_desc" placeholder="House description" value="<?php echo $house_desc; ?>">
-                    <!-- <input type="number" id="input-group" placeholder="Phone number"> -->
-                    <!-- <input type="file" name="house_image" accept="image/gif, image/jpeg, image/png"> -->
                 </div>
                 <!-- house address -->
                 <div id="content">
@@ -64,12 +62,7 @@
                 <!-- house number of guest -->
                 <div id="content">
                     <i class="fa fa-calendar" aria-hidden="true"></i>
-                    <select id="input-group" name="house_guest" value="<?php echo $house_guest; ?>"><br>
-                        <option value="">No.of guests</option>
-                        <option value="1-5">1-5</option>
-                        <option value="6-10">6-10</option>
-                        <option value="11-20">11-20</option>
-                    </select>
+                    <input type="number" id="input-group" name="house_guest" placeholder="Select guest" min="1" value="<?php echo $house_guest; ?>">
                 </div>
                 <!-- house number of room -->
                 <div id="content">
@@ -102,18 +95,6 @@
             </div>
 
             <div id="second-group">
-
-                <!-- house check in date -->
-
-                <!-- <div class="Bk_tab">
-                    <label for="checkin">Check In:</label>
-                    <input type="text" id="checkin" name="checkin">
-                </div>
-                <div class="Bk_tab">
-                    <label for="checkout">Check Out:</label>
-                    <input type="text" id="checkout" name="checkout">
-                </div> -->
-
                 <div id="content">
                     <i class="fa fa-calendar" aria-hidden="true"></i>
                     <input type="text" id="checkin" name="house_checkin" placeholder="House check in" value="<?php echo $house_checkin; ?>">

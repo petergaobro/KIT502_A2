@@ -116,12 +116,7 @@ if (isset($_GET['id'])) {
         <!-- house guest -->
         <div class="input-group">
             <label>House guest</label>
-            <select class="house_guest" name="house_guest" value="<?= $row['house_guest'] ?>"><br>
-                <!-- <option value="">No.of guests</option> -->
-                <option value="1-5">1-5</option>
-                <option value="6-10">6-10</option>
-                <option value="11-20">11-20</option>
-            </select><br>
+            <input type="number" id="input-group" name="house_guest" placeholder="Select guest" min="1" value="<?php echo $house_guest; ?>">
         </div>
         <!-- house room -->
         <div class="input-group">
