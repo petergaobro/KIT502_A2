@@ -62,13 +62,13 @@ if (!isset($_SESSION['c_username'])) {
                     <!-- sub user bar -->
                     <div class="sub_user">
                         <ul>
-                            <li><a href="../customer/customer_login.php">Login</a></li>
+                            <li>
+                                <a href="customer_login.php?logout='1'">Logout</a>
+                            </li>
+                            <!-- <li><a href="../customer/customer_login.php">Login</a></li> -->
                             <!-- <li><a onclick="do_logout()" href="../html/login_reg.html">Logout</a></li> -->
                             <li><a href="../customer/review.php">Review</a></li>
-                            <li>
-                                <a href="customer_login.php?logout='1'" class="active_fun">
-                                    <span>Logout</span></a>
-                            </li>
+
                         </ul>
                     </div>
                 </li>
