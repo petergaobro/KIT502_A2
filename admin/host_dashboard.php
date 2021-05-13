@@ -209,7 +209,7 @@ if (isset($_GET['logout'])) {
                                             <td><?php echo $rows['house_smoke']; ?></td>
                                             <td><?php echo $rows['house_internet']; ?></td>
                                             <td><?php echo $rows['house_pet']; ?></td>
-                                            <td<img src="data:image;base64,'.base64, <?php echo base64_encode($rows['house_image']); ?>" />
+                                            <td><img src="data:image;base64,'.base64, <?php echo base64_encode($rows['house_image']); ?>" />
                                             </td>
 
                                             <td><a href="./host_CRUD/update_house.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
