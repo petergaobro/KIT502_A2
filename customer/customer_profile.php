@@ -79,11 +79,6 @@ if (isset($_GET['id'])) {
             <p>UTas</p>
             <p>Accommodation</p>
         </div>
-        <!-- <a href="#" class="toggle_btn">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </a> -->
         <div class="nav_links">
             <ul class="list_nav">
                 <li><a class="active_nav" href="../home.php">Home</a></li>
@@ -95,10 +90,6 @@ if (isset($_GET['id'])) {
                             <li>
                                 <a href="customer_login.php?logout='1'">Logout</a>
                             </li>
-                            <!-- <li><a href="../customer/customer_login.php">Login</a></li> -->
-                            <!-- <li><a onclick="do_logout()" href="../html/login_reg.html">Logout</a></li> -->
-                            <li><a href="../customer/review.php">Review</a></li>
-
                         </ul>
                     </div>
                 </li>
@@ -234,11 +225,6 @@ if (isset($_GET['id'])) {
                                     <?php } ?>
                                 </tbody>
                             </table>
-                            <!-- <table>
-                                <td>
-                                <td><a href="customer_change_pws.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Change Password</a></td>
-                                </td>
-                            </table> -->
                         <?php } ?>
                     </div>
                 </div>
@@ -394,8 +380,6 @@ if (isset($_GET['id'])) {
             </div>
         </main>
     </div>
-    <!-- insert the javascript files -->
-
 </body>
 <script src="../js/client_profile.js"></script>
 

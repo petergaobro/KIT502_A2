@@ -1,6 +1,3 @@
-<?php //include('update_cust_f.php') 
-?>
-
 <?php
 session_start();
 include "../../db_conn.php";
@@ -40,15 +37,7 @@ if (isset($_GET['id'])) {
     $result = mysqli_query($db, $sql);
     if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
-        // $c_username = $row['c_username'];
-        // $c_first_name = $row['c_first_name'];
-        // $c_last_name = $row['c_last_name'];
-        // $c_email = $row['c_email'];
-        // $c_mobile = $row['c_mobile'];
-        // $c_address = $row['c_address'];
-        // $c_country = $row['c_country'];
     } else {
-        // echo ("ok");
         header("Location: ../host_dashboard.php");
     }
 }
@@ -59,7 +48,6 @@ if (isset($_GET['id'])) {
 <head>
     <title>Update house</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
 
@@ -146,11 +134,6 @@ if (isset($_GET['id'])) {
                 <option value="4">4</option>
             </select><br>
         </div>
-
-
-
-
-
         <!-- house check in date -->
         <div class="input-group">
             <label>House check in date</label>
@@ -221,5 +204,4 @@ if (isset($_GET['id'])) {
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="../../js/booking.js"></script>
 </body>
-
 </html>

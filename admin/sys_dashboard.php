@@ -1,10 +1,11 @@
+<!-- KIT 502 
+Group 3 last edit 26/03/2021 -->
 <?php
 include "./system_CRUD/read.php";
 include "./host_CRUD/read_house.php";
 include "./host_CRUD/read_order.php";
 include "./host_CRUD/read_review.php";
 include "./host_CRUD/read_q_a.php";
-// include "./CRUD/update_cust.php";
 session_start();
 
 if (!isset($_SESSION['username'])) {
@@ -18,8 +19,7 @@ if (isset($_GET['logout'])) {
 }
 
 ?>
-<!-- KIT 502 
-Group 3 last edit 26/03/2021 -->
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +27,6 @@ Group 3 last edit 26/03/2021 -->
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<!-- link to font style  -->
 	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 	<link rel="stylesheet" href="../css/dashboard.css" />
@@ -60,7 +59,6 @@ Group 3 last edit 26/03/2021 -->
 					<a class="active_fun" onclick="q_n_a_tab()"><span class="las la-question-circle"></span>
 						<span>Q&A</span></a>
 				</li>
-
 				<li>
 					<a href="admin_login.php?logout='1'" class="active_fun"><span class="las la-hotel"></span>
 						<span>Logout</span></a>
@@ -76,7 +74,6 @@ Group 3 last edit 26/03/2021 -->
 					<span class="las la-bars"></span>
 				</label> Dashboard
 			</h2>
-
 			<div class="user_bar">
 				<img src="../img/dashboard/user_icon.webp" alt="">
 				<div>
@@ -90,12 +87,8 @@ Group 3 last edit 26/03/2021 -->
 							</h3>
 						</div>
 					<?php endif ?>
-
-					<!-- logged in user information -->
 					<?php if (isset($_SESSION['username'])) : ?>
 						<h3>Welcome <?php echo $_SESSION['username']; ?></h3>
-
-
 					<?php endif ?>
 					<h6>System manager</h6>
 				</div>
@@ -161,7 +154,6 @@ Group 3 last edit 26/03/2021 -->
 			</div>
 			<!--------------------------user card---------------------------->
 			<div class="tab" id="user_content">
-
 				<!-- create and edit customers' details in the table -->
 				<div class="container">
 					<div class="box_customer">
@@ -204,7 +196,6 @@ Group 3 last edit 26/03/2021 -->
 											<td><?php echo $rows['c_address']; ?></td>
 											<td><?php echo $rows['c_country']; ?></td>
 											<td><a href="./system_CRUD/update_cust.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
-
 												<a href="./system_CRUD/delete_cust.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Delete</a>
 											</td>
 										</tr>
@@ -216,7 +207,6 @@ Group 3 last edit 26/03/2021 -->
 							<a href="./system_CRUD/create_cust.php" class="link-primary">Create</a>
 						</div>
 					</div>
-
 					<!-- admin user -->
 					<div class="box_admin">
 						<h4 class="display-4 text-center">Admin user</h4><br>
@@ -262,7 +252,6 @@ Group 3 last edit 26/03/2021 -->
 											<td><?php echo $rows['country']; ?></td>
 											<td><?php echo $rows['abn']; ?></td>
 											<td><a href="./system_CRUD/update_admin.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
-
 												<a href="./system_CRUD/delete_admin.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Delete</a>
 											</td>
 										</tr>
@@ -336,7 +325,6 @@ Group 3 last edit 26/03/2021 -->
 					</div>
 				</div>
 			</div>
-
 			<!--------------------------review card---------------------------->
 			<div class="tab" id="review_content">
 				<div class="container">
@@ -425,10 +413,8 @@ Group 3 last edit 26/03/2021 -->
 			</div>
 		</main>
 	</div>
-	<!-- called the javascript files -->
 	<script src="../js/dashboard.js"></script>
 	<script src="../js/host_CRUD.js"></script>
-	<!-- <script src="../js/CRUD_user.js"></script> -->
 </body>
 
 </html>

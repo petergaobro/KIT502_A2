@@ -12,10 +12,6 @@ $c_address = "";
 $c_country = "";
 $errors = array();
 
-
-
-
-
 // REGISTER USER
 if (isset($_POST['reg_customer'])) {
     // receive all input values from the form
@@ -29,8 +25,6 @@ if (isset($_POST['reg_customer'])) {
     $c_address = mysqli_real_escape_string($db, $_POST['c_address']);
     $c_country = mysqli_real_escape_string($db, $_POST['c_country']);
     $c_pattern = '/^(?=.*[!@#$%])(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z]).{6,12}$/';
-
-
     // form validation: ensure that the form is correctly filled ...
     // by adding (array_push()) corresponding error unto $errors array
     if (empty($c_username)) {

@@ -4,8 +4,6 @@
 
 <head>
     <title>Host create house</title>
-    <!-- <link rel="stylesheet" type="text/css" href="../../css/style.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="../../css/style.css"> -->
     <link rel="stylesheet" type="text/css" href="../../css/h_create_house.css">
     <link rel="stylesheet" type="text/css" href="../../css/booking.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -13,9 +11,6 @@
 </head>
 
 <body>
-    <!-- <div class="header">
-        <h2>Create house</h2>
-    </div> -->
     <form class="form-group" method="post" action="create_house.php">
         <?php include('../../errors.php'); ?>
         <div id="form">
@@ -156,28 +151,12 @@
                     <input type="file" id="input-group" name="house_image" accept="image/gif, image/jpeg, image/png" placeholder="House image" value="<?php echo $house_image; ?>">
                     <p>Please upload house image</p>
                 </div>
-
-
-                <!-- <div id="content">
-                    <i class="fa fa-users" aria-hidden="true"></i>
-                    <select id="input-group">
-                        <option value="">Room Type</option>
-                        <option value="">AC</option>
-                        <option value="">Non-AC</option>
-                        <option value="">Single Bed</option>
-                        <option value="">Double Bed</option>
-                    </select>
-                </div> -->
-
             </div>
-            <!-- <button type="submit" class="btn" name="create_admin_ad">Register</button> -->
             <button type="submit" class="btn" value="Submit" id="submit-btn" name="create_house_host">Create Now</button>
-
         </div>
     </form>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="../../js/booking.js"></script>
 </body>
-
 </html>

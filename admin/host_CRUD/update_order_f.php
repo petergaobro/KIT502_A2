@@ -11,8 +11,6 @@ $b_reason = "";
 $errors = array();
 
 if (isset($_POST['edit_order'])) {
-    // echo "OK";
-    // include "../../db_conn.php";
     // receive all input values from the form
     $id = mysqli_real_escape_string($db, $_POST['id']);
     $b_first_name = mysqli_real_escape_string($db, $_POST['b_first_name']);
@@ -50,20 +48,13 @@ if (isset($_POST['edit_order'])) {
                                     b_reason = '$b_reason'
                                 WHERE id = '$id'";
         $result = mysqli_query($db, $query);
-        // var_dump($query);
-        // var_dump($result);
-        // mysqli_query($db, $query);
-        // $_SESSION['c_username'] = $c_username;
-        // $_SESSION['success'] = "You are now logged in";
+
         if ($result) {
             header("Location: ../host_dashboard.php?success=successfully update");
         } else {
             header("Location: ../host_dashboard.php?error=unknown error occurred&$user_data");
         }
-        // header('location: ../sys_dashboard.php');
     }
 } else {
     header("Location: ../host_dashboard.php");
-    //var_dump($_POST);
-    // echo "No";
 }

@@ -35,9 +35,6 @@ if (isset($_GET['logout'])) {
         <div class="db_brand">
             <h2><span class="las la-hotel"></span>Utas Hotel</h2>
         </div>
-        <!-- <div class="db_brand">
-            <img src="../img/logo/logo.png" alt="">
-        </div> -->
         <div class="sider_bar_menu">
             <ul>
                 <li>
@@ -227,7 +224,6 @@ if (isset($_GET['logout'])) {
                     </div>
                 </div>
             </div>
-
             <!------------------------Orders card----------------->
             <div class="tab" id="order_content">
                 <div class="container">
@@ -373,9 +369,6 @@ if (isset($_GET['logout'])) {
             </div>
         </main>
     </div>
-    <!-- insert the javascript files -->
     <script src="../js/host_dashboard.js"></script>
-    <!-- <script src="../js/host_CRUD.js"></script> -->
 </body>
-
 </html>

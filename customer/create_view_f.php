@@ -8,10 +8,6 @@ $r_rating = "";
 $r_comment = "";
 $errors = array();
 
-
-
-
-
 // REGISTER USER
 if (isset($_POST['create_view'])) {
     // receive all input values from the form
@@ -29,16 +25,11 @@ if (isset($_POST['create_view'])) {
     if (empty($r_comment)) {
         array_push($errors, "Comment is required");
     }
-
-
     // Finally, register user if there are no errors in the form
     if (count($errors) == 0) {
-        // $c_password = md5($password_c1); //encrypt the password before saving in the database
         $query = "INSERT INTO users_review (r_location, r_rating, r_comment) 
        VALUES('$r_location', '$r_rating', '$r_comment')";
         mysqli_query($db, $query);
-        // $_SESSION['r_location'] = $r_location;
-        // $_SESSION['success'] = "You are now logged in";
         header('location: review.php');
     }
 }

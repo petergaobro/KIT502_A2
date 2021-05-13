@@ -5,8 +5,6 @@ $QA = "";
 $errors = array();
 
 if (isset($_GET['id'])) {
-    // include "../../db_conn.php";
-
     function validate($data)
     {
         $data = trim($data);
@@ -14,15 +12,12 @@ if (isset($_GET['id'])) {
         $data = htmlspecialchars($data);
         return $data;
     }
-
     $id = validate($_GET['id']);
-
     $sql = "SELECT * FROM Q_A WHERE id=$id";
     $result = mysqli_query($db, $sql);
     if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
     } else {
-        // echo ("ok");
         header("Location: ./customer_profile.php");
     }
 }
@@ -33,7 +28,6 @@ if (isset($_GET['id'])) {
 <head>
     <title>Client edit Q&A</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
 
@@ -42,7 +36,6 @@ if (isset($_GET['id'])) {
         <h2>Client edit Q&A</h2>
     </div>
     <form method="post" action="update_qa_f.php">
-
         <?php if (isset($_GET['error'])) { ?>
             <div class="alert alert-danger" role="alert">
                 <?php echo $_GET['error']; ?>
@@ -54,14 +47,12 @@ if (isset($_GET['id'])) {
             <label>Q&A</label>
             <input type="text" name="QA" value="<?= $row['QA'] ?>">
         </div>
-
         <!-- button  -->
         <div class="input-group">
             <button type="submit" class="btn btn-primary" name="edit_QA">Update</button>
         </div>
     </form>
-
 </body>
-<!-- <script src="../../js/reject_reason.js"></script> -->
+
 
 </html>

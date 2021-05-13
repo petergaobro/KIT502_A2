@@ -9,8 +9,6 @@ Group 3 last edit 26/03/2021 -->
 
     <title>KIT_502_web_dev</title>
     <link rel="stylesheet" type="text/css" href="./css/home.css">
-    <!-- <link rel="stylesheet" type="text/css" href="./css/booking.css"> -->
-    <!-- <link rel="stylesheet" type="text/css" href="./css/popup_window.css"> -->
     <link rel="stylesheet" type="text/css" href="./css/footer.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
     <link rel="shortcut icon" type="image" href="../img/logo/Photo.png">
@@ -29,11 +27,6 @@ Group 3 last edit 26/03/2021 -->
         <div class="logo">
             <img src="./img/logo/Photo.png" alt="">
         </div>
-        <!-- <a href="#" class="toggle_btn">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </a > -->
         <div class="nav_links">
             <ul class="list_nav">
                 <li><a class="active_nav" href="./home.php">Home</a></li>
@@ -43,17 +36,13 @@ Group 3 last edit 26/03/2021 -->
                     <div class="sub_user">
                         <ul>
                             <li><a href="./customer/customer_login.php">Login</a></li>
-                            <!-- <li><a onclick="do_logout()" href="../html/login_reg.html">Logout</a ></li> -->
                         </ul>
                     </div>
                 </li>
                 <li><a href="./admin/admin_login.php"><button id="do_admin_login" type="button" class="btn btn-dark" onclick="do_admin_login()">Admin</button></a></li>
-                <!-- <li><a><button id="open" type="button" class="btn btn-info">Search Now</button></a ></li> -->
             </ul>
         </div>
-        <!-- <script src="../js/toggle_bar.js" defer></script> -->
     </nav>
-
     <!---------------part 2-------------------->
     <div class="gallery_container">
         <div class="slide_show_container">
@@ -87,7 +76,6 @@ Group 3 last edit 26/03/2021 -->
                 <img src="./img/gallery/hotel_5.jpg">
                     <p class="text_form">The Disaster Café, Location: Loloret de Mar, Spain</p>
             </div>
-
             <!-- booking button -->
             <div class="more_info">
                 <a class="explore_btn" href="./customer/booking.php">BOOKING NOW</a>
@@ -95,12 +83,9 @@ Group 3 last edit 26/03/2021 -->
         </div>
         <div id="dots_container"></div>
     </div>
-
     <!-- seperate line part -->
     <div class="seperate_line"></div>
-
     <!--------------footer_part------------------->
-    <!-- <div class="footer_container"> -->
     <div class="contact_us">
         <div class="contact_word">
             <h1>Contact us</h1>
@@ -109,21 +94,15 @@ Group 3 last edit 26/03/2021 -->
                 <br>Churchill Ave
                 <br>Hobart TAS 7005
             </p>
-
             <p>
                 <strong>Phone</strong>
                 <br>+61362262999
             </p>
         </div>
-
         <div class="google_map">
             <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2922.5404210451375!2d147.32365931566832!3d-42.9036422497168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaa6ddf5a09db9cc9%3A0xf03c94eb451f680!2sUniversity%20of%20Tasmania!5e0!3m2!1sen!2sau!4v1620016679034!5m2!1sen!2sau" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe></p>
         </div>
     </div>
-
-
-
-
     <div class="social_main">
         <div class="social_container">
             <li>
@@ -154,7 +133,6 @@ Group 3 last edit 26/03/2021 -->
             </li>
         </div>
     </div>
-    <!-- </div> -->
     <!-- footer part -->
     <footer>
         <p>Copyright &copy; , KIT_502 Assignment_2</p>
@@ -163,9 +141,6 @@ Group 3 last edit 26/03/2021 -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="./js/home.js"></script>
-    <!-- <script src="./js/search_pop.js"></script> -->
-    <!-- <script src="./js/admin_pop.js"></script> -->
-    <!-- <script src="./js/booking.js"></script> -->
 </body>
 
 </html>

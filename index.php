@@ -20,7 +20,6 @@ if (isset($_GET['logout'])) {
 </head>
 
 <body>
-
 	<div class="header">
 		<h2>Home Page</h2>
 	</div>

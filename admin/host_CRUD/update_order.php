@@ -40,7 +40,6 @@ if (isset($_GET['id'])) {
 <head>
     <title>Update house</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
 
@@ -104,20 +103,15 @@ if (isset($_GET['id'])) {
                 <option value="Reject">Reject</option>
             </select><br>
         </div>
-
         <div class="input-group" id="reason">
             <label>Reason</label>
             <textarea type="text" name="b_reason" value="<?= $row['b_reason'] ?>"></textarea>
         </div>
-
-
         <!-- button  -->
         <div class="input-group">
             <button type="submit" class="btn btn-primary" name="edit_order">Update</button>
         </div>
     </form>
-
 </body>
 <script src="../../js/reject_reason.js"></script>
-
 </html>

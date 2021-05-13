@@ -4,13 +4,11 @@
 }
 
 body {
-    /* background-image: url(resort.jpg); */
     background-position: center;
     background-size: auto;
 }
 
 #form {
-    /* background-color: #000; */
     height: 400px;
     width: 800px;
     margin: auto;

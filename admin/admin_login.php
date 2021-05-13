@@ -15,15 +15,6 @@
 
 	<form method="post" action="admin_login.php">
 		<?php include('../errors.php'); ?>
-		<!-- <div class="input-group">
-			<label>Username</label>
-			<input type="text" name="username">
-		</div>
-		<div class="input-group">
-			<label>Password</label>
-			<input type="password" name="password">
-		</div> -->
-
 		<div class="mb-3">
 			<label for="username" class="form-label">User name</label>
 			<input type="text" class="form-control" name="username" id="username">
@@ -45,7 +36,6 @@
 		</select>
 
 		<div class="input-group">
-			<!-- <button type="submit" class="btn" name="login_user">Login</button> -->
 			<button type="submit" class="btn btn-primary" name="login_user">LOGIN</button>
 		</div>
 		<p>

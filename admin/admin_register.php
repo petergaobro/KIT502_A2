@@ -1,17 +1,14 @@
 <?php include('admin_server.php') ?>
 <!DOCTYPE html>
 <html>
-
 <head>
 	<title>Registration system PHP and MySQL</title>
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
-
 <body>
 	<div class="header">
 		<h2>Register</h2>
 	</div>
-
 	<form method="post" action="admin_register.php">
 		<?php include('../errors.php'); ?>
 		<div class="input-group">
@@ -26,12 +23,10 @@
 			<label>Username</label>
 			<input type="text" name="username" value="<?php echo $username; ?>">
 		</div>
-
 		<div class="input-group">
 			<label>First Name</label>
 			<input type="text" name="first_name" value="<?php echo $first_name; ?>">
 		</div>
-
 		<div class="input-group">
 			<label>Last Name</label>
 			<input type="text" name="last_name" value="<?php echo $last_name; ?>">
@@ -40,7 +35,6 @@
 			<label>Email</label>
 			<input type="email" name="email" value="<?php echo $email; ?>">
 		</div>
-
 		<div class="input-group">
 			<label>Mobile</label>
 			<input type="text" name="mobile" value="<?php echo $mobile; ?>">
@@ -73,7 +67,6 @@
 			<label>ABN</label>
 			<input type="text" name="abn" value="<?php echo $abn; ?>">
 		</div>
-
 		<div class="input-group">
 			<button type="submit" class="btn" name="reg_user">Register</button>
 		</div>
@@ -82,7 +75,5 @@
 		</p>
 	</form>
 </body>
-
 <script src="../js/hide.js"></script>
-
 </html>

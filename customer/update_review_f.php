@@ -8,8 +8,6 @@ $errors = array();
 
 
 if (isset($_POST['edit_review'])) {
-
-    // include "../../db_conn.php";
     $id = mysqli_real_escape_string($db, $_POST['id']);
     $r_location = mysqli_real_escape_string($db, $_POST['r_location']);
     $r_rating = mysqli_real_escape_string($db, $_POST['r_rating']);
@@ -27,11 +25,6 @@ if (isset($_POST['edit_review'])) {
                                             r_comment = '$r_comment'
                                         WHERE id = '$id'";
         $result = mysqli_query($db, $query);
-        // var_dump($query);
-        // var_dump($result);
-        // mysqli_query($db, $query);
-        // $_SESSION['c_username'] = $c_username;
-        // $_SESSION['success'] = "You are now logged in";
         if ($result) {
             header("Location: ./review.php?success=successfully created");
         } else {
