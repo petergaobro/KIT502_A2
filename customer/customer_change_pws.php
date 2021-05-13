@@ -108,15 +108,15 @@ if (isset($_GET['id'])) {
     <div class="header">
         <h2>Change Password</h2>
     </div>
-    <form method="post" action="customer_change_pws_f.php">
-
+    <form method="post" action="customer_change_pws.php">
+        <?php include('./customer_change_pws_f.php');?>
         <?php include('../errors.php'); ?>
         <!-- User id -->
         <input type="text" name="id" value="<?php echo $id; ?>" ; hidden>
         <!-- Password -->
         <div class="input-group">
-            <label>Password</label>
-            <input type="c_password_c" name="c_password_c1" value="<?= $row['c_password'] ?>">
+            <label>New Password</label>
+            <input type="c_password_c" name="c_password_c1"
         </div>
         <!-- Confirm Password -->
         <div class="input-group">

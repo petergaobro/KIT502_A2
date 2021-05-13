@@ -1,12 +1,12 @@
 <?php
-session_start();
+// session_start();
 include "../db_conn.php";
 // initializing variables
 
 // $c_password = "";
 // $c_password_c = "";
 
-echo "hi";
+
 $errors = array();
 
 
@@ -27,10 +27,10 @@ if (isset($_POST['customer_change_pws'])) {
     }
     if ($c_password_c1 != $c_password_c2) {
         array_push($errors, "The two passwords do not match");
-    } elseif (!preg_match($c_pattern_detail, $c_password_c1)) {
+    } else if (!preg_match($c_pattern_detail, $c_password_c1)) {
         array_push($errors, "Your Password  length Must be 6-12 and must contain 1 letter, 1 number, 1 capital letter and one of the following special character(!@#$%)");
     }
-    echo "hip";
+
     // if (empty($c_password_c)) {
     //     header("Location: ./customer_update_detail.php?id=$id&error=Password is reuqired");
     // } //elseif ($c_password != $c_password_c) {
@@ -44,6 +44,7 @@ if (isset($_POST['customer_change_pws'])) {
         $c_password_c = md5($c_password_c1);
         $sql_customer_detail = "UPDATE users_customer SET c_password = '$c_password_c'
                                 WHERE id = '$id'";
+
         $result_customer_detail = mysqli_query($db, $sql_customer_detail);
 
         if ($result_customer_detail) {
@@ -52,11 +53,4 @@ if (isset($_POST['customer_change_pws'])) {
             header("Location: customer_profile.php?error=unknown error occurred&$user_data");
         }
     }
-
-    // }
-} else {
-    header("Location: customer_profile.php");
-    //var_dump($_POST);
-    // echo "No";
 }
-echo "asdf";

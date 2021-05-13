@@ -227,17 +227,18 @@ if (isset($_GET['id'])) {
                                             <td><?php echo $rows['c_address']; ?></td>
                                             <td><?php echo $rows['c_country']; ?></td>
                                             <td><a href="customer_update_detail.php?id=<?= $rows['id'] ?>" class="btn btn-success">Change Details</a>
-                                            </td>
+                                                <a href="customer_change_pws.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Change Password</a>
+                                        </td>
 
                                         </tr>
                                     <?php } ?>
                                 </tbody>
                             </table>
-                            <table>
+                            <!-- <table>
                                 <td>
-                                <td><a href="./customer_change_pws.php?= $rows['id'] ?>" class="btn btn-danger">Change Password</a></td>
+                                <td><a href="customer_change_pws.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Change Password</a></td>
                                 </td>
-                            </table>
+                            </table> -->
                         <?php } ?>
                     </div>
                 </div>

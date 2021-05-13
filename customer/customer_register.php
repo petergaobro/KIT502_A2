@@ -179,12 +179,12 @@
 		<p>Copyright &copy; , KIT_502 Assignment_2</p>
 	</footer>
 	<!-- js files -->
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
 	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="../js/home.js"></script>
 	<!-- <script src="./js/search_pop.js"></script> -->
-	<script src="../js/admin_pop.js"></script>
-	<script src="../js/booking.js"></script>
+	<!-- <script src="../js/admin_pop.js"></script>
+	<script src="../js/booking.js"></script> -->
 
 
 

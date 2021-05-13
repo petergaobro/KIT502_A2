@@ -66,6 +66,7 @@
 		$b_checkin = "";
 		$b_checkout = "";
 		$b_guest = "";
+		$house_image="";
 		// $connection = mysqli_connect('localhost', 'root', '', 'testdb');
 
 		// city
@@ -157,6 +158,7 @@
 				<tr>
 					<td>
 						<div class="img_room">
+							<img src=".<?php echo $row->house_image;?>" />
 							<?php echo $row->house_image ?>
 						</div>
 					</td>
