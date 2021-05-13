@@ -9,6 +9,7 @@
 	<!-- <link rel="stylesheet" type="text/css" href="../css/style.css"> -->
 	<!-- <link rel="stylesheet" type="text/css" href="../css/popup_window.css"> -->
 	<link rel="stylesheet" type="text/css" href="../css/footer.css">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 	<!-- <link rel="stylesheet" type="text/css" href="../css/popup_window.css"> -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/booking.css">
@@ -179,9 +180,10 @@
 			<?php } ?>
 		</table>
 	</div>
-
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<!-- <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script> -->
+	<!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
 	<script src="../js/booking.js"></script>
 	<footer>
 		<p>Copyright &copy; , KIT_502 Assignment_1</p>
