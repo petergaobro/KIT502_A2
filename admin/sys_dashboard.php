@@ -2,6 +2,8 @@
 include "./system_CRUD/read.php";
 include "./host_CRUD/read_house.php";
 include "./host_CRUD/read_order.php";
+include "./host_CRUD/read_review.php";
+include "./host_CRUD/read_q_a.php";
 // include "./CRUD/update_cust.php";
 session_start();
 
@@ -169,7 +171,7 @@ Group 3 last edit 26/03/2021 -->
 								<?php echo $_GET['success']; ?>
 							</div>
 						<?php } ?>
-						<?php if (mysqli_num_rows($result)) { ?>
+						<?php if (mysqli_num_rows($result_c)) { ?>
 							<table class="table table-striped">
 								<thead>
 									<tr>
@@ -188,7 +190,7 @@ Group 3 last edit 26/03/2021 -->
 								<tbody>
 									<?php
 									$i = 0;
-									while ($rows = mysqli_fetch_assoc($result)) {
+									while ($rows = mysqli_fetch_assoc($result_c)) {
 										$i++;
 									?>
 										<tr>
@@ -322,7 +324,7 @@ Group 3 last edit 26/03/2021 -->
 											<td><?php echo $rows['b_mobile']; ?></td>
 											<td><?php echo $rows['b_status']; ?></td>
 											<td><?php echo $rows['b_reason']; ?></td>
-											<td><a href="./system_CRUD/delete_house_sys.php?id=<?= $rows['id']?>" class="btn btn-success">Delete</a>
+											<td><a href="./system_CRUD/delete_house_sys.php?id=<?= $rows['id'] ?>" class="btn btn-success">Delete</a>
 											</td>
 										</tr>
 									<?php } ?>
@@ -335,66 +337,85 @@ Group 3 last edit 26/03/2021 -->
 
 			<!--------------------------review card---------------------------->
 			<div class="tab" id="review_content">
-				<table id="review_table">
-					<thead>
-						<tr>
-							<th>No.reference</th>
-							<th>Location</th>
-							<th>Rate score (sum_rate/num_review)</th>
-							<th>Action</th>
-						</tr>
-					</thead>
-					<tr>
-						<td>#202101</td>
-						<td>Mel</td>
-						<td>3.8</td>
-						<td>
-							<button onclick="delete_review()" id="delete" type="button" class="btn btn-outline-danger">Delete</button>
-						</td>
-					</tr>
-					<tr>
-						<td>#202102</td>
-						<td>SYN</td>
-						<td>3.8</td>
-						<td>
-							<button onclick="delete_review()" id="delete" type="button" class="btn btn-outline-danger">Delete</button>
-						</td>
-					</tr>
-					<tr>
-						<td>#202103</td>
-						<td>Hobart</td>
-						<td>3.8</td>
-						<td>
-							<button onclick="delete_review()" id="delete" type="button" class="btn btn-outline-danger">Delete</button>
-						</td>
-					</tr>
-				</table>
+				<div class="container">
+					<div class="box_customer">
+						<h4 class="display-4 text-center">Rates&Comment</h4><br>
+						<?php if (isset($_GET['success'])) { ?>
+							<div class="alert alert-success" role="alert">
+								<?php echo $_GET['success']; ?>
+							</div>
+						<?php } ?>
+						<?php if (mysqli_num_rows($result_review)) { ?>
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th scope="col">Order.NO</th>
+										<th scope="col">ID.NO</th>
+										<th scope="col">Location</th>
+										<th scope="col">Rating</th>
+										<th scope="col">Comment</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php
+									$i = 0;
+									while ($rows = mysqli_fetch_assoc($result_review)) {
+										$i++;
+									?>
+										<tr>
+											<th scope="row"><?= $i ?></th>
+											<th scope="row"><?= $rows['id'] ?></th>
+											<td><?php echo $rows['r_location']; ?></td>
+											<td><?php echo $rows['r_rating']; ?></td>
+											<td><?php echo $rows['r_comment']; ?></td>
+										</tr>
+									<?php } ?>
+								</tbody>
+							</table>
+							<h4 class="display-4 text-center">Average Rates</h4><br>
+						<?php } ?>
+					</div>
+				</div>
 			</div>
+			<!--------------------------Q&A card---------------------------->
 			<div class="tab" id="q_n_a_content">
-				<table id="review_table">
-					<thead>
-						<tr>
-							<th>Question reference</th>
-							<th>No.question</th>
-							<th>content</th>
-						</tr>
-					</thead>
-					<tr>
-						<td>#202101</td>
-						<td>1</td>
-						<td>Question1</td>
-					</tr>
-					<tr>
-						<td>#202102</td>
-						<td>2</td>
-						<td>Question2</td>
-					</tr>
-					<tr>
-						<td>#202103</td>
-						<td>3</td>
-						<td>Question3</td>
-					</tr>
-				</table>
+				<div class="container">
+					<div class="box_customer">
+						<h4 class="display-4 text-center">Q&A</h4><br>
+						<?php if (isset($_GET['success'])) { ?>
+							<div class="alert alert-success" role="alert">
+								<?php echo $_GET['success']; ?>
+							</div>
+						<?php } ?>
+						<?php if (mysqli_num_rows($result_q_a)) { ?>
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th scope="col">Order.NO</th>
+										<th scope="col">ID.NO</th>
+										<th scope="col">Content</th>
+										<th scope="col">Action</th>
+									</tr>
+								</thead>
+								<tbody>
+									<?php
+									$i = 0;
+									while ($rows = mysqli_fetch_assoc($result_q_a)) {
+										$i++;
+									?>
+										<tr>
+											<th scope="row"><?= $i ?></th>
+											<th scope="row"><?= $rows['id'] ?></th>
+											<td><?php echo $rows['QA']; ?></td>
+											<td><a href="./host_CRUD/update_q_a.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
+											</td>
+										</tr>
+									<?php } ?>
+								</tbody>
+							</table>
+						<?php } ?>
+					</div>
+				</div>
 			</div>
 		</main>
 	</div>
