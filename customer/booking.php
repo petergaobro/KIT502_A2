@@ -137,23 +137,12 @@
 			<div class="Bk_tab">
 				<input type="submit" class="Search_btn" value="Search" name="search_client">
 			</div>
-			<!-- 
-			<div class="col-md-6 text-left">
-				<button class="btn">Search</button>
-			</div> -->
 		</form>
 	</div>
 
 	
 	<div class="Room_type" id="Room_type">
 		<table class="Room_bk">
-			<!-- <tr>
-			<th>Image</th>
-			<th>City</th>
-			<th>Check in date</th>
-			<th>Check out date</th>
-			<th>Guest</th>
-		</tr> -->
 			<?php while ($row = mysqli_fetch_object($result)) { ?>
 				<tr>
 					<td>

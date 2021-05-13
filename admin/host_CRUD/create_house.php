@@ -1,4 +1,4 @@
-<?php include('create_house_f.php') ?>
+<?php include('create_house_f.php')?>
 <!DOCTYPE html>
 <html>
 
