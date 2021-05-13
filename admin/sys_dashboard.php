@@ -378,7 +378,7 @@ Group 3 last edit 26/03/2021 -->
 				</div>
 			</div>
 			<!--------------------------Q&A card---------------------------->
-			<div class="tab" id="q_n_a_content">
+			<div class="tab" id="Q_A_content">
 				<div class="container">
 					<div class="box_customer">
 						<h4 class="display-4 text-center">Q&A</h4><br>
