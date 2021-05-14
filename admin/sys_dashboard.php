@@ -366,7 +366,6 @@ if (isset($_GET['logout'])) {
 									<?php } ?>
 								</tbody>
 							</table>
-							<h4 class="display-4 text-center">Average Rates</h4><br>
 						<?php } ?>
 					</div>
 				</div>
