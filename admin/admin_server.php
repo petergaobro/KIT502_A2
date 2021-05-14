@@ -105,9 +105,11 @@ if (isset($_POST['reg_user'])) {
     mysqli_query($db, $query);
     if ($type_user == "System manager") {
       $_SESSION['username'] = $username;
+      $_SESSION['success'] = "You are now logged in";
       header('location: sys_dashboard.php');
     } else {
       $_SESSION['username'] = $username;
+      $_SESSION['success'] = "You are now logged in";
       header('location: host_dashboard.php');
     }
   }
@@ -146,10 +148,12 @@ if (isset($_POST['login_user'])) {
       if ($row['type_user'] == 'System manager') {
         $_SESSION['username'] = $row['username'];
         $_SESSION['type_user'] = $row['type_user'];
+        $_SESSION['success'] = "You are now logged in";
         header('location: sys_dashboard.php');
       } else if ($row['type_user'] == 'Host') {
         $_SESSION['username'] = $row['username'];
         $_SESSION['type_user'] = $row['type_user'];
+        $_SESSION['success'] = "You are now logged in";
         header('location: host_dashboard.php');
       } else {
         array_push($errors, "Wrong! Your entry doesn't match, please try again.");

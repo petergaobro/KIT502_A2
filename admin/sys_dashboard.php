@@ -388,7 +388,6 @@ if (isset($_GET['logout'])) {
 										<th scope="col">Order.NO</th>
 										<th scope="col">ID.NO</th>
 										<th scope="col">Content</th>
-										<th scope="col">Action</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -401,8 +400,6 @@ if (isset($_GET['logout'])) {
 											<th scope="row"><?= $i ?></th>
 											<th scope="row"><?= $rows['id'] ?></th>
 											<td><?php echo $rows['QA']; ?></td>
-											<td><a href="./host_CRUD/update_q_a.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
-											</td>
 										</tr>
 									<?php } ?>
 								</tbody>

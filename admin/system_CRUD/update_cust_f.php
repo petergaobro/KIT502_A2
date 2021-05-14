@@ -50,7 +50,8 @@ if (isset($_POST['edit_cust'])) {
                                         WHERE id = '$id'";
         $result = mysqli_query($db, $query);
         if ($result) {
-            header("Location: ../sys_dashboard.php?success=successfully created");
+            echo "<script type='text/javascript'>alert('Update Successfully');window.location.href='../sys_dashboard.php';</script>";
+            
         } else {
             header("Location: ../sys_dashboard.php?error=unknown error occurred&$user_data");
         }
