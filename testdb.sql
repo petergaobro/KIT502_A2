@@ -12,48 +12,9 @@ CREATE TABLE `users_admin` (
     `country` varchar(100) NOT NULL,
     `abn` varchar(100) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
-INSERT INTO `users_admin` (
-        `id`,
-        `type_user`,
-        `username`,
-        `first_name`,
-        `last_name`,
-        `email`,
-        `mobile`,
-        `password`,
-        `address`,
-        `country`,
-        `abn`
-    )
-VALUES (
-        1,
-        'System manager',
-        'peter',
-        'Peng',
-        'Gao',
-        'peter@gmail.com',
-        '0426612585',
-        '202cb962ac59075b964b07152d234b70',
-        '7 lincoln st',
-        'China',
-        ''
-    ),
-    (
-        2,
-        'Host',
-        'petergao',
-        'Peng',
-        'Gao',
-        'petergao@gmail.com',
-        '0426612585',
-        '202cb962ac59075b964b07152d234b70',
-        '70 lincoln st',
-        'Australia',
-        '123'
-    );
 ALTER TABLE `users_admin`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 3;
+    AUTO_INCREMENT = 1;
 COMMIT;
 -- customer table
 CREATE TABLE `users_customer` (
