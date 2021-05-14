@@ -20,7 +20,7 @@ if (isset($_POST['edit_q_a'])) {
         $query = "INSERT INTO Q_A (QA) 
   			  VALUES('$c_q_a')";
         mysqli_query($db, $query);
-        header('location: ./customer_profile.php');
+        echo "<script type='text/javascript'>alert('Q&A Submit Successfully');window.location.href='customer_profile.php';</script>";
     }
 }
 

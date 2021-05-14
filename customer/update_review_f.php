@@ -26,7 +26,7 @@ if (isset($_POST['edit_review'])) {
                                         WHERE id = '$id'";
         $result = mysqli_query($db, $query);
         if ($result) {
-            header("Location: ./customer_profile.php?success=successfully created");
+            echo "<script type='text/javascript'>alert('Update  Successfully');window.location.href='customer_profile.php';</script>";
         } else {
             header("Location: ./customer_profile.php?error=unknown error occurred&$user_data");
         }

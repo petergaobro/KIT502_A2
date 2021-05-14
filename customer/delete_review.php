@@ -16,7 +16,7 @@ if (isset($_GET['id'])) {
          WHERE id=$id";
     $result = mysqli_query($db, $sql);
     if ($result) {
-        header("Location: ./customer_profile.php?success=successfully deleted");
+        echo "<script type='text/javascript'>alert('Delete Successfully');window.location.href='customer_profile.php';</script>";
     } else {
         header("Location: ./customer_profile.php?error=unknown error occurred&$user_data");
     }

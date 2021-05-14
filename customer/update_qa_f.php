@@ -20,7 +20,7 @@ if (isset($_POST['edit_QA'])) {
                                 WHERE id = '$id'";
         $result = mysqli_query($db, $query);
         if ($result) {
-            header("Location: ./customer_profile.php?success=successfully update");
+            echo "<script type='text/javascript'>alert('Reply Successfully');window.location.href='customer_profile.php';</script>";
         } else {
             header("Location: ./customer_profile.php?error=unknown error occurred&$user_data");
         }
