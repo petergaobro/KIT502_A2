@@ -1,11 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Boogaloo&family=Hachi+Maru+Pop&family=Monoton&family=Syncopate&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap');
 * {
-    margin: 0px;
     padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    text-decoration: none;
 }
 
 body {
-    font-size: 120%;
-    background: #F8F8FF;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/background/background_img.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+.nav_bar {
+    margin-top: 0;
+    width: 1100px;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: calc((100% - 1100px) / 2);
+    z-index: 100000;
+}
+
+.nav_links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav_links li {
+    display: inline-flex;
+}
+
+.nav_links li a {
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+    font-size: 25px;
+    position: relative;
+    font-family: 'Noto Serif', serif;
+}
+
+.nav_links li a:hover {
+    color: tomato;
+    transition: .9s;
 }
 
 .header {
@@ -18,6 +64,18 @@ body {
     border-bottom: none;
     border-radius: 10px 10px 0px 0px;
     padding: 20px;
+}
+
+.logo {
+    font-family: "Monoton", cursive;
+    font-size: 1.5rem;
+    margin: .5rem;
+    color: white;
+}
+
+.logo p {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 form,
@@ -74,19 +132,6 @@ form,
     background: #dff0d8;
     border: 1px solid #3c763d;
     margin-bottom: 20px;
-}
-
-
-/* import font google css API */
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;500&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    list-style-type: none;
-    text-decoration: none;
-    font-family: "Montserrat", sans-serif;
 }
 
 .main_container {
@@ -161,16 +206,6 @@ main {
 .dash_card_container ul li h1:hover {
     color: #fff;
 }
-
-
-/* .dash_card h1 {
-    color: #191970;
-} */
-
-
-/* .dash_card h1:hover {
-    background: #fff;
-} */
 
 .dash_card {
     border: 1px solid #191970;

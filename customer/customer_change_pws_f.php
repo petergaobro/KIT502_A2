@@ -26,7 +26,7 @@ if (isset($_POST['customer_change_pws'])) {
                                 WHERE id = '$id'";
         $result_customer_detail = mysqli_query($db, $sql_customer_detail);
         if ($result_customer_detail) {
-            header("Location: customer_profile.php?success=successfully created");
+            echo "<script type='text/javascript'>alert('Password Was Changed Successfully');window.location.href='customer_profile.php';</script>";
         } else {
             header("Location: customer_profile.php?error=unknown error occurred&$user_data");
         }

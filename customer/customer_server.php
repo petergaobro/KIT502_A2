@@ -85,8 +85,7 @@ if (isset($_POST['reg_customer'])) {
   			  VALUES('$c_username', '$c_first_name', '$c_last_name', '$c_email', '$c_mobile', '$c_address', '$c_password', '$c_country')";
         mysqli_query($db, $query);
         $_SESSION['c_username'] = $c_username;
-        $_SESSION['success'] = "You are now logged in";
-        header('location: customer_profile.php');
+        echo "<script type='text/javascript'>alert('Register Successfully and login automatically');window.location.href='customer_profile.php';</script>";
     }
 }
 
@@ -116,8 +115,7 @@ if (isset($_POST['login_customer'])) {
         if (mysqli_num_rows($results) == 1) {
             $row = mysqli_fetch_assoc($results);
             $_SESSION['c_username'] = $row['c_username'];
-            $_SESSION['success']  = "You are now logged in";
-            header('location: customer_profile.php');
+            echo "<script type='text/javascript'>alert('Login Successfully');window.location.href='customer_profile.php';</script>";
         } else {
             array_push($errors, "Wrong! Your entry doesn't match, please try again.");
         }

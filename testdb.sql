@@ -67,31 +67,9 @@ CREATE TABLE `users_customer` (
     `c_address` varchar(100) NOT NULL,
     `c_country` varchar(100) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
-INSERT INTO `users_customer` (
-        `id`,
-        `c_username`,
-        `c_first_name`,
-        `c_last_name`,
-        `c_email`,
-        `c_mobile`,
-        `c_password`,
-        `c_address`,
-        `c_country`
-    )
-VALUES (
-        1,
-        'peter',
-        'Peng',
-        'Gao',
-        'peter@gmail.com',
-        '0426612585',
-        '202cb962ac59075b964b07152d234b70',
-        '7 lincoln st',
-        'China'
-    );
 ALTER TABLE `users_customer`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 2;
+    AUTO_INCREMENT = 1;
 COMMIT;
 -- booking table
 CREATE TABLE `booking` (
@@ -110,37 +88,9 @@ CREATE TABLE `booking` (
     `b_payment` varchar(100) NOT NULL,
     `b_reason` varchar(100) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
-INSERT INTO `booking` (
-        `id`,
-        `con_checkin`,
-        `con_checkout`,
-        `con_guest`,
-        `con_price`,
-        `b_first_name`,
-        `b_last_name`,
-        `b_email`,
-        `b_mobile`,
-        `b_status`,
-        `b_payment`,
-        `b_reason`
-    )
-VALUES (
-        1,
-        '2021-05-31',
-        '2021-06-10',
-        '3',
-        '240',
-        'PENG',
-        'GAO',
-        'peter@gmail.com',
-        '0426612390',
-        'in process',
-        'in process',
-        'Good'
-    );
 ALTER TABLE `booking`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 2;
+    AUTO_INCREMENT = 1;
 COMMIT;
 -- house table
 CREATE TABLE `house` (
@@ -262,22 +212,6 @@ ALTER TABLE `house`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,
     AUTO_INCREMENT = 6;
 COMMIT;
--- INSERT INTO `room` (`r_id`, `r_type`, `r_bedding`, `r_status`, `r_inventory`)
--- VALUES (1, 'Superior Room', 'Single', 'Free', 2),
---     (2, 'Superior Room', 'Double', 'Free', 5),
---     (3, 'Superior Room', 'Triple', 'Free', 2),
---     (4, 'Single Room', 'Quad', 'Free', 1),
---     (5, 'Superior Room', 'Quad', 'Unavailable', 0),
---     (6, 'Deluxe Room', 'Single', 'Free', 6),
---     (7, 'Deluxe Room', 'Double', 'Free', 3),
---     (8, 'Deluxe Room', 'Triple', 'Free', 8),
---     (9, 'Deluxe Room', 'Quad', 'Free', 2),
---     (10, 'Guest House', 'Single', 'Free', 3),
---     (11, 'Guest House', 'Double', 'Free', 1),
---     (12, 'Guest House', 'Quad', 'Free', 4),
---     (13, 'Single Room', 'Single', 'Free', 2),
---     (14, 'Single Room', 'Double', 'Unavailable', 0),
---     (15, 'Single Room', 'Triple', 'Free', 2);
 -- review table
 CREATE TABLE `users_review` (
     `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
@@ -296,36 +230,17 @@ VALUES (
         'sandy vay',
         '3.4',
         'Perfect'
-    ),
-    (
-        2,
-        'city',
-        '4.2',
-        'Wonderful'
     );
 ALTER TABLE `users_review`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 3;
+    AUTO_INCREMENT = 2;
 COMMIT;
-
 -- Q&A
 CREATE TABLE `Q_A` (
     `id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     `QA` varchar(100) NOT NULL
 ) ENGINE = InnoDB DEFAULT CHARSET = latin1;
-INSERT INTO `Q_A` (
-        `id`,
-        `QA`
-    )
-VALUES (
-        1,
-        'Hi, where is the utas hotel?'
-    ),
-    (
-        2,
-        'Hi, how are you?'
-    );
 ALTER TABLE `Q_A`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,
-    AUTO_INCREMENT = 3;
+    AUTO_INCREMENT = 1;
 COMMIT;

@@ -39,7 +39,7 @@ if (isset($_POST['edit_customer_profile'])) {
                                 WHERE id = '$id'";
         $result_customer_detail = mysqli_query($db, $sql_customer_detail);
         if ($result_customer_detail) {
-            header("Location: customer_profile.php?success=successfully created");
+            echo "<script type='text/javascript'>alert('Change Details Successfully');window.location.href='customer_profile.php';</script>";
         } else {
             header("Location: customer_profile.php?error=unknown error occurred&$user_data");
         }

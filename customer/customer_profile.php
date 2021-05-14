@@ -56,25 +56,14 @@ if (isset($_GET['id'])) {
     <link rel="stylesheet" type="text/css" href="../css/customer_profile.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../css/footer.css">
-    <link rel="stylesheet" type="text/css" href="../css/login_reg.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- link css file and font style -->
     <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
-    <!-- <link rel="stylesheet" href="../css/dashboard.css" /> -->
-    <!-- <link rel="stylesheet" href="../css/system_CRUD.css" /> -->
+
     <title>Profile</title>
 </head>
 
 <body>
-    <!---------------part 1-------------------->
-    <div class="covid_div">
-        <aside class="covid_notice">
-            <a class="covid_news" href="https://www.australia.gov.au/">
-                <span class="covid_words">Get the latest on our COVID-19 response</span>
-            </a>
-        </aside>
-    </div>
-
     <nav class="nav_bar">
         <div class="logo">
             <p>UTas</p>
