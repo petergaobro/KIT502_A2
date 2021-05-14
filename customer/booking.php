@@ -73,7 +73,6 @@
 			$b_guest = $_POST['b_guest'];
 			$sql .= "AND house_guest LIKE '%$b_guest%' ";
 		}
-		echo $sql;
 		$result = mysqli_query($db, $sql);
 		?>
 		<form class="Bk_form_tab" method="post" action="booking.php">
@@ -115,7 +114,6 @@
 					<td>
 						<div class="img_room">
 							<img src=".<?php echo $row->house_image;?>" />
-							<?php echo $row->house_image ?>
 						</div>
 					</td>
 					<td>

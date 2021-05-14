@@ -149,7 +149,7 @@ VALUES (
         'No',
         'Yes',
         'No',
-        './img/background/background_img.jpg'
+        './img/Room/img1.jpg'
     ),
     (
         2,
@@ -168,7 +168,7 @@ VALUES (
         'Yes',
         'No',
         'Yes',
-        './img/booking/background.jpg'
+        './img/Room/img2.jpg'
     ),
     (
         3,
@@ -187,7 +187,7 @@ VALUES (
         'No',
         'No',
         'Yes',
-        './img/booking/close.jpg'
+        './img/Room/Room1.jpg'
     ),
     (
         4,
@@ -206,7 +206,7 @@ VALUES (
         'No',
         'No',
         'Yes',
-        './img/footer_social/fb.png'
+        './img/Room/Room2.jpg'
     );
 ALTER TABLE `house`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,

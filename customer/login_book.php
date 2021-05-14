@@ -24,7 +24,7 @@ if (isset($_GET['logout'])) {
 	<title>KIT_502_web_dev</title>
 	<link rel="stylesheet" type="text/css" href="../css/footer.css">
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="../css/booking.css">
 	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
 </head>
@@ -148,7 +148,7 @@ if (isset($_GET['logout'])) {
 				<tr>
 					<td>
 						<div class="img_room">
-							<?php echo $row->house_image ?>
+						<img src=".<?php echo $row->house_image;?>" />
 						</div>
 					</td>
 					<td>
