@@ -77,7 +77,7 @@ if (isset($_GET['Price'])) {
         </div>
         <div class="input-group">
             <button type="submit" class="btn btn-primary" name="confirm_book">Confirm</button>
-            <a href="./review.php" class="link-primary">Review</a>
+            <a href="./login_book.php" class="link-primary">Back</a>
         </div>  
     </form>
 </body>

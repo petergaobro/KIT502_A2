@@ -147,7 +147,7 @@ if (isset($_GET['logout'])) {
 				<tr>
 					<td>
 						<div class="img_room">
-						<img src=".<?php echo $row->house_image;?>" />
+						<img src="<?php echo $row->house_image;?>" />
 						</div>
 					</td>
 					<td>

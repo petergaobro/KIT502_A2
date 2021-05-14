@@ -88,7 +88,7 @@ if (isset($_GET['id'])) {
                 </div>
                 <div class="input-group">
                         <button type="submit" class="btn btn-primary" name="edit_cust">Update</button>
-                        <a href="../sys_dashboard.php" class="link-primary">View</a>
+                        <a href="../sys_dashboard.php" class="link-primary">Cancel</a>
                 </div>
         </form>
 </body>

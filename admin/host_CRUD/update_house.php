@@ -198,7 +198,7 @@ if (isset($_GET['id'])) {
         <!-- button  -->
         <div class="input-group">
             <button type="submit" class="btn btn-primary" name="edit_house">Update</button>
-            <a href="../host_dashboard.php" class="link-primary">View</a>
+            <a href="../host_dashboard.php" class="link-primary">Cancel</a>
         </div>
     </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

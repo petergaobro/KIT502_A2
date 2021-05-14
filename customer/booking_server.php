@@ -83,6 +83,6 @@ if (isset($_POST['confirm_book'])) {
                         '$b_payment',
                         '$b_reason')";
         mysqli_query($db, $query);
-        $_SESSION['success'] = "You are now booked successfully";
+        echo "<script type='text/javascript'>alert('Booking Successfully, Please wait for Host confirm');window.location.href='customer_profile.php';</script>";
     }
 }
