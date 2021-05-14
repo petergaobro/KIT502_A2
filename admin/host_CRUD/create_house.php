@@ -5,12 +5,10 @@
 <head>
     <title>Host create house</title>
     <link rel="stylesheet" type="text/css" href="../../css/h_create_house.css">
-    <link rel="stylesheet" type="text/css" href="../../css/booking.css">
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
-
 <body>
     <form class="form-group" method="post" action="create_house.php">
         <?php include('../../errors.php'); ?>

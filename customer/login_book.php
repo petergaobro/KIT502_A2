@@ -72,7 +72,6 @@ if (isset($_GET['logout'])) {
 			<?php if (isset($_SESSION['c_username'])) : ?>
 				<div class="user_log_suc">
 					<p>Welcome <strong><?php echo $_SESSION['c_username']; ?></strong></p>
-					<p> <a class="active_nav" href="customer_login.php?logout='1'">logout</a> </p>
 				</div>
 			<?php endif ?>
 		</div>

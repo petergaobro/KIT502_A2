@@ -40,7 +40,6 @@
 						</ul>
 					</div>
 				</li>
-				<li><a href="../html/login_admin.html"><button id="do_admin_login" type="button" class="btn btn-dark" onclick="do_admin_login()">Admin</button></a></li>
 			</ul>
 		</div>
 		<script src="../js/toggle_bar.js" defer></script>

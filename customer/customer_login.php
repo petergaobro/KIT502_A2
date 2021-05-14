@@ -34,11 +34,9 @@
                     <div class="sub_user">
                         <ul>
                             <li><a href="../customer/customer_login.php">Login</a></li>
-                            <li><a href="../customer/review.php">Review</a></li>
                         </ul>
                     </div>
                 </li>
-                <li><a href="../admin/admin_login.php"><button id="do_admin_login" type="button" class="btn btn-dark" onclick="do_admin_login()">Admin</button></a></li>
             </ul>
         </div>
     </nav>
