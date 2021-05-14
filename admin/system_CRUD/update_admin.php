@@ -54,7 +54,7 @@ if (isset($_GET['id'])) {
         <input type="text" name="id" value="<?php echo $id; ?>" ; hidden>
 		<div class="input-group">
 			<label>Are you registering as a system manager or host?</label>
-			<select class="type_user" name="type_user" value="<?= $row['type_user'] ?>"><br>
+			<select class="type_user" id="usertype"  name="type_user" value="<?= $row['type_user'] ?>"><br>
 				<option selected value=""></option>
 				<option value="System manager">System manager</option>
 				<option value="Host">Host</option>
@@ -96,7 +96,7 @@ if (isset($_GET['id'])) {
                 <option value="South Korea">South Korea</option>
             </select><br>
         </div>
-        <div class="input-group">
+        <div class="input-group" id="abn">
 			<label>ABN</label>
 			<input type="text" name="abn" value="<?= $row['abn'] ?>">
 		</div>
@@ -106,4 +106,5 @@ if (isset($_GET['id'])) {
         </div>
     </form>
 </body>
+<script src="../../js/hide.js"></script>
 </html>

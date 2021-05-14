@@ -87,8 +87,7 @@ if (isset($_POST['create_cust_ad'])) {
   			  VALUES('$c_username', '$c_first_name', '$c_last_name', '$c_email', '$c_mobile', '$c_address', '$c_password', '$c_country')";
         mysqli_query($db, $query);
         $_SESSION['c_username'] = $c_username;
-        // $_SESSION['success'] = "You are now logged in";
-        header('location: ../sys_dashboard.php');
+        echo "<script type='text/javascript'>alert('Create Successfully');window.location.href='../sys_dashboard.php';</script>";
     }
 }
 

@@ -99,6 +99,6 @@ if (isset($_POST['create_admin_ad'])) {
         $query = "INSERT INTO users_admin (type_user, username, first_name, last_name, email, mobile, address, password, country, abn) 
   			  VALUES('$type_user', '$username', '$first_name', '$last_name', '$email', '$mobile', '$address', '$password', '$country', '$abn')";
         mysqli_query($db, $query);
-        header('location: ../sys_dashboard.php');
+        echo "<script type='text/javascript'>alert('Create Successfully');window.location.href='../sys_dashboard.php';</script>";
     }
 }
