@@ -18,22 +18,22 @@
             <div id="first-group">
                 <!-- house name -->
                 <div id="content">
-                    <i class="fa fa-user" aria-hidden="true"></i>
+                <i class="fa fa-home" aria-hidden="true"></i>
                     <input type="text" id="input-group" name="house_name" placeholder="House name" value="<?php echo $house_name; ?>">
                 </div>
                 <!-- house description -->
                 <div id="content">
-                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <i class="fa fa-file-text" aria-hidden="true"></i>
                     <input type="text" id="input-group" name="house_desc" placeholder="House description" value="<?php echo $house_desc; ?>">
                 </div>
                 <!-- house address -->
                 <div id="content">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <i class="fa fa-map-marker" aria-hidden="true"></i>
                     <input type="text" id="input-group" name="house_addr" placeholder="House address" value="<?php echo $house_addr; ?>">
                 </div>
                 <!-- house city -->
                 <div id="content">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <i class="fa fa-globe" aria-hidden="true"></i>
                     <select id="input-group" name="house_city" placeholder="House city" value="<?php echo $house_city; ?>">
                         <option value="">City</option>
                         <option value="Sydney">Sydney</option>
@@ -50,17 +50,17 @@
                 </div>
                 <!-- house price -->
                 <div id="content">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <i class="fa fa-usd" aria-hidden="true"></i>
                     <input type="text" id="input-group" name="house_price" placeholder="House price" value="<?php echo $house_price; ?>">
                 </div>
                 <!-- house number of guest -->
                 <div id="content">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <i class="fa fa-users" aria-hidden="true"></i>
                     <input type="number" id="input-group" name="house_guest" placeholder="Select guest" min="1" value="<?php echo $house_guest; ?>">
                 </div>
                 <!-- house number of room -->
                 <div id="content">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <i class="fa fa-sort-numeric-asc" aria-hidden="true"></i>
                     <select id="input-group" name="house_num_room" placeholder="Number of room" value="<?php echo $house_num_room; ?>">
                         <option value="">No.of room</option>
                         <option value="1">1</option>
@@ -77,7 +77,7 @@
                 </div>
                 <!-- house number of bathroom -->
                 <div id="content">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <i class="fa fa-bath" aria-hidden="true"></i>
                     <select id="input-group" name="house_num_bathroom" placeholder="Number of bathroom" value="<?php echo $house_num_bathroom; ?>">
                         <option value="">No.of bathroom</option>
                         <option value="1">1</option>
@@ -90,17 +90,17 @@
 
             <div id="second-group">
                 <div id="content">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <i class="fa fa-check" aria-hidden="true"></i>
                     <input type="text" id="checkin" name="house_checkin" placeholder="House check in" value="<?php echo $house_checkin; ?>">
                 </div>
                 <!-- house check out date -->
                 <div id="content">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <i class="fa fa-check-square-o" aria-hidden="true"></i>
                     <input type="text" id="checkout" name="house_checkout" placeholder="House check out" value="<?php echo $house_checkout; ?>">
                 </div>
                 <!-- entire house -->
                 <div id="content">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <i class="fa fa-expand" aria-hidden="true"></i>
                     <select id="input-group" name="house_entire" placeholder="House entire" value="<?php echo $house_entire; ?>">
                         <option value="">House entire</option>
                         <option value="Yes">Yes</option>
@@ -109,7 +109,7 @@
                 </div>
                 <!-- Garage -->
                 <div id="content">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <i class="fa fa-car" aria-hidden="true"></i>
                     <select id="input-group" name="house_garage" placeholder="House garage" value="<?php echo $house_garage; ?>">
                         <option value="">House garage</option>
                         <option value="Yes">Yes</option>
@@ -118,7 +118,7 @@
                 </div>
                 <!-- smoke -->
                 <div id="content">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <i class="fa fa-cloud" aria-hidden="true"></i>
                     <select id="input-group" name="house_smoke" placeholder="House smoke" value="<?php echo $house_smoke; ?>">
                         <option value="">House smoke</option>
                         <option value="Yes">Yes</option>
@@ -127,7 +127,7 @@
                 </div>
                 <!-- internet -->
                 <div id="content">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <i class="fa fa-internet-explorer" aria-hidden="true"></i>
                     <select id="input-group" name="house_internet" placeholder="House internet" value="<?php echo $house_internet; ?>">
                         <option value="">House internet</option>
                         <option value="Yes">Yes</option>
@@ -136,7 +136,7 @@
                 </div>
                 <!-- pet -->
                 <div id="content">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <i class="fa fa-paw" aria-hidden="true"></i>
                     <select id="input-group" name="house_pet" placeholder="House pet" value="<?php echo $house_pet; ?>">
                         <option value="">House pet</option>
                         <option value="Yes">Yes</option>
@@ -145,7 +145,7 @@
                 </div>
                 <!-- image -->
                 <div id="content">
-                    <i class="fa fa-calendar" aria-hidden="true"></i>
+                    <i class="fa fa-file-image-o" aria-hidden="true"></i>
 
                     <input type="file" id="input-group" name="house_image" accept="image/gif, image/jpeg, image/png" placeholder="House image" value="<?php echo $house_image; ?>">
                     <p>Please upload house image</p>

@@ -40,6 +40,8 @@
 		</div>
 		<p>
 			Not yet a member? <a href="admin_register.php">Sign up</a>
+			<a href="../home.php">Back to home</a>
+
 		</p>
 	</form>
 </body>
