@@ -42,7 +42,6 @@
 				</li>
 			</ul>
 		</div>
-		<script src="../js/toggle_bar.js" defer></script>
 	</nav>
 	<div class="Booking_form">
 		<?php include('../db_conn.php');
