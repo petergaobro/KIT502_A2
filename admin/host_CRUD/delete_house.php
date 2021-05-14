@@ -16,7 +16,7 @@ if (isset($_GET['id'])) {
 	        WHERE id=$id";
     $result = mysqli_query($db, $sql);
     if ($result) {
-        header("Location: ../host_dashboard.php?success=successfully deleted");
+        echo "<script type='text/javascript'>alert('Delete Successfully');window.location.href='../host_dashboard.php';</script>";
     } else {
         header("Location: ../host_dashboard.php?error=unknown error occurred&$user_data");
     }

@@ -48,6 +48,7 @@ if (isset($_GET['id'])) {
 <head>
     <title>Update house</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="../../css/style.css">
 </head>
 
@@ -200,8 +201,8 @@ if (isset($_GET['id'])) {
             <a href="../host_dashboard.php" class="link-primary">View</a>
         </div>
     </form>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="../../js/booking.js"></script>
 </body>
 </html>

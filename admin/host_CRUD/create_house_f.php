@@ -117,8 +117,6 @@ if (isset($_POST['create_house_host'])) {
                         '$house_pet', 
                         '$house_image')";
         mysqli_query($db, $query);
-        // $_SESSION['c_username'] = $c_username;
-        // $_SESSION['success'] = "You are now logged in";
-        header('location: ../host_dashboard.php');
+        echo "<script type='text/javascript'>alert('Create Successfully');window.location.href='../host_dashboard.php';</script>";
     }
 }

@@ -75,11 +75,11 @@ if (isset($_POST['edit_house'])) {
                                     house_smoke = '$house_smoke', 
                                     house_internet = '$house_internet', 
                                     house_pet = '$house_pet', 
-                                    house_image = '$house_image' as img
+                                    house_image = '$house_image'
                                 WHERE id = '$id'";
         $result = mysqli_query($db, $query);
         if ($result) {
-            header("Location: ../host_dashboard.php?success=successfully created");
+            echo "<script type='text/javascript'>alert('Update Successfully');window.location.href='../host_dashboard.php';</script>";
         } else {
             header("Location: ../host_dashboard.php?error=unknown error occurred&$user_data");
         }

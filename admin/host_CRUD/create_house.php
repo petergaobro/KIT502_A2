@@ -6,6 +6,7 @@
     <title>Host create house</title>
     <link rel="stylesheet" type="text/css" href="../../css/h_create_house.css">
     <link rel="stylesheet" type="text/css" href="../../css/booking.css">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
@@ -155,8 +156,8 @@
             <button type="submit" class="btn" value="Submit" id="submit-btn" name="create_house_host">Create Now</button>
         </div>
     </form>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="../../js/booking.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="../../js/booking.js"></script>
 </body>
 </html>
