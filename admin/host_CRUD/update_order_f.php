@@ -50,7 +50,7 @@ if (isset($_POST['edit_order'])) {
         $result = mysqli_query($db, $query);
 
         if ($result) {
-            header("Location: ../host_dashboard.php?success=successfully update");
+            echo "<script type='text/javascript'>alert('Update Successfully');window.location.href='../host_dashboard.php';</script>";
         } else {
             header("Location: ../host_dashboard.php?error=unknown error occurred&$user_data");
         }
