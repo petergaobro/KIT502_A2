@@ -21,7 +21,7 @@ if (isset($_GET['id'])) {
     if (mysqli_num_rows($result) > 0) {
         $row = mysqli_fetch_assoc($result);
     } else {
-        header("Location: review.php");
+        header("Location: customer_profile.php");
     }
 }
 ?>
@@ -61,7 +61,6 @@ if (isset($_GET['id'])) {
                     <div class="sub_user">
                         <ul>
                             <li><a href="../customer/customer_login.php">Login</a></li>
-                            <li><a href="../customer/review.php">Review</a></li>
                         </ul>
                     </div>
                 </li>

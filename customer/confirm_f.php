@@ -3,7 +3,6 @@ include "../db_conn.php";
 $b_checkin = "";
 $b_checkout = "";
 $b_guest = "";
-echo "hi";
 if (isset($_POST['book_now'])) {
     $b_checkin = mysqli_real_escape_string($db, $_POST['b_checkin']);
     $b_checkout = mysqli_real_escape_string($db, $_POST['b_checkout']);

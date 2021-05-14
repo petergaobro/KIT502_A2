@@ -23,6 +23,7 @@ if (isset($_GET['logout'])) {
 
 	<title>KIT_502_web_dev</title>
 	<link rel="stylesheet" type="text/css" href="../css/footer.css">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="../css/booking.css">
 	<link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
@@ -49,11 +50,10 @@ if (isset($_GET['logout'])) {
 					<div class="sub_user">
 						<ul>
 							<li><a href="./customer_login.php">Logout</a></li>
-							<li><a href="./review.php">Review</a></li>
+							<li><a href="./customer_profile.php">Profile</a></li>
 						</ul>
 					</div>
 				</li>
-				<li><a href="../html/login_admin.html"><button id="do_admin_login" type="button" class="btn btn-dark" onclick="do_admin_login()">Admin</button></a></li>
 			</ul>
 		</div>
 		<div class="log_msg">
@@ -104,7 +104,6 @@ if (isset($_GET['logout'])) {
 			$b_guest = $_POST['b_guest'];
 			$sql .= "AND house_guest LIKE '%$b_guest%' ";
 		}
-		echo $sql;
 		$result = mysqli_query($db, $sql);
 		?>
 		<form class="Bk_form_tab" method="post" action="login_book.php">
@@ -178,8 +177,8 @@ if (isset($_GET['logout'])) {
 			<?php } ?>
 		</table>
 	</div>
-	<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 	<script src="../js/booking.js"></script>
 	<footer>
 		<p>Copyright &copy; , KIT_502 Assignment_2</p>

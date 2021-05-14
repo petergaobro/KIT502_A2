@@ -16,10 +16,10 @@ if (isset($_GET['id'])) {
          WHERE id=$id";
     $result = mysqli_query($db, $sql);
     if ($result) {
-        header("Location: ./review.php?success=successfully deleted");
+        header("Location: ./customer_profile.php?success=successfully deleted");
     } else {
-        header("Location: ./review.php?error=unknown error occurred&$user_data");
+        header("Location: ./customer_profile.php?error=unknown error occurred&$user_data");
     }
 } else {
-    header("Location: ./review.php");
+    header("Location: ./customer_profile.php");
 }

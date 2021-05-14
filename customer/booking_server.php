@@ -18,6 +18,7 @@ $errors = array();
 
 // confirm booking
 if (isset($_POST['confirm_book'])) {
+    include "../db_conn.php";
 
     $con_checkin = mysqli_real_escape_string($db, $_POST['con_checkin']);
     $con_checkout = mysqli_real_escape_string($db, $_POST['con_checkout']);
@@ -32,8 +33,6 @@ if (isset($_POST['confirm_book'])) {
     $b_reason = mysqli_real_escape_string($db, $_POST['b_reason']);
     // form validation: ensure that the form is correctly filled ...
     // by adding (array_push()) corresponding error unto $errors array
-
-    echo $con_checkin;
     if (empty($con_checkin)) {
         array_push($errors, "Check in date is required");
     }
@@ -83,8 +82,6 @@ if (isset($_POST['confirm_book'])) {
                         '$b_status',
                         '$b_payment',
                         '$b_reason')";
-
-        echo $query;
         mysqli_query($db, $query);
         $_SESSION['success'] = "You are now booked successfully";
     }

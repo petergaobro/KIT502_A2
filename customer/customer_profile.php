@@ -7,6 +7,7 @@ include "../admin/host_CRUD/read_order.php";
 include "../admin/host_CRUD/read_review.php";
 include "../db_conn.php";
 include "../admin/host_CRUD/read_q_a.php";
+include "./review_read.php";
 // include "../customer/q_a_f.php";
 
 
@@ -82,7 +83,7 @@ if (isset($_GET['id'])) {
         <div class="nav_links">
             <ul class="list_nav">
                 <li><a class="active_nav" href="../home.php">Home</a></li>
-                <li><a class="active_nav" href="../customer/booking.php">Book</a></li>
+                <li><a class="active_nav" href="../customer/login_book.php">Book</a></li>
                 <li><a class="active_nav" href="#">Customer</a>
                     <!-- sub user bar -->
                     <div class="sub_user">
@@ -219,7 +220,7 @@ if (isset($_GET['id'])) {
                                             <td><?php echo $rows['c_country']; ?></td>
                                             <td><a href="customer_update_detail.php?id=<?= $rows['id'] ?>" class="btn btn-success">Change Details</a>
                                                 <a href="customer_change_pws.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Change Password</a>
-                                        </td>
+                                            </td>
 
                                         </tr>
                                     <?php } ?>
@@ -280,7 +281,7 @@ if (isset($_GET['id'])) {
             <div class="tab" id="rate_content">
                 <div class="container">
                     <div class="box_customer">
-                        <h4 class="display-4 text-center">Rates&Comment</h4><br>
+                        <h4 class="display-4 text-center">Reviews</h4><br>
                         <?php if (isset($_GET['success'])) { ?>
                             <div class="alert alert-success" role="alert">
                                 <?php echo $_GET['success']; ?>
@@ -291,10 +292,10 @@ if (isset($_GET['id'])) {
                                 <thead>
                                     <tr>
                                         <th scope="col">Order.NO</th>
-                                        <th scope="col">ID.NO</th>
-                                        <th scope="col">Location</th>
-                                        <th scope="col">Rating</th>
+                                        <th scope="col">location</th>
+                                        <th scope="col">Rate</th>
                                         <th scope="col">Comment</th>
+                                        <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -305,15 +306,21 @@ if (isset($_GET['id'])) {
                                     ?>
                                         <tr>
                                             <th scope="row"><?= $i ?></th>
-                                            <th scope="row"><?= $rows['id'] ?></th>
-                                            <td><?php echo $rows['r_location']; ?></td>
-                                            <td><?php echo $rows['r_rating']; ?></td>
-                                            <td><?php echo $rows['r_comment']; ?></td>
+                                            <td><?= $rows['r_location'] ?></td>
+                                            <td><?= $rows['r_rating'] ?></td>
+                                            <td><?= $rows['r_comment'] ?></td>
+                                            <td><a href="./update_review.php?id=<?= $rows['id'] ?>" class="btn btn-success">Update</a>
+                                                <a href="./delete_review.php?id=<?= $rows['id'] ?>" class="btn btn-danger">Delete</a>
+                                            </td>
                                         </tr>
                                     <?php } ?>
                                 </tbody>
+                                <tbody>
+                                    <div class="link-right">
+                                        <a href="create_view.php" class="btn btn-success">Write a Rate</a>
+                                    </div>
+                                </tbody>
                             </table>
-                            <h4 class="display-4 text-center">Average Rates</h4><br>
                         <?php } ?>
                     </div>
                 </div>

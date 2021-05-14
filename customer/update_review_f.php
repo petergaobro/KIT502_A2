@@ -26,11 +26,11 @@ if (isset($_POST['edit_review'])) {
                                         WHERE id = '$id'";
         $result = mysqli_query($db, $query);
         if ($result) {
-            header("Location: ./review.php?success=successfully created");
+            header("Location: ./customer_profile.php?success=successfully created");
         } else {
-            header("Location: review.php?error=unknown error occurred&$user_data");
+            header("Location: ./customer_profile.php?error=unknown error occurred&$user_data");
         }
     }
 } else {
-    header("Location: ../view.php");
+    header("Location: ./customer_profile.php");
 }

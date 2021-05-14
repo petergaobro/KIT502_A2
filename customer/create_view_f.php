@@ -30,6 +30,6 @@ if (isset($_POST['create_view'])) {
         $query = "INSERT INTO users_review (r_location, r_rating, r_comment) 
        VALUES('$r_location', '$r_rating', '$r_comment')";
         mysqli_query($db, $query);
-        header('location: review.php');
+        header('location: customer_profile.php');
     }
 }
